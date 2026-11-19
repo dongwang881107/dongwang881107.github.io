@@ -1,0 +1,419 @@
+.conference-schedule {
+  max-width: 64rem;
+}
+
+.conference-snapshot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem 2rem;
+  margin: 0;
+  padding: .7rem .9rem;
+  border-inline-start: 3px solid var(--accent);
+  background: var(--soft);
+}
+
+.conference-snapshot div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 .55rem;
+}
+
+.conference-snapshot dt {
+  color: var(--muted);
+  font-size: .86rem;
+}
+
+.conference-snapshot dd {
+  margin: 0;
+  font-size: .9rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.conference-date-note {
+  margin-block: .65rem 1.5rem;
+  color: var(--muted);
+  font-size: .875rem;
+}
+
+.conference-jump {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .55rem;
+  margin-block-end: 1rem;
+}
+
+.conference-jump-with-archive {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.conference-jump a {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .35rem;
+  min-height: 2.75rem;
+  padding: .5rem .75rem;
+  border: 1px solid var(--line);
+  border-radius: .22rem;
+  font-size: .91rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.conference-jump a:hover {
+  border-color: var(--accent);
+  background: var(--soft);
+}
+
+.conference-count {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.conference-category + .conference-category {
+  margin-block-start: 1.85rem;
+}
+
+.conference-category h2 {
+  margin-block-end: .66rem;
+}
+
+.conference-category:target h2 {
+  color: var(--accent);
+}
+
+.conference-events {
+  margin: 0;
+  padding: 0;
+  border-block-start: 1px solid var(--line);
+  list-style-type: none;
+}
+
+.conference-event {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1.13fr) minmax(10rem, 1.65fr) minmax(8.4rem, .66fr);
+  align-items: start;
+  gap: .3rem 1.05rem;
+  padding-block: .75rem;
+  border-block-end: 1px solid var(--line);
+}
+
+.conference-event-date {
+  color: var(--ink);
+  font-size: .94rem;
+  font-weight: 620;
+  font-variant-numeric: tabular-nums;
+}
+
+.conference-event-date time {
+  white-space: nowrap;
+}
+
+.conference-event-zone,
+.conference-event-original,
+.conference-event-source span {
+  display: block;
+  color: var(--muted);
+  font-size: .79rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.conference-event h3 {
+  font-size: .97rem;
+  line-height: 1.45;
+}
+
+.conference-rank {
+  display: inline-block;
+  margin-inline-start: .2rem;
+  padding: .03rem .27rem;
+  border-radius: .18rem;
+  background: var(--soft);
+  color: var(--accent);
+  font-size: .7rem;
+  font-weight: 600;
+  white-space: nowrap;
+  vertical-align: .08em;
+}
+
+.conference-event-label {
+  margin-block-start: .14rem;
+  color: var(--muted);
+  font-size: .91rem;
+  line-height: 1.5;
+}
+
+.conference-event-source {
+  font-size: .87rem;
+  text-align: end;
+}
+
+.conference-event-source time {
+  white-space: nowrap;
+}
+
+.conference-pending .conference-event-label {
+  margin-block-start: 0;
+}
+
+.conference-archive {
+  margin-block-start: 2.5rem;
+  padding-block-start: 1.4rem;
+  border-block-start: 1px solid var(--line);
+}
+
+.conference-archive [hidden] {
+  display: none;
+}
+
+.conference-archive-heading > p {
+  color: var(--muted);
+}
+
+.conference-archive-coverage {
+  margin-block-start: .3rem;
+  font-size: .88rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.conference-review {
+  margin-block: 1.25rem 1.6rem;
+  padding: clamp(.85rem, 2vw, 1.25rem);
+  border: 1px solid var(--line);
+  border-inline-start: 3px solid var(--accent);
+  border-radius: .24rem;
+  background: var(--soft);
+}
+
+.conference-review-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .25rem 1rem;
+}
+
+.conference-review-heading h3,
+.conference-catalog-heading {
+  font-size: 1.13rem;
+}
+
+.conference-review-heading time,
+.conference-review-scope,
+.conference-review-papers li p,
+.conference-catalog-note {
+  color: var(--muted);
+  font-size: .88rem;
+}
+
+.conference-review-findings {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .8rem 1.2rem;
+  margin: .8rem 0;
+}
+
+.conference-review-findings dt {
+  font-weight: 650;
+}
+
+.conference-review-findings dd {
+  margin: .25rem 0 0;
+  font-size: .94rem;
+  line-height: 1.58;
+}
+
+.conference-review-outlook {
+  margin-block: .75rem;
+  font-size: .94rem;
+}
+
+.conference-review-papers {
+  margin-block-start: .7rem;
+  padding-block-start: .55rem;
+  border-block-start: 1px solid var(--line);
+}
+
+.conference-review-papers summary,
+.conference-archive-year summary {
+  color: var(--accent);
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.conference-review-papers summary .conference-count,
+.conference-archive-year summary .conference-count {
+  margin-inline-start: .45rem;
+  font-size: .87rem;
+}
+
+.conference-review-papers ul {
+  margin: .6rem 0 0;
+  padding-inline-start: 1.3rem;
+}
+
+.conference-review-papers li + li {
+  margin-block-start: .6rem;
+}
+
+.conference-catalog-note {
+  margin-block: .35rem .85rem;
+}
+
+.conference-archive-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(8rem, 11rem) auto;
+  align-items: end;
+  gap: .65rem;
+}
+
+.conference-archive-field {
+  display: grid;
+  gap: .2rem;
+  min-width: 0;
+}
+
+.conference-archive-field label {
+  font-size: .89rem;
+  font-weight: 600;
+}
+
+.conference-archive-field input,
+.conference-archive-field select,
+.conference-archive-controls button {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: .38rem .65rem;
+  border: 1px solid var(--line);
+  border-radius: .24rem;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+}
+
+.conference-archive-field select,
+.conference-archive-controls button {
+  font-size: .89rem;
+}
+
+.conference-archive-controls button {
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.conference-archive-controls button:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: var(--soft);
+}
+
+.conference-archive-controls button:disabled {
+  color: var(--muted);
+  cursor: default;
+}
+
+.conference-archive-status {
+  margin-block: .5rem .65rem;
+  color: var(--muted);
+  font-size: .87rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.conference-archive-year {
+  margin-block-start: .55rem;
+  border: 1px solid var(--line);
+  border-radius: .24rem;
+}
+
+.conference-archive-year summary {
+  padding: .55rem .75rem;
+  background: var(--soft);
+}
+
+.conference-archive-entries,
+.conference-archive-sources {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.conference-archive-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: .35rem 1rem;
+  padding: .68rem .75rem;
+  border-block-start: 1px solid var(--line);
+}
+
+.conference-archive-entry h4 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.conference-archive-entry p {
+  color: var(--muted);
+  font-size: .85rem;
+  line-height: 1.55;
+}
+
+.conference-archive-metadata {
+  font-variant-numeric: tabular-nums;
+}
+
+.conference-archive-sources {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: .15rem .65rem;
+  font-size: .88rem;
+}
+
+@media (max-width: 43rem) {
+  .conference-event {
+    grid-template-columns: minmax(0, 1fr);
+    padding-block: .63rem;
+  }
+
+  .conference-event-source {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: .12rem .65rem;
+    text-align: start;
+  }
+
+  .conference-review-findings,
+  .conference-archive-entry {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .conference-archive-sources {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 31rem) {
+  .conference-jump {
+    gap: .38rem;
+  }
+
+  .conference-jump-with-archive,
+  .conference-archive-controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .conference-archive-field:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .conference-jump a {
+    flex-direction: column;
+    padding: .38rem .45rem;
+    font-size: .84rem;
+    line-height: 1.36;
+  }
+}

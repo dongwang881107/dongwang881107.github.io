@@ -4,6 +4,83 @@ zh-CN:
     verified: 最后核对于
     schedule: 会议日程
     empty: 公开日程正在整理。每个会议条目将附上官方来源、时区与最后核对日期。
+    categories:
+      submission: 投稿截止
+      decision: 录用通知
+      conference: 会期
+    browse: 浏览会议追踪
+    window: 展示区间
+    snapshot: 来源核验截至
+    date_separator: 至
+    date_note: 注明时刻的节点显示北京时间。仅公布日期的节点保留官网日期，跨越区间边界的会期保留完整起止日。
+    beijing: 北京时间
+    official_date: 官网日期
+    aoe_date: AoE 日期（UTC−12）
+    aoe: AoE（UTC−12）
+    original_time: 官网时刻
+    official_source: 官方来源
+    checked: 核对于
+    no_events: 这个区间暂无已核实的节点。
+    pending: 日程待确认
+    archive:
+      heading: 往期回顾
+      summary: 浏览已收录的历届论文，回顾医学影像及相关方向的研究变化。
+      series: 个会议系列
+      editions: 届会议
+      as_of: 资料更新于
+      papers: 代表论文
+      catalog: 收录届次与来源
+      catalog_note: 题录与摘要数反映会议追踪资料的收录范围。官方论文集、会议目录及书目索引按来源标注。
+      search: 搜索会议
+      search_hint: CVPR、MICCAI、CCF-A
+      year: 年份
+      all_years: 全部年份
+      clear: 清除筛选
+      results: 共找到 {count} 届会议
+      one_result: 共找到 1 届会议
+      no_results: 没有符合条件的会议。可更换关键词或年份。
+      records: 条题录
+      abstracts: 份摘要
+      matched: 条已匹配正式出版记录
+      sources: 公开来源
+      coverage:
+        program: 官方日程目录快照
+        catalog: 官方录用或开放目录
+        metadata: 出版书目收录
+      source_kinds:
+        proceedings: 官方论文集
+        program: 官方日程
+        catalog: 会议公开目录
+        metadata: 书目索引
+        conference: 会议信息
+      proceedings:
+        heading: 历届论文集
+        intro: 按届浏览已收录的论文，可搜索题名或作者，并打开单篇论文的来源。
+        intro_abstracts: 按届浏览已收录的论文，可搜索题名、作者或摘要，展开阅读已收录的摘要。
+        edition: 会议届次
+        choose: 选择会议届次
+        search: 搜索本届论文
+        query_metadata: 题名或作者
+        query_with_abstract: 题名、作者或摘要
+        browse: 浏览本站论文
+        no_selection: 选择一届会议以加载论文。
+        loading: 正在加载本届论文…
+        unavailable: 暂时无法加载本届论文，请重试或从届次列表打开公开来源。
+        empty: 没有找到匹配的论文。
+        one_result: 共 1 条题录
+        results: 第 {first}–{last} 条，共 {total} 条匹配
+        results_all: 第 {first}–{last} 条，共 {total} 条题录
+        page: 第 {page} / {pages} 页
+        pagination: 论文分页
+        previous: 上一页
+        next: 下一页
+        retry: 重新加载
+        paper_link: 论文来源
+        abstract: 摘要
+        retracted: 已撤稿
+        nonresearch: 非研究材料
+        no_script: 启用 JavaScript 后可浏览本站收录的论文。
+        edition_sources: 查看各届来源
   knowledge:
     other_notes: 其他笔记
     updated: 更新于
@@ -26,6 +103,83 @@ en:
     verified: Last verified
     schedule: Conference Schedule
     empty: The schedule is being compiled. Each entry will include its official source, time zone, and last verification date.
+    categories:
+      submission: Submission deadlines
+      decision: Acceptance notifications
+      conference: Conference dates
+    browse: Browse the conference tracker
+    window: Date range
+    snapshot: Sources verified through
+    date_separator: to
+    date_note: Events with a published time are shown in Beijing time. Date-only events use the official calendar dates. Conferences that cross the date range retain their full dates.
+    beijing: Beijing time
+    official_date: Official dates
+    aoe_date: AoE date (UTC−12)
+    aoe: AoE (UTC−12)
+    original_time: Official time
+    official_source: Official source
+    checked: Checked
+    no_events: No verified events in this date range.
+    pending: Dates pending confirmation
+    archive:
+      heading: Past editions
+      summary: Browse collected papers from past conferences and revisit trends in medical imaging and related fields.
+      series: conference series
+      editions: editions
+      as_of: Data updated
+      papers: Representative papers
+      catalog: Tracked editions and sources
+      catalog_note: Record and abstract counts reflect the tracker’s coverage. Links identify official proceedings, conference catalogs, and bibliographic indexes.
+      search: Search conferences
+      search_hint: CVPR, MICCAI, CCF-A
+      year: Year
+      all_years: All years
+      clear: Clear filters
+      results: '{count} matching editions'
+      one_result: 1 matching edition
+      no_results: No editions match. Try another search term or year.
+      records: records
+      abstracts: abstracts
+      matched: matched to published records
+      sources: Public sources
+      coverage:
+        program: Official program snapshot
+        catalog: Official accepted or open paper catalog
+        metadata: Publication metadata coverage
+      source_kinds:
+        proceedings: Official proceedings
+        program: Official program
+        catalog: Public paper catalog
+        metadata: Bibliographic index
+        conference: Conference information
+      proceedings:
+        heading: Past proceedings
+        intro: Browse collected papers by edition, search by title or author, and open individual paper sources.
+        intro_abstracts: Browse collected papers by edition, search titles, authors, or abstracts, and expand abstracts where available.
+        edition: Conference edition
+        choose: Choose an edition
+        search: Search this edition
+        query_metadata: Title or author
+        query_with_abstract: Title, author, or abstract
+        browse: Browse papers here
+        no_selection: Choose a conference edition to load its papers.
+        loading: Loading papers…
+        unavailable: This edition could not be loaded. Try again or use the edition’s public sources.
+        empty: No papers match your search.
+        one_result: 1 record
+        results: '{first}–{last} of {total} matching records'
+        results_all: '{first}–{last} of {total} records'
+        page: 'Page {page} of {pages}'
+        pagination: Proceedings pages
+        previous: Previous
+        next: Next
+        retry: Retry loading
+        paper_link: Paper source
+        abstract: Abstract
+        retracted: Retracted
+        nonresearch: Non-research material
+        no_script: Enable JavaScript to browse the collected papers on this site.
+        edition_sources: View edition sources
   knowledge:
     other_notes: Other Notes
     updated: Updated

@@ -1,0 +1,1389 @@
+{
+  "as_of": "2026-11-19",
+  "edition_count": 72,
+  "series_count": 20,
+  "record_count": 126989,
+  "abstract_count": 125888,
+  "editions": [
+    {
+      "id": "AAAI-2026-proceedings",
+      "series": "AAAI",
+      "title": "AAAI Conference on Artificial Intelligence",
+      "year": 2026,
+      "coverage": "metadata",
+      "records": 4920,
+      "abstracts": 4920,
+      "ccf": "A",
+      "start": "2026-01-20",
+      "end": "2026-01-27",
+      "sources": [
+        {
+          "kind": "metadata",
+          "url": "https://api.crossref.org/journals/2374-3468/works?filter=from-pub-date:2026-01-01,until-pub-date:2026-12-31&rows=1000"
+        },
+        {
+          "kind": "proceedings",
+          "url": "https://aaai.org/proceeding/aaai-40-2026/"
+        },
+        {
+          "kind": "conference",
+          "url": "https://aaai.org/conference/aaai/aaai-26/main-technical-track-call/"
+        }
+      ]
+    },
+    {
+      "id": "ACM-MM-2026-main",
+      "series": "ACM MM",
+      "title": "ACM International Conference on Multimedia",
+      "year": 2026,
+      "coverage": "program",
+      "records": 1703,
+      "abstracts": 1703,
+      "ccf": "A",
+      "start": "2026-11-10",
+      "end": "2026-11-14",
+      "matched": 1639,
+      "sources": [
+        {
+          "kind": "program",
+          "url": "https://2026.acmmm.org/site/technical-programme.html"
+        },
+        {
+          "kind": "proceedings",
+          "url": "https://doi.org/10.1145/3767308"
+        },
+        {
+          "kind": "conference",
+          "url": "https://2026.acmmm.org/"
+        }
+      ]
+    },
+    {
+      "id": "AISTATS-2026-main",
+      "series": "AISTATS",
+      "title": "International Conference on Artificial Intelligence and Statistics",
+      "year": 2026,
+      "coverage": "proceedings",
+      "records": 588,
+      "abstracts": 588,
+      "ccf": "C",
+      "start": "2026-05-02",
+      "end": "2026-05-05",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.mlr.press/v300/"
+        },
+        {
+          "kind": "conference",
+          "url": "https://virtual.aistats.org/Conferences/2026"
+        }
+      ]
+    },
+    {
+      "id": "COLT-2026-main",
+      "series": "COLT",
+      "title": "Conference on Learning Theory",
+      "year": 2026,
+      "coverage": "proceedings",
+      "records": 196,
+      "abstracts": 196,
+      "ccf": "B",
+      "start": "2026-06-29",
+      "end": "2026-07-03",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.mlr.press/v336/"
+        },
+        {
+          "kind": "conference",
+          "url": "https://learningtheory.org/colt2026/"
+        }
+      ]
+    },
+    {
+      "id": "CVPR-2026-main",
+      "series": "CVPR",
+      "title": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "year": 2026,
+      "coverage": "proceedings",
+      "records": 4042,
+      "abstracts": 4042,
+      "ccf": "A",
+      "start": "2026-06-05",
+      "end": "2026-06-07",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://openaccess.thecvf.com/CVPR2026?day=all"
+        },
+        {
+          "kind": "conference",
+          "url": "https://cvpr.thecvf.com/Conferences/2026/Dates"
+        }
+      ]
+    },
+    {
+      "id": "ECCV-2026-main",
+      "series": "ECCV",
+      "title": "European Conference on Computer Vision",
+      "year": 2026,
+      "coverage": "catalog",
+      "records": 2834,
+      "abstracts": 2834,
+      "ccf": "B",
+      "start": "2026-09-10",
+      "end": "2026-09-12",
+      "matched": 2572,
+      "sources": [
+        {
+          "kind": "catalog",
+          "url": "https://eccv.ecva.net/Conferences/2026/AcceptedPapers"
+        },
+        {
+          "kind": "proceedings",
+          "url": "https://link.springer.com/book/9783032369833"
+        },
+        {
+          "kind": "conference",
+          "url": "https://eccv.ecva.net/Conferences/2026"
+        }
+      ]
+    },
+    {
+      "id": "ICASSP-2026-main",
+      "series": "ICASSP",
+      "title": "IEEE International Conference on Acoustics, Speech and Signal Processing",
+      "year": 2026,
+      "coverage": "metadata",
+      "records": 4589,
+      "abstracts": 4313,
+      "ccf": "B",
+      "start": "2026-05-04",
+      "end": "2026-05-08",
+      "sources": [
+        {
+          "kind": "metadata",
+          "url": "https://ieeexplore.ieee.org/xpl/conhome/11460365/proceeding"
+        },
+        {
+          "kind": "conference",
+          "url": "https://2026.ieeeicassp.org/event/about-conference/"
+        }
+      ]
+    },
+    {
+      "id": "ICIP-2026-main",
+      "series": "ICIP",
+      "title": "IEEE International Conference on Image Processing",
+      "year": 2026,
+      "coverage": "metadata",
+      "records": 635,
+      "abstracts": 634,
+      "ccf": "C",
+      "start": "2026-09-13",
+      "end": "2026-09-17",
+      "sources": [
+        {
+          "kind": "metadata",
+          "url": "https://ieeexplore.ieee.org/xpl/conhome/11629556/proceeding"
+        },
+        {
+          "kind": "conference",
+          "url": "https://2026.ieeeicip.org/important-dates/"
+        }
+      ]
+    },
+    {
+      "id": "ICLR-2026-main",
+      "series": "ICLR",
+      "title": "International Conference on Learning Representations",
+      "year": 2026,
+      "coverage": "proceedings",
+      "records": 5351,
+      "abstracts": 5351,
+      "ccf": "A",
+      "start": "2026-04-23",
+      "end": "2026-04-25",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2026"
+        },
+        {
+          "kind": "conference",
+          "url": "https://iclr.cc/Conferences/2026/Dates"
+        }
+      ]
+    },
+    {
+      "id": "ICML-2026-main",
+      "series": "ICML",
+      "title": "International Conference on Machine Learning",
+      "year": 2026,
+      "coverage": "proceedings",
+      "records": 6552,
+      "abstracts": 6552,
+      "ccf": "A",
+      "start": "2026-07-07",
+      "end": "2026-07-09",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.mlr.press/v306/"
+        },
+        {
+          "kind": "conference",
+          "url": "https://icml.cc/Conferences/2026/Dates"
+        }
+      ]
+    },
+    {
+      "id": "ICPR-2026-main",
+      "series": "ICPR",
+      "title": "International Conference on Pattern Recognition",
+      "year": 2026,
+      "coverage": "proceedings",
+      "records": 715,
+      "abstracts": 715,
+      "ccf": "C",
+      "start": "2026-08-17",
+      "end": "2026-08-22",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://link.springer.com/book/10.1007/978-3-032-31335-5"
+        },
+        {
+          "kind": "conference",
+          "url": "https://icpr2026.org/program.html"
+        }
+      ]
+    },
+    {
+      "id": "MICCAI-2026-main",
+      "series": "MICCAI",
+      "title": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+      "year": 2026,
+      "coverage": "catalog",
+      "records": 1165,
+      "abstracts": 1165,
+      "ccf": "B",
+      "start": "2026-09-27",
+      "end": "2026-10-01",
+      "sources": [
+        {
+          "kind": "catalog",
+          "url": "https://papers.miccai.org/miccai-2026/"
+        },
+        {
+          "kind": "proceedings",
+          "url": "https://miccai2026.org/en/OPEN-ACCESS-AND-PROCEEDINGS.html"
+        },
+        {
+          "kind": "conference",
+          "url": "https://miccai2026.org/en/IMPORTANT-DATES.html"
+        }
+      ]
+    },
+    {
+      "id": "MIDL-2026-full",
+      "series": "MIDL",
+      "title": "Medical Imaging with Deep Learning",
+      "year": 2026,
+      "coverage": "proceedings",
+      "records": 221,
+      "abstracts": 221,
+      "start": "2026-07-08",
+      "end": "2026-07-10",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.mlr.press/v315/"
+        },
+        {
+          "kind": "conference",
+          "url": "https://2026.midl.io/dates"
+        }
+      ]
+    },
+    {
+      "id": "UAI-2026-main",
+      "series": "UAI",
+      "title": "Conference on Uncertainty in Artificial Intelligence",
+      "year": 2026,
+      "coverage": "proceedings",
+      "records": 330,
+      "abstracts": 330,
+      "ccf": "B",
+      "start": "2026-08-18",
+      "end": "2026-08-20",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.mlr.press/v337/"
+        },
+        {
+          "kind": "conference",
+          "url": "https://auai.org/uai2026/"
+        }
+      ]
+    },
+    {
+      "id": "AAAI-2025-proceedings",
+      "series": "AAAI",
+      "title": "AAAI Conference on Artificial Intelligence",
+      "year": 2025,
+      "coverage": "proceedings",
+      "records": 3486,
+      "abstracts": 3486,
+      "ccf": "A",
+      "start": "2025-02-25",
+      "end": "2025-03-04",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://aaai.org/proceeding/aaai-39-2025/"
+        },
+        {
+          "kind": "conference",
+          "url": "https://aaai.org/conference/aaai/aaai-25/"
+        }
+      ]
+    },
+    {
+      "id": "ACM-MM-2025-regular",
+      "series": "ACM MM",
+      "title": "ACM International Conference on Multimedia",
+      "year": 2025,
+      "coverage": "catalog",
+      "records": 1250,
+      "abstracts": 1247,
+      "ccf": "A",
+      "start": "2025-10-27",
+      "end": "2025-10-31",
+      "matched": 1247,
+      "sources": [
+        {
+          "kind": "catalog",
+          "url": "https://acmmm2025.org/accepted-regular-papers/"
+        },
+        {
+          "kind": "proceedings",
+          "url": "https://dl.acm.org/doi/proceedings/10.1145/3746027"
+        },
+        {
+          "kind": "conference",
+          "url": "https://acmmm2025.org/"
+        }
+      ]
+    },
+    {
+      "id": "AISTATS-2025-main",
+      "series": "AISTATS",
+      "title": "International Conference on Artificial Intelligence and Statistics",
+      "year": 2025,
+      "coverage": "proceedings",
+      "records": 583,
+      "abstracts": 583,
+      "ccf": "C",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.mlr.press/v258/"
+        }
+      ]
+    },
+    {
+      "id": "BIBM-2025-main",
+      "series": "BIBM",
+      "title": "IEEE International Conference on Bioinformatics and Biomedicine",
+      "year": 2025,
+      "coverage": "metadata",
+      "records": 1244,
+      "abstracts": 1239,
+      "ccf": "B",
+      "sources": [
+        {
+          "kind": "metadata",
+          "url": "https://ieeexplore.ieee.org/xpl/conhome/11355913/proceeding"
+        }
+      ]
+    },
+    {
+      "id": "BMVC-2025-main",
+      "series": "BMVC",
+      "title": "British Machine Vision Conference",
+      "year": 2025,
+      "coverage": "proceedings",
+      "records": 276,
+      "abstracts": 276,
+      "ccf": "C",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://bmvc2025.bmva.org/proceedings/conference-proceedings/"
+        }
+      ]
+    },
+    {
+      "id": "COLT-2025-main",
+      "series": "COLT",
+      "title": "Conference on Learning Theory",
+      "year": 2025,
+      "coverage": "proceedings",
+      "records": 181,
+      "abstracts": 181,
+      "ccf": "B",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.mlr.press/v291/"
+        }
+      ]
+    },
+    {
+      "id": "CVPR-2025-main",
+      "series": "CVPR",
+      "title": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "year": 2025,
+      "coverage": "proceedings",
+      "records": 2871,
+      "abstracts": 2871,
+      "ccf": "A",
+      "start": "2025-06-13",
+      "end": "2025-06-15",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://openaccess.thecvf.com/CVPR2025?day=all"
+        },
+        {
+          "kind": "conference",
+          "url": "https://cvpr.thecvf.com/Conferences/2025/Dates"
+        }
+      ]
+    },
+    {
+      "id": "ICASSP-2025-proceedings",
+      "series": "ICASSP",
+      "title": "IEEE International Conference on Acoustics, Speech and Signal Processing",
+      "year": 2025,
+      "coverage": "metadata",
+      "records": 3296,
+      "abstracts": 3272,
+      "ccf": "B",
+      "start": "2025-04-06",
+      "end": "2025-04-11",
+      "sources": [
+        {
+          "kind": "metadata",
+          "url": "https://ieeexplore.ieee.org/xpl/conhome/10887540/proceeding"
+        },
+        {
+          "kind": "conference",
+          "url": "https://signalprocessingsociety.org/events/icassp-2025-2025-ieee-international-conference-acoustics-speech-and-signal-processing"
+        }
+      ]
+    },
+    {
+      "id": "ICCV-2025-main",
+      "series": "ICCV",
+      "title": "International Conference on Computer Vision",
+      "year": 2025,
+      "coverage": "proceedings",
+      "records": 2701,
+      "abstracts": 2701,
+      "ccf": "A",
+      "start": "2025-10-21",
+      "end": "2025-10-23",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://openaccess.thecvf.com/ICCV2025?day=all"
+        },
+        {
+          "kind": "conference",
+          "url": "https://iccv.thecvf.com/Conferences/2025/Dates"
+        }
+      ]
+    },
+    {
+      "id": "ICIP-2025-proceedings",
+      "series": "ICIP",
+      "title": "IEEE International Conference on Image Processing",
+      "year": 2025,
+      "coverage": "metadata",
+      "records": 489,
+      "abstracts": 172,
+      "ccf": "C",
+      "start": "2025-09-14",
+      "end": "2025-09-17",
+      "sources": [
+        {
+          "kind": "metadata",
+          "url": "https://ieeexplore.ieee.org/xpl/conhome/11084272/proceeding"
+        },
+        {
+          "kind": "conference",
+          "url": "https://signalprocessingsociety.org/events/icip-2025-2025-ieee-international-conference-image-processing"
+        }
+      ]
+    },
+    {
+      "id": "ICLR-2025-main",
+      "series": "ICLR",
+      "title": "International Conference on Learning Representations",
+      "year": 2025,
+      "coverage": "proceedings",
+      "records": 3703,
+      "abstracts": 3703,
+      "ccf": "A",
+      "start": "2025-04-24",
+      "end": "2025-04-26",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2025"
+        },
+        {
+          "kind": "conference",
+          "url": "https://iclr.cc/Conferences/2025/Dates"
+        }
+      ]
+    },
+    {
+      "id": "ICME-2025-main",
+      "series": "ICME",
+      "title": "IEEE International Conference on Multimedia and Expo",
+      "year": 2025,
+      "coverage": "metadata",
+      "records": 1004,
+      "abstracts": 995,
+      "ccf": "B",
+      "sources": [
+        {
+          "kind": "metadata",
+          "url": "https://ieeexplore.ieee.org/xpl/conhome/11208895/proceeding"
+        }
+      ]
+    },
+    {
+      "id": "ICML-2025-main",
+      "series": "ICML",
+      "title": "International Conference on Machine Learning",
+      "year": 2025,
+      "coverage": "proceedings",
+      "records": 3330,
+      "abstracts": 3330,
+      "ccf": "A",
+      "start": "2025-07-15",
+      "end": "2025-07-17",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.mlr.press/v267/"
+        },
+        {
+          "kind": "conference",
+          "url": "https://icml.cc/Conferences/2025/Dates"
+        }
+      ]
+    },
+    {
+      "id": "MICCAI-2025-main",
+      "series": "MICCAI",
+      "title": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+      "year": 2025,
+      "coverage": "catalog",
+      "records": 1027,
+      "abstracts": 1027,
+      "ccf": "B",
+      "start": "2025-09-23",
+      "end": "2025-09-27",
+      "sources": [
+        {
+          "kind": "catalog",
+          "url": "https://papers.miccai.org/miccai-2025/"
+        },
+        {
+          "kind": "proceedings",
+          "url": "https://conferences.miccai.org/2025/en/PROCEEDINGS.html"
+        },
+        {
+          "kind": "conference",
+          "url": "https://conferences.miccai.org/2025/files/downloads/MICCAI2025-Program-Book.pdf"
+        }
+      ]
+    },
+    {
+      "id": "MIDL-2025-full",
+      "series": "MIDL",
+      "title": "Medical Imaging with Deep Learning",
+      "year": 2025,
+      "coverage": "proceedings",
+      "records": 110,
+      "abstracts": 109,
+      "start": "2025-07-09",
+      "end": "2025-07-11",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.mlr.press/v301/"
+        },
+        {
+          "kind": "conference",
+          "url": "https://2025.midl.io/call-for-papers"
+        }
+      ]
+    },
+    {
+      "id": "NeurIPS-2025-main",
+      "series": "NeurIPS",
+      "title": "Conference on Neural Information Processing Systems",
+      "year": 2025,
+      "coverage": "proceedings",
+      "records": 5823,
+      "abstracts": 5823,
+      "ccf": "A",
+      "start": "2025-12-03",
+      "end": "2025-12-05",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2025/vol38-main-conference"
+        },
+        {
+          "kind": "conference",
+          "url": "https://neurips.cc/Conferences/2025/Dates"
+        }
+      ]
+    },
+    {
+      "id": "UAI-2025-main",
+      "series": "UAI",
+      "title": "Conference on Uncertainty in Artificial Intelligence",
+      "year": 2025,
+      "coverage": "proceedings",
+      "records": 229,
+      "abstracts": 229,
+      "ccf": "B",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.mlr.press/v286/"
+        }
+      ]
+    },
+    {
+      "id": "AAAI-2024-proceedings",
+      "series": "AAAI",
+      "title": "AAAI Conference on Artificial Intelligence",
+      "year": 2024,
+      "coverage": "proceedings",
+      "records": 2865,
+      "abstracts": 2865,
+      "ccf": "A",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://aaai.org/proceeding/aaai-38-2024/"
+        }
+      ]
+    },
+    {
+      "id": "ACCV-2024-main",
+      "series": "ACCV",
+      "title": "Asian Conference on Computer Vision",
+      "year": 2024,
+      "coverage": "proceedings",
+      "records": 269,
+      "abstracts": 269,
+      "ccf": "C",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://openaccess.thecvf.com/ACCV2024?day=all"
+        }
+      ]
+    },
+    {
+      "id": "ACM-MM-2024-proceedings",
+      "series": "ACM MM",
+      "title": "ACM International Conference on Multimedia",
+      "year": 2024,
+      "coverage": "metadata",
+      "records": 1237,
+      "abstracts": 1233,
+      "ccf": "A",
+      "sources": [
+        {
+          "kind": "metadata",
+          "url": "https://dl.acm.org/doi/proceedings/10.1145/3664647"
+        }
+      ]
+    },
+    {
+      "id": "BIBM-2024-proceedings",
+      "series": "BIBM",
+      "title": "IEEE International Conference on Bioinformatics and Biomedicine",
+      "year": 2024,
+      "coverage": "metadata",
+      "records": 1158,
+      "abstracts": 1145,
+      "ccf": "B",
+      "sources": [
+        {
+          "kind": "metadata",
+          "url": "https://api.crossref.org/works?filter=prefix%3A10.1109%2Cfrom-pub-date%3A2024-12-03%2Cuntil-pub-date%3A2024-12-03%2Ctype%3Aproceedings-article&rows=1000&cursor=%2A"
+        }
+      ]
+    },
+    {
+      "id": "BMVC-2024-main",
+      "series": "BMVC",
+      "title": "British Machine Vision Conference",
+      "year": 2024,
+      "coverage": "proceedings",
+      "records": 263,
+      "abstracts": 263,
+      "ccf": "C",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://bmvc2024.org/proceedings/conference-proceedings/"
+        }
+      ]
+    },
+    {
+      "id": "CVPR-2024-main",
+      "series": "CVPR",
+      "title": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "year": 2024,
+      "coverage": "program",
+      "records": 2716,
+      "abstracts": 2716,
+      "ccf": "A",
+      "sources": [
+        {
+          "kind": "program",
+          "url": "https://cvpr.thecvf.com/virtual/2024/papers.html"
+        },
+        {
+          "kind": "proceedings",
+          "url": "https://openaccess.thecvf.com/CVPR2024?day=all"
+        }
+      ]
+    },
+    {
+      "id": "ECCV-2024-main",
+      "series": "ECCV",
+      "title": "European Conference on Computer Vision",
+      "year": 2024,
+      "coverage": "proceedings",
+      "records": 2387,
+      "abstracts": 2387,
+      "ccf": "B",
+      "start": "2024-10-01",
+      "end": "2024-10-04",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://eccv.ecva.net/public/ProceedingsList"
+        },
+        {
+          "kind": "conference",
+          "url": "https://eccv2024.ecva.net/Conferences/2024/Dates"
+        }
+      ]
+    },
+    {
+      "id": "ICASSP-2024-proceedings",
+      "series": "ICASSP",
+      "title": "IEEE International Conference on Acoustics, Speech and Signal Processing",
+      "year": 2024,
+      "coverage": "metadata",
+      "records": 2697,
+      "abstracts": 2637,
+      "ccf": "B",
+      "sources": [
+        {
+          "kind": "metadata",
+          "url": "https://api.crossref.org/works?filter=prefix%3A10.1109%2Cfrom-pub-date%3A2024-04-14%2Cuntil-pub-date%3A2024-04-14%2Ctype%3Aproceedings-article&rows=1000&cursor=%2A"
+        }
+      ]
+    },
+    {
+      "id": "ICIP-2024-proceedings",
+      "series": "ICIP",
+      "title": "IEEE International Conference on Image Processing",
+      "year": 2024,
+      "coverage": "metadata",
+      "records": 599,
+      "abstracts": 251,
+      "ccf": "C",
+      "sources": [
+        {
+          "kind": "metadata",
+          "url": "https://api.crossref.org/works?filter=prefix%3A10.1109%2Cfrom-pub-date%3A2024-10-27%2Cuntil-pub-date%3A2024-10-27%2Ctype%3Aproceedings-article&rows=1000&cursor=%2A"
+        }
+      ]
+    },
+    {
+      "id": "ICLR-2024-main",
+      "series": "ICLR",
+      "title": "International Conference on Learning Representations",
+      "year": 2024,
+      "coverage": "proceedings",
+      "records": 2260,
+      "abstracts": 2260,
+      "ccf": "A",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2024"
+        }
+      ]
+    },
+    {
+      "id": "ICME-2024-proceedings",
+      "series": "ICME",
+      "title": "IEEE International Conference on Multimedia and Expo",
+      "year": 2024,
+      "coverage": "metadata",
+      "records": 662,
+      "abstracts": 658,
+      "ccf": "B",
+      "sources": [
+        {
+          "kind": "metadata",
+          "url": "https://api.crossref.org/works?filter=prefix%3A10.1109%2Cfrom-pub-date%3A2024-07-15%2Cuntil-pub-date%3A2024-07-15%2Ctype%3Aproceedings-article&rows=1000&cursor=%2A"
+        }
+      ]
+    },
+    {
+      "id": "ICML-2024-main",
+      "series": "ICML",
+      "title": "International Conference on Machine Learning",
+      "year": 2024,
+      "coverage": "proceedings",
+      "records": 2610,
+      "abstracts": 2610,
+      "ccf": "A",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.mlr.press/v235/"
+        }
+      ]
+    },
+    {
+      "id": "ICPR-2024-main",
+      "series": "ICPR",
+      "title": "International Conference on Pattern Recognition",
+      "year": 2024,
+      "coverage": "proceedings",
+      "records": 947,
+      "abstracts": 946,
+      "ccf": "C",
+      "start": "2024-12-01",
+      "end": "2024-12-05",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://link.springer.com/book/10.1007/978-3-031-78107-0"
+        },
+        {
+          "kind": "conference",
+          "url": "https://link.springer.com/conference/icpr"
+        }
+      ]
+    },
+    {
+      "id": "MICCAI-2024-main",
+      "series": "MICCAI",
+      "title": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+      "year": 2024,
+      "coverage": "catalog",
+      "records": 856,
+      "abstracts": 856,
+      "ccf": "B",
+      "sources": [
+        {
+          "kind": "catalog",
+          "url": "https://papers.miccai.org/miccai-2024/"
+        },
+        {
+          "kind": "proceedings",
+          "url": "https://link.springer.com/book/10.1007/978-3-031-72378-0"
+        }
+      ]
+    },
+    {
+      "id": "MIDL-2024-full",
+      "series": "MIDL",
+      "title": "Medical Imaging with Deep Learning",
+      "year": 2024,
+      "coverage": "proceedings",
+      "records": 117,
+      "abstracts": 117,
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.mlr.press/v250/"
+        }
+      ]
+    },
+    {
+      "id": "NeurIPS-2024-main",
+      "series": "NeurIPS",
+      "title": "Conference on Neural Information Processing Systems",
+      "year": 2024,
+      "coverage": "proceedings",
+      "records": 4493,
+      "abstracts": 4493,
+      "ccf": "A",
+      "start": "2024-12-11",
+      "end": "2024-12-13",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2024"
+        },
+        {
+          "kind": "conference",
+          "url": "https://neurips.cc/Conferences/2024/Dates"
+        }
+      ]
+    },
+    {
+      "id": "AAAI-2023-proceedings",
+      "series": "AAAI",
+      "title": "AAAI Conference on Artificial Intelligence",
+      "year": 2023,
+      "coverage": "proceedings",
+      "records": 2023,
+      "abstracts": 2021,
+      "ccf": "A",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://aaai.org/proceeding/aaai-37-2023/"
+        }
+      ]
+    },
+    {
+      "id": "ACM-MM-2023-proceedings",
+      "series": "ACM MM",
+      "title": "ACM International Conference on Multimedia",
+      "year": 2023,
+      "coverage": "metadata",
+      "records": 1013,
+      "abstracts": 1009,
+      "ccf": "A",
+      "sources": [
+        {
+          "kind": "metadata",
+          "url": "https://dl.acm.org/doi/proceedings/10.1145/3581783"
+        }
+      ]
+    },
+    {
+      "id": "CVPR-2023-main",
+      "series": "CVPR",
+      "title": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "year": 2023,
+      "coverage": "program",
+      "records": 2359,
+      "abstracts": 2359,
+      "ccf": "A",
+      "sources": [
+        {
+          "kind": "program",
+          "url": "https://cvpr.thecvf.com/virtual/2023/papers.html"
+        },
+        {
+          "kind": "proceedings",
+          "url": "https://openaccess.thecvf.com/CVPR2023?day=all"
+        }
+      ]
+    },
+    {
+      "id": "ICCV-2023-main",
+      "series": "ICCV",
+      "title": "International Conference on Computer Vision",
+      "year": 2023,
+      "coverage": "proceedings",
+      "records": 2156,
+      "abstracts": 2156,
+      "ccf": "A",
+      "start": "2023-10-04",
+      "end": "2023-10-06",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://openaccess.thecvf.com/ICCV2023?day=all"
+        },
+        {
+          "kind": "conference",
+          "url": "https://iccv2023.thecvf.com/"
+        }
+      ]
+    },
+    {
+      "id": "ICLR-2023-main",
+      "series": "ICLR",
+      "title": "International Conference on Learning Representations",
+      "year": 2023,
+      "coverage": "program",
+      "records": 1574,
+      "abstracts": 1574,
+      "ccf": "A",
+      "sources": [
+        {
+          "kind": "program",
+          "url": "https://iclr.cc/virtual/2023/papers.html"
+        }
+      ]
+    },
+    {
+      "id": "ICML-2023-main",
+      "series": "ICML",
+      "title": "International Conference on Machine Learning",
+      "year": 2023,
+      "coverage": "proceedings",
+      "records": 1828,
+      "abstracts": 1828,
+      "ccf": "A",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.mlr.press/v202/"
+        }
+      ]
+    },
+    {
+      "id": "MICCAI-2023-main",
+      "series": "MICCAI",
+      "title": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+      "year": 2023,
+      "coverage": "catalog",
+      "records": 730,
+      "abstracts": 730,
+      "ccf": "B",
+      "start": "2023-10-08",
+      "end": "2023-10-12",
+      "sources": [
+        {
+          "kind": "catalog",
+          "url": "https://conferences.miccai.org/2023/papers/"
+        },
+        {
+          "kind": "proceedings",
+          "url": "https://link.springer.com/book/10.1007/978-3-031-43907-0"
+        }
+      ]
+    },
+    {
+      "id": "MIDL-2023-full",
+      "series": "MIDL",
+      "title": "Medical Imaging with Deep Learning",
+      "year": 2023,
+      "coverage": "proceedings",
+      "records": 112,
+      "abstracts": 112,
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.mlr.press/v227/"
+        }
+      ]
+    },
+    {
+      "id": "NeurIPS-2023-main",
+      "series": "NeurIPS",
+      "title": "Conference on Neural Information Processing Systems",
+      "year": 2023,
+      "coverage": "proceedings",
+      "records": 3540,
+      "abstracts": 3540,
+      "ccf": "A",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2023"
+        }
+      ]
+    },
+    {
+      "id": "AAAI-2022-proceedings",
+      "series": "AAAI",
+      "title": "AAAI Conference on Artificial Intelligence",
+      "year": 2022,
+      "coverage": "proceedings",
+      "records": 1624,
+      "abstracts": 1624,
+      "ccf": "A",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://aaai.org/proceeding/aaai-36-2022/"
+        }
+      ]
+    },
+    {
+      "id": "ACCV-2022-main",
+      "series": "ACCV",
+      "title": "Asian Conference on Computer Vision",
+      "year": 2022,
+      "coverage": "proceedings",
+      "records": 277,
+      "abstracts": 277,
+      "ccf": "C",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://openaccess.thecvf.com/ACCV2022?day=all"
+        }
+      ]
+    },
+    {
+      "id": "ACM-MM-2022-proceedings",
+      "series": "ACM MM",
+      "title": "ACM International Conference on Multimedia",
+      "year": 2022,
+      "coverage": "metadata",
+      "records": 829,
+      "abstracts": 818,
+      "ccf": "A",
+      "sources": [
+        {
+          "kind": "metadata",
+          "url": "https://api.crossref.org/works/10.1145/3503161"
+        },
+        {
+          "kind": "proceedings",
+          "url": "https://dl.acm.org/doi/proceedings/10.1145/3503161"
+        }
+      ]
+    },
+    {
+      "id": "CVPR-2022-main",
+      "series": "CVPR",
+      "title": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "year": 2022,
+      "coverage": "proceedings",
+      "records": 2074,
+      "abstracts": 2072,
+      "ccf": "A",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://openaccess.thecvf.com/CVPR2022?day=all"
+        }
+      ]
+    },
+    {
+      "id": "ECCV-2022-main",
+      "series": "ECCV",
+      "title": "European Conference on Computer Vision",
+      "year": 2022,
+      "coverage": "proceedings",
+      "records": 1645,
+      "abstracts": 1645,
+      "ccf": "B",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://www.ecva.net/papers.php"
+        }
+      ]
+    },
+    {
+      "id": "ICLR-2022-main",
+      "series": "ICLR",
+      "title": "International Conference on Learning Representations",
+      "year": 2022,
+      "coverage": "program",
+      "records": 1095,
+      "abstracts": 1095,
+      "ccf": "A",
+      "sources": [
+        {
+          "kind": "program",
+          "url": "https://iclr.cc/virtual/2022/papers.html"
+        }
+      ]
+    },
+    {
+      "id": "ICML-2022-main",
+      "series": "ICML",
+      "title": "International Conference on Machine Learning",
+      "year": 2022,
+      "coverage": "proceedings",
+      "records": 1233,
+      "abstracts": 1233,
+      "ccf": "A",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.mlr.press/v162/"
+        }
+      ]
+    },
+    {
+      "id": "MICCAI-2022-main",
+      "series": "MICCAI",
+      "title": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+      "year": 2022,
+      "coverage": "catalog",
+      "records": 573,
+      "abstracts": 573,
+      "ccf": "B",
+      "start": "2022-09-18",
+      "end": "2022-09-22",
+      "sources": [
+        {
+          "kind": "catalog",
+          "url": "https://conferences.miccai.org/2022/papers/"
+        },
+        {
+          "kind": "proceedings",
+          "url": "https://link.springer.com/book/10.1007/978-3-031-16431-6"
+        }
+      ]
+    },
+    {
+      "id": "MIDL-2022-full",
+      "series": "MIDL",
+      "title": "Medical Imaging with Deep Learning",
+      "year": 2022,
+      "coverage": "proceedings",
+      "records": 98,
+      "abstracts": 98,
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.mlr.press/v172/"
+        }
+      ]
+    },
+    {
+      "id": "NeurIPS-2022-main",
+      "series": "NeurIPS",
+      "title": "Conference on Neural Information Processing Systems",
+      "year": 2022,
+      "coverage": "proceedings",
+      "records": 2834,
+      "abstracts": 2834,
+      "ccf": "A",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2022"
+        }
+      ]
+    },
+    {
+      "id": "ICCV-2021-proceedings",
+      "series": "ICCV",
+      "title": "International Conference on Computer Vision",
+      "year": 2021,
+      "coverage": "metadata",
+      "records": 1619,
+      "abstracts": 1612,
+      "ccf": "A",
+      "sources": [
+        {
+          "kind": "metadata",
+          "url": "https://doi.org/10.1109/ICCV48922.2021"
+        },
+        {
+          "kind": "proceedings",
+          "url": "https://openaccess.thecvf.com/ICCV2021?day=all"
+        }
+      ]
+    },
+    {
+      "id": "NeurIPS-2021-main",
+      "series": "NeurIPS",
+      "title": "Conference on Neural Information Processing Systems",
+      "year": 2021,
+      "coverage": "proceedings",
+      "records": 2334,
+      "abstracts": 2334,
+      "ccf": "A",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2021"
+        }
+      ]
+    },
+    {
+      "id": "ECCV-2020-main",
+      "series": "ECCV",
+      "title": "European Conference on Computer Vision",
+      "year": 2020,
+      "coverage": "proceedings",
+      "records": 1358,
+      "abstracts": 1358,
+      "ccf": "B",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://www.ecva.net/papers.php"
+        }
+      ]
+    },
+    {
+      "id": "ICCV-2019-proceedings",
+      "series": "ICCV",
+      "title": "International Conference on Computer Vision",
+      "year": 2019,
+      "coverage": "metadata",
+      "records": 1084,
+      "abstracts": 1075,
+      "ccf": "A",
+      "sources": [
+        {
+          "kind": "metadata",
+          "url": "https://doi.org/10.1109/ICCV.2019"
+        }
+      ]
+    },
+    {
+      "id": "ECCV-2018-main",
+      "series": "ECCV",
+      "title": "European Conference on Computer Vision",
+      "year": 2018,
+      "coverage": "proceedings",
+      "records": 776,
+      "abstracts": 776,
+      "ccf": "B",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://www.ecva.net/papers.php"
+        }
+      ]
+    },
+    {
+      "id": "ICCV-2017-main",
+      "series": "ICCV",
+      "title": "International Conference on Computer Vision",
+      "year": 2017,
+      "coverage": "proceedings",
+      "records": 621,
+      "abstracts": 621,
+      "ccf": "A",
+      "sources": [
+        {
+          "kind": "proceedings",
+          "url": "https://openaccess.thecvf.com/ICCV2017?day=all"
+        }
+      ]
+    }
+  ]
+}

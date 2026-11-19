@@ -1,0 +1,52 @@
+{% assign papers_copy = include.labels %}
+{% assign papers_path = site.conference_papers_path | default: '/assets/conference-papers/' %}
+<section class="conference-papers" id="conference-papers" aria-labelledby="conference-papers-heading" data-papers-root
+  data-papers-base="{{ papers_path | relative_url | escape }}"
+  data-no-selection="{{ papers_copy.no_selection | escape }}"
+  data-loading="{{ papers_copy.loading | escape }}"
+  data-unavailable="{{ papers_copy.unavailable | escape }}"
+  data-one-result="{{ papers_copy.one_result | escape }}"
+  data-results="{{ papers_copy.results | escape }}"
+  data-results-all="{{ papers_copy.results_all | escape }}"
+  data-empty="{{ papers_copy.empty | escape }}"
+  data-page="{{ papers_copy.page | escape }}"
+  data-paper-link="{{ papers_copy.paper_link | escape }}"
+  data-abstract-label="{{ papers_copy.abstract | escape }}"
+  data-retracted="{{ papers_copy.retracted | escape }}"
+  data-nonresearch="{{ papers_copy.nonresearch | escape }}"
+  data-query-with-abstract="{{ papers_copy.query_with_abstract | escape }}"
+  data-query-metadata="{{ papers_copy.query_metadata | escape }}">
+  <h3 id="conference-papers-heading" tabindex="-1">{{ papers_copy.heading | escape }}</h3>
+  <p class="conference-papers-intro">{% if site.conference_papers_has_abstracts %}{{ papers_copy.intro_abstracts | escape }}{% else %}{{ papers_copy.intro | escape }}{% endif %}</p>
+
+  <div class="conference-papers-controls" data-papers-controls hidden>
+    <div class="conference-archive-field">
+      <label for="conference-papers-edition">{{ papers_copy.edition | escape }}</label>
+      <select id="conference-papers-edition">
+        <option value="">{{ papers_copy.choose | escape }}</option>
+        {% for group in include.groups %}
+          <optgroup label="{{ group.name | escape }}">
+            {% for edition in group.items %}
+              <option value="{{ edition.id | escape }}">{{ edition.series | escape }} {{ edition.year | escape }}</option>
+            {% endfor %}
+          </optgroup>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="conference-archive-field">
+      <label for="conference-papers-query">{{ papers_copy.search | escape }}</label>
+      <input type="search" id="conference-papers-query" autocomplete="off" placeholder="{{ papers_copy.query_metadata | escape }}" disabled>
+    </div>
+  </div>
+
+  <p class="conference-papers-status" role="status" data-papers-status></p>
+  <button type="button" data-papers-retry hidden>{{ papers_copy.retry | escape }}</button>
+  <nav class="conference-papers-pagination" aria-label="{{ papers_copy.pagination | escape }}" data-papers-pagination hidden>
+    <button type="button" data-papers-previous>{{ papers_copy.previous | escape }}</button>
+    <span data-papers-page></span>
+    <button type="button" data-papers-next>{{ papers_copy.next | escape }}</button>
+  </nav>
+  <ol class="conference-paper-list" data-papers-list></ol>
+  <noscript><p>{{ papers_copy.no_script | escape }} <a href="#conference-catalog">{{ papers_copy.edition_sources | escape }}</a></p></noscript>
+</section>
+<script src="{{ '/assets/conference-papers.js' | relative_url }}" defer></script>

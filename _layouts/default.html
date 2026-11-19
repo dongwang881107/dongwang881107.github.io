@@ -27,6 +27,7 @@
   {% endif %}
   <script src="{{ '/assets/preferences.js' | relative_url }}"></script>
   <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+  {% for stylesheet in page.stylesheets %}<link rel="stylesheet" href="{{ stylesheet | relative_url | escape }}">{% endfor %}
   <link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}" type="image/png">
 </head>
 <body>

@@ -1,0 +1,54 @@
+date: '2026-11-19'
+languages:
+  zh-CN:
+    title: 会议研究趋势与医学影像方向
+    scope: 对 2022–2026 年固定会议组的收录论文做关键词比较。占比反映本期会议库中的主题分布，各主题可以重叠。
+    findings:
+      - title: 通用会议的视觉语言与多模态研究
+        text: 在 CVPR、ICML、ICLR 主会中，题名命中视觉语言或多模态关键词的比例从 2022 年的 2.0%（86/4,399）升至 2026 年的 8.3%（1,325/15,945）。模型是否真正利用视觉证据，是相应基准评测关注的问题。
+      - title: 医学成像中的有限采样与重建
+        text: 在 MICCAI 主会与 MIDL Full 中，题名或摘要命中重建相关关键词的比例从 2022 年的 9.8%（66/671）升至 2026 年的 14.1%（196/1,386）。2026 年还有 52 篇同时命中重建或逆问题，以及物理模型、算法展开或变分等关键词。
+      - title: 医学图像处理中的分割与多模态
+        text: 在上述两组医学会议论文中，2026 年有 422/1,386 篇（30.4%）命中分割关键词。多模态、基础模型或融合这一组关键词合计命中 451/1,386 篇（32.5%）。两组均按题名或摘要匹配。
+    outlook:
+      title: 值得持续跟踪的问题
+      text: 医学成像可关注有限采样和采集协议变化时，重建能保留多少定量信息。医学图像处理可跟踪跨中心验证、输入模态缺失时的表现，以及分割或测量结果的自动质控。
+    papers:
+      - title: 'VideoHallu: Evaluating and Mitigating Multi-modal Hallucinations on Synthetic Video Understanding'
+        conference: NeurIPS 2025
+        url: https://proceedings.neurips.cc/paper_files/paper/2025/hash/6e1734c47c0cc899021060d88f69dc65-Abstract-Conference.html
+        note: 用含物理或逻辑异常的合成视频检验视觉语言模型能否识别异常。
+      - title: 'DM4CT: Benchmarking Diffusion Models for Computed Tomography Reconstruction'
+        conference: ICLR 2026
+        url: https://proceedings.iclr.cc/paper_files/paper/2026/hash/6b066da6a23bc55f9b887e7298102884-Abstract-Conference.html
+        note: 在稀疏视角和有噪声的 CT 数据上，对比扩散先验与其他重建方法。
+      - title: A Real-World Evaluation of Failure Detection for Liver CT Segmentation
+        conference: MICCAI 2026
+        url: https://papers.miccai.org/miccai-2026/0017-Paper6055.html
+        note: 用内部和外部数据评估如何识别肝脏 CT 分割失败。
+  en:
+    title: Conference Research Trends in Medical Imaging
+    scope: Keyword counts cover tracked papers from fixed groups of conferences between 2022 and 2026. Shares describe this snapshot, and topics can overlap.
+    findings:
+      - title: Vision-language and multimodal research at general conferences
+        text: In the CVPR, ICML, and ICLR main tracks, the share of titles matching vision-language or multimodal terms rose from 2.0% in 2022 (86/4,399) to 8.3% in 2026 (1,325/15,945). One question for benchmarks is whether models rely on visual evidence.
+      - title: Limited sampling and reconstruction in medical imaging
+        text: In the MICCAI main track and MIDL Full papers, titles or abstracts matching reconstruction terms rose from 9.8% in 2022 (66/671) to 14.1% in 2026 (196/1,386). In 2026, 52 papers matched terms for reconstruction or inverse problems alongside terms such as physical models, algorithm unrolling, or variational methods.
+      - title: Segmentation and multimodal methods in medical image analysis
+        text: In the same two medical conferences, 422/1,386 papers (30.4%) matched segmentation terms in 2026. The broader group of multimodal, foundation-model, or fusion terms matched 451/1,386 papers (32.5%). Both groups were matched against titles or abstracts.
+    outlook:
+      title: Questions for future reviews
+      text: For image reconstruction, track how much quantitative information is preserved under limited sampling or a change in acquisition protocol. For image analysis, follow cross-site validation, performance with missing modalities, and automated quality checks for segmentation or measurements.
+    papers:
+      - title: 'VideoHallu: Evaluating and Mitigating Multi-modal Hallucinations on Synthetic Video Understanding'
+        conference: NeurIPS 2025
+        url: https://proceedings.neurips.cc/paper_files/paper/2025/hash/6e1734c47c0cc899021060d88f69dc65-Abstract-Conference.html
+        note: Uses synthetic videos with physical or logical inconsistencies to test whether vision-language models spot them.
+      - title: 'DM4CT: Benchmarking Diffusion Models for Computed Tomography Reconstruction'
+        conference: ICLR 2026
+        url: https://proceedings.iclr.cc/paper_files/paper/2026/hash/6b066da6a23bc55f9b887e7298102884-Abstract-Conference.html
+        note: Compares diffusion priors with other reconstruction methods on sparse-view and noisy CT data.
+      - title: A Real-World Evaluation of Failure Detection for Liver CT Segmentation
+        conference: MICCAI 2026
+        url: https://papers.miccai.org/miccai-2026/0017-Paper6055.html
+        note: Evaluates how to detect liver CT segmentation failures using internal and external data.
