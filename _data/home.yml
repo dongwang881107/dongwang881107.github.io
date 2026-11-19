@@ -1,4 +1,5 @@
 zh:
+  about_heading: 个人简介
   field: 医学成像 · 反问题 · 科学计算
   intro: 我的研究聚焦医学成像与分析中的数学模型和算法，结合压缩感知、反问题和深度学习，研究 MRI、CT、PET 和 EIT 的图像重建与分析。
   cv: 个人简历
@@ -21,6 +22,7 @@ zh:
       description: 将数学模型与深度学习应用于影像分割、配准、融合与生成。
 
 en:
+  about_heading: About
   field: Medical Imaging · Inverse Problems · Scientific Computing
   intro: I develop mathematical models and algorithms for medical imaging and analysis. My work combines compressed sensing, inverse problems, and deep learning for image reconstruction and analysis in MRI, CT, PET, and EIT.
   cv: Curriculum Vitae

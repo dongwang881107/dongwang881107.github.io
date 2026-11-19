@@ -3,7 +3,7 @@
 {% assign cv_english = false %}
 {% if cv_lang == 'en' %}{% assign cv_english = true %}{% endif %}
 
-<header class="page-header">
+<header class="page-header cv-page-header">
   <p class="eyebrow">{{ cv.heading[cv_lang] | escape }}</p>
   {% if cv_english %}
     <h1>Dong Wang <span lang="zh-CN">王冬</span></h1>
@@ -16,6 +16,7 @@
 <div class="content-layout">
   <aside class="section-nav">
     <nav aria-label="{% if cv_english %}CV sections{% else %}简历目录{% endif %}">
+      <h2 class="cv-directory-heading">{% if cv_english %}On this page{% else %}本页目录{% endif %}</h2>
       <ul>
         {% for section in cv.sections %}
           <li><a href="#{{ section.id }}">{{ section.label[cv_lang] | escape }}</a></li>
@@ -30,23 +31,27 @@
         <h2>{{ section.label[cv_lang] | escape }}</h2>
         {% case section.id %}
         {% when 'Employment' %}
-          <ul>
+          <ul class="cv-records" role="list">
             {% for item in cv.appointments %}
-              <li>
-                <strong>{{ item.institution[cv_lang] | escape }}</strong><br>
-                {% if item.role %}{{ item.role[cv_lang] | escape }}<br>{% endif %}
-                {% if item.unit %}{{ item.unit[cv_lang] | escape }}<br>{% endif %}
-                <span class="muted">{{ item.dates[cv_lang] | escape }}</span>
+              <li class="cv-record">
+                <div class="cv-record-body">
+                  <strong>{{ item.institution[cv_lang] | escape }}</strong>
+                  {% if item.role %}<div>{{ item.role[cv_lang] | escape }}</div>{% endif %}
+                  {% if item.unit %}<div>{{ item.unit[cv_lang] | escape }}</div>{% endif %}
+                </div>
+                <span class="cv-record-date muted">{{ item.dates[cv_lang] | escape }}</span>
               </li>
             {% endfor %}
           </ul>
         {% when 'Education' %}
-          <ul>
+          <ul class="cv-records" role="list">
             {% for item in cv.education %}
-              <li>
-                <strong>{{ item.title[cv_lang] | escape }}</strong><br>
-                {{ item.details[cv_lang] | escape }}<br>
-                <span class="muted">{{ item.dates[cv_lang] | escape }}</span>
+              <li class="cv-record">
+                <div class="cv-record-body">
+                  <strong>{{ item.title[cv_lang] | escape }}</strong>
+                  <div>{{ item.details[cv_lang] | escape }}</div>
+                </div>
+                <span class="cv-record-date muted">{{ item.dates[cv_lang] | escape }}</span>
               </li>
             {% endfor %}
           </ul>
