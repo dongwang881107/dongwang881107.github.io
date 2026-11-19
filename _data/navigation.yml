@@ -1,0 +1,21 @@
+- id: home
+  label: 首页
+  url: /
+- id: cv
+  label: 个人简历
+  url: /cv/
+- id: group
+  label: 课题组
+  url: /group/
+- id: literature
+  label: 文献日报
+  url: /literature/
+  summary: 医学成像与逆问题方向的文献精选
+- id: conferences
+  label: CCF 会议追踪
+  url: /conferences/
+  summary: 会议届次、投稿节点与官方来源
+- id: knowledge
+  label: 知识库
+  url: /knowledge/
+  summary: 电阻抗成像、逆问题与医学影像重建

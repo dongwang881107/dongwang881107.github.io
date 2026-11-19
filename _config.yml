@@ -1,0 +1,56 @@
+title: Dong Wang 王冬
+description: 王冬的科研主页，关注医学成像、逆问题与科学计算。
+url: https://dongwang881107.github.io
+baseurl: ""
+timezone: Asia/Shanghai
+markdown: kramdown
+
+collections:
+  literature:
+    output: true
+    permalink: /literature/:name/
+  group_updates:
+    output: true
+    permalink: /group/updates/:name/
+  conference_editions:
+    output: true
+    permalink: /conferences/:path/
+  knowledge_notes:
+    output: true
+    permalink: /knowledge/:path/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      lang: zh-CN
+  - scope:
+      path: ""
+      type: literature
+    values:
+      layout: article
+      section: literature
+  - scope:
+      path: ""
+      type: group_updates
+    values:
+      layout: article
+      section: group
+  - scope:
+      path: ""
+      type: conference_editions
+    values:
+      layout: article
+      section: conferences
+  - scope:
+      path: ""
+      type: knowledge_notes
+    values:
+      layout: article
+      section: knowledge
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

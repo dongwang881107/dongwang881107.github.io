@@ -1,401 +1,113 @@
-<!doctype html>
-<html lang="en">
-
-  <head>
-    <meta charset="UTF-8" />
-    <title>Dong Wang's Homepage</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-    <link rel="icon" type="image/x-icon" href="img/dong.jpg">
-    <!-- <base target="_blank" /> -->
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta name="keywords" content="Dong Wang, medical imaging, medical image analysis, Southest University">
-    <meta name="decription" content="Dong Wang is a Postdoc in Southeast University and Nanjing Center of Applied Mathematics
-     working at the mathematical theories and methods in medical image processing.">
-    <meta name="author" content="Dong Wang">
-    <script async="async" src="analytics.js">/* */</script>
-  </head>
-
-  <body>
-    <div class="topouter">
-    <div class="top">
-      <div class="links">
-        <div class="bars">
-          <label for="mobilelinks">
-            <div class="bar">&nbsp;</div>
-            <div class="bar">&nbsp;</div>
-            <div class="bar">&nbsp;</div>
-          </label>
-        </div>
-        <input checked="checked" id="mobilelinks" type="checkbox" />
-        <div class="dropdown">
-          <nav>
-            <a href="#Education">
-              Eduation
-            </a>
-            <a href="#Employment">
-              Employment
-            </a>
-            <a href="#Research">
-              Research
-            </a>
-            <a href="#Projects">
-              Projects
-            </a>
-            <a href="#Publications">
-              Publications
-            </a>
-            <a href="#Talks">
-              Talks
-            </a>
-            <a href="#Awards">
-              Awards
-            </a>
-          </nav>
-        </div>
-      </div>
-      <div class="title">
-        Dong Wang 
-      </div> 
-      <div style="clear: both">
-      </div>
+---
+layout: default
+title: 科研主页
+section: home
+lang: zh-CN
+permalink: /
+---
+<section class="hero" aria-labelledby="profile-name">
+  <div class="hero-copy">
+    <p class="eyebrow">医学成像 · 逆问题 · 科学计算</p>
+    <h1 id="profile-name"><span lang="en">Dong Wang</span><span class="hero-name-cn">王冬</span></h1>
+    <p class="hero-lead">研究医学成像中的数学模型与重建算法，关注如何结合成像物理、数值方法与机器学习，从有限或有噪声的观测中恢复可靠的图像。</p>
+    <p class="hero-english" lang="en">My research combines imaging physics, numerical methods, and machine learning to address inverse problems in medical imaging.</p>
+    <div class="profile-links">
+      <a class="primary-link" href="{{ '/cv/' | relative_url }}">个人简历</a>
+      <a href="https://scholar.google.com/citations?user=354GQLQAAAAJ" lang="en">Google Scholar</a>
+      <a href="https://github.com/dongwang881107" lang="en">GitHub</a>
+      <a href="mailto:dongwang@seu.edu.cn">邮箱</a>
     </div>
+  </div>
+  <figure class="profile-photo">
+    <img src="{{ '/assets/images/dong-wang.jpg' | relative_url }}" width="900" height="920" alt="王冬">
+  </figure>
+</section>
+
+<div class="home-grid">
+  <section class="home-section" aria-labelledby="research-heading">
+    <div class="section-heading">
+      <h2 id="research-heading">研究方向</h2>
+      <span class="section-note" lang="en">Research</span>
     </div>
+    <ul class="ruled-list">
+      <li>
+        <h3>电阻抗成像与逆问题</h3>
+        <p>关注电导率成像中的测量建模、数据利用与绝对重建。</p>
+      </li>
+      <li>
+        <h3>医学影像重建</h3>
+        <p>研究低剂量 PET/CT 与快速 MRI 中的重建模型和算法。</p>
+      </li>
+      <li>
+        <h3>成像模型与学习方法</h3>
+        <p>结合变分正则化、数值求解和数据驱动方法。</p>
+      </li>
+    </ul>
+  </section>
 
-    <a href="javascript:window.scrollTo(0,0)" class="btn" title="Dong Wang's Homepage"></a>
-
-
-    <div class="container">
-      <div class="outer">
-        <div class="boxed">
-          <div class="inner">
-
-            <div class="rightouter">
-              <div class="rightinner">
-                <div class="rightelement">
-                  <img alt="Bazinga!" src="https://raw.githubusercontent.com/dongwang881107/upic_images/master/uPic/20220328135809_rEhFMj.jpg" style="width: 300px; height: 300px" >
-                  <div style="text-align: center">
-                    Dong Wang (王冬), Ph.D. <br />
-                    Researcher, NJCAM <br />
-                    Email: dongwang@seu.edu.cn
-                    <br />
-                    <a href="https://scholar.google.com/citations?hl=en&authuser=1&user=354GQLQAAAAJ">
-                      <img src="https://raw.githubusercontent.com/dongwang881107/upic_images/master/uPic/20220328135729_otTjNx.jpg"  style="width: 30px; height: 30px" >
-                    </a>
-                    <a href="https://github.com/dongwang881107">
-                      <img src="https://raw.githubusercontent.com/dongwang881107/upic_images/master/uPic/20220328135920_DKfT22.jpg"  style="width: 30px; height: 30px" >
-                    </a>
-                    <a href="https://www.linkedin.com/in/dong-wang-a74960239/">
-                      <img src="https://raw.githubusercontent.com/dongwang881107/upic_images/master/uPic/20220328135938_jGqlUQ.jpg"  style="width: 30px; height: 30px" >
-                    </a>
-                    <a href="https://www.researchgate.net/profile/Dong-Wang-123">
-                      <img src="https://raw.githubusercontent.com/dongwang881107/upic_images/master/uPic/20220328140019_TFI3Th.jpg"  style="width: 30px; height: 30px" >
-                    </a>
-                    <a href="https://www.facebook.com/profile.php?id=100006660643705">
-                      <img src="https://raw.githubusercontent.com/dongwang881107/upic_images/master/uPic/20220328140031_cG3Sk8.jpg"  style="width: 30px; height: 30px" >
-                    </a>
-                    <a href="https://twitter.com/DongWang881107">
-                      <img src="https://raw.githubusercontent.com/dongwang881107/upic_images/master/uPic/20220328140045_7CgIpx.jpg"  style="width: 30px; height: 30px" >
-                    </a>
-                    <a href="https://www.instagram.com/dongwang881107/">
-                      <img src="https://raw.githubusercontent.com/dongwang881107/upic_images/master/uPic/20220328140058_mN0Jys.jpg"  style="width: 30px; height: 30px" >
-                    </a>
-                  </div>
-                </div>
-                <br />
-              </div>
-            </div>
-            
-
-            <!-- <div class="contact">
-              <img src="img/dong.jpg" style="width: 10em; height: 10em; align: center;" /><br />
-              Dong Wang (王冬), Ph.D. <br />
-              Postdoc, Southeast University <br />
-              dongwang@seu.edu.cn
-              <br />
-              <a href="https://github.com/dongwang881107">
-                GitHub
-              </a>
-              |
-              <a href="https://scholar.google.com/citations?hl=en&user=fvtlt_MAAAAJ">
-                Google Scholar
-              </a>
-              <br />
-              <br />
-            </div> -->
-
-
-
-            <div>
-              <h2>Biography</h2>
-            <p class="bio">I am currently employed as a full-time reseacher in <a href="http://www.njcam.org.cn/c952/index.phtml">Group A: Large-scale Scientific Computing and Media Imaging</a>
-              of <a href="http://www.njcam.org.cn/">Nanjing Center of Applied Mathematics (NJCAM)</a>. I mainly focus on medical imaging and 
-              analysis in Nuclear Medicine (PET and SPECT) and dedicate to promote the industrialization of self-developed algorithms.
-            </p>
-            
-            <!-- <p class="bio">
-               I reveived my Ph.D from School of Science, Nanjing University of Science and Technology, where I was advised by <a href="https://math.nju.edu.cn/en/People/Faculty/20200501/i74493.html">Prof. Xiaoping Yang</a>.
-               After that, I was a full-time (Zhishan) Postdoc in <a href="https://math.seu.edu.cn/">School of Mathematics</a> and <a href="https://yauc.seu.edu.cn/main.htm">S.T.Yau Center</a> of Southeast University under the supervision of <a href="https://math.seu.edu.cn/ljj/list.htm">Prof. Jijun Liu</a>.
-               Meantime, I also held a part-time Postdoc position in <a href="http://www.njcam.org.cn/">Nanjing Center of Applied Mathematics</a>. 
-            </p> -->
-      
-            <p class="bio">
-              My research area includes mathematical theories and methods in medical image processing. Specifically, I mainly focus on the theory of compressed sensing, 
-              deep learning, inverse problems, and their applications in medical imaging, including fast MRI, low-dose CT and low-count PET.
-              My work has been published in top journals and conferences including MRM, MRI and ISMRM.
-            </p>
-
-            <p class="bio">
-              I am also very interested in scientific programming, especially parallel programming in CUDA/C. I also have experience in 
-              builing medical image databases and developing corresponding GUIs.
-            </p>
-            </div>
-            
-
-            <div id="Education">
-              <h2>Education</h2>
-                <ul>
-                  <li> <b> MA & Ph.D (Sep. 2011 - Jan. 2020)</b> <br />
-                  Ph.D of Engineering, Control Science and Engineering, School of Science, Nanjing University of Science and Technology, Nanjing, Jiangsu, P.R.China. <br />
-                  Supervisor: <a href="https://math.nju.edu.cn/en/People/Faculty/20200501/i74493.html">Prof. Xiaoping Yang</a>. </li>
-
-                  <li> <b> Visiting Scholar (Oct. 2013 - Oct. 2014) </b> <br />
-                    Department of Mathematics, Vanderbilt University, Nashville, Tennessee, USA. <br /> 
-                    Supervisor: <a href="https://math.vanderbilt.edu/aldroua/">Prof. Akram Aldroubi</a> and <a href="https://www.vumc.org/radiology/person/david-s-smith-phd">Prof. David Smith</a>. </li>
-                
-                 <li> <b> B.S. (Sep. 2007 - Jun. 2011) </b> <br />
-                     Bachelor of Science, Applied Mathematics, School of Science, <a href="https://www.njust.edu.cn/">Nanjing University of Science and Technology</a>, Nanjing, Jiangsu, P.R.China. </li>
-                  </ul>  
-            </div>
-
-            <div id="Employment">
-              <h2>Employment</h2>
-                <ul>
-                  <li> <b> Full-time Researcher (Dec. 2023 - Present)</b> <br />
-                    Group A: Large-Scale Scientific Computing and Media Imaging, <a href="http://www.njcam.org.cn/">Nanjing Center of Applied Mathematics</a>. <br />
-                   </li>
-
-                  <li> <b> Advanced Visiting Scholar (Aug. 2023 - Dec. 2023)</b> <br />
-                    Group A: Large-Scale Scientific Computing and Media Imaging,<a href="http://www.njcam.org.cn/">Nanjing Center of Applied Mathematics</a>. <br />
-                   </li>
-
-                  <li> <b> Postdoctoral Research Fellow (Aug. 2020 - Aug. 2023)</b> <br />
-                    <a href="https://math.seu.edu.cn/">School of Mathematics</a>/<a href="https://yauc.seu.edu.cn/main.htm">S.T.Yau Center</a>, <a href="https://www.seu.edu.cn/">Southeast University</a>. <br />
-                  Cosupervisor: <a href="https://math.seu.edu.cn/ljj/list.htm">Prof. Jijun Liu</a>. </li>
-
-                  <li> <b> Postdoctoral Research Fellow (Aug. 2020 - Aug. 2023) </b> <br />
-                    Group A: Large-Scale Scientific Computing and Media Imaging, <a href="http://www.njcam.org.cn/">Nanjing Center of Applied Mathematics</a>. </li>
-              
-                  </ul>  
-            </div>
-
-
-            <div id="Research">
-              <h2>Research</h2>
-                <ul>
-                 <li> Mathematical theories, models, algorithms, and the applications in medical imaging and analysis </li>
-                 <li> Deep learning theories and the applications in solving large scale scientific computing </li>
-                 <li> Inverse problems in image processing </li>
-                 <li> Parallel programming and GUI programming </li>
-                </ul>  
-            </div>
-
-            <div id="Projects">
-              <h2>Projects</h2>
-                <ul>
-                  <li><b> (Jan. 2023 - Dec. 2025) [Chief Investigator] [In Progress]</b><br/> 
-                    Mathematical modeling and computational of intelligent reconstruction and lesion recognition of low-dose PET based on variational regularization.
-                    Young Scholar Program of National Natural Science Foundation of China under Grand #12201109,
-                    China, 300 000 RMB.
-                  </li>
-
-                 <li><b> (Dec. 2020 - Nov. 2025) [Core Investigator] [In Progress]</b> <br/> 
-                  Mathematical theories and algorithms for precise diagnosis and treatment of pancreaticobiliary malignancies. 
-                  National Key Research and Development Program of Ministry of Science and Technology under Grand #2020YFA0713800, 
-                  China, 4 490 000 RMB. </li>
-                  
-                  <li><b> (Jan. 2023 - Dec. 2026) [Core Investigator] [In Progress]</b><br/> 
-                    Efficient numerical algorithm and Mathematical theoretical Analysis of Atmospheric data assimilation.
-                    Special Funds of the National Natural Science Foundation of China under Grand #12241102,
-                    China, 2 500 000 RMB.
-                  </li>
-
-                  <li><b> (Jan. 2023 - Dec. 2026) [Core Investigator] [In Progress]</b><br/> 
-                    Study on the changes and Regulation Mechanism of Cell-Spatial Navigation Neural Loop in A-SCD Endoolfactory Grid based on Eye Movement-fMRI.
-                    The General Program of National Natural Science Foundation of China under Grand #82271965,
-                    China, 520 000 RMB.
-                  </li>
-
-                  <li><b> (Jan. 2023 - Dec. 2026) [Core Investigator] [In Progress]</b><br/> 
-                    Multi-origin excitation conduction Modeling of parallel Rhythm and its Application in ECG Imaging recognition.
-                    The General Program of National Natural Science Foundation of China under Grand #12271094,
-                    China, 460 000 RMB.
-                  </li>
-
-                  <li><b> (Jan. 2014 - Dec. 2016) [Core Investigator] [Complete]</b><br/> 
-                    High-order non-linear partial differential equation based image models and basic algorithms.
-                    Training Program of the Major Research Plan of the National Natural Science Foundation of China under Grand #91330101,
-                    China, 800 000 RMB.
-                  </li>
-
-                  <li><b> (Jan. 2014 - Dec. 2019) [Chief Investigator] [Complete]</b><br/> 
-                    Variational methods and sparse representation based fast reconstruction models and acceleration algorithms for quantitative MRI.
-                    Ph.D Thesis.
-                  </li>
-
-                </ul>  
-            </div>
-
-            <div id="Publications">
-              <h2>Publications (Asterisk (*) indicates the corresponding author)</h2>
-              
-              <h3>In Progress</h3>
-                <ol>
-                  <li>Yiming Gao, Luying Gui, and <b>Dong Wang*</b>. Spatially adaptive oscillation total generalized variation for image restoration with structured textures, 2024. 
-                    <b>Submitted</b>.
-                  </li>
-                  <li>Heming Chen, <b>Dong Wang</b>, Jiayi Li, Qingqiang Yao, Nicola Pugno, Zhiyong Li, and Qiang Chen*. Match analysis of the primary microstructural 
-                    and mechanical directions of human osteoporotic femoral heads, 2023. 
-                    <b>Submitted</b>.
-                  </li>
-                  <li><b>Dong Wang</b>, Qiang Zhang, and Jijun Liu*. On the Recovery of Conductivity in 3-Dimensional Medium by Neural Network Approximation.
-                    2023. <b>Submitted</b>.
-                  <a href="https://github.com/dongwang881107/DeepEIT">[Code]</a>
-                </li>
-                <li><b>Dong Wang</b>, Jian He, Qianqian Tan, and Jijun Liu*. Deep Progressive Learning for Medical Imaging. <b>Writing</b>.
-              </li>
-              <li><b>Dong Wang</b>, Liyan Wang, and Jijun Liu*. Deep Texture Learning for Dynamic MR Reconstruction. <b>Writing</b>.
-            </li>
-                </ol>  
-              <h3>Journal Papers</h3>
-                <ol>
-                  <li>Heming Chen, <b>Dong Wang</b>, Jiayi Li, Qingqiang Yao, Nicola Pugno, Zhiyong Li, and Qiang Chen*. A simple projection method to study the alignment of 
-                    the principal mechanical direction with the principal microstructural direction of human osteoporotic femoral heads. 
-                    <i>Medical & Biological Engineering & Computing</i>, 2024. <b>Accepted</b>. <b>(IF:2.700)</b> 
-                  </li>
-                  <li>Yanan Gu, Yiming Gao, <b>Dong Wang</b>, Chunyang Wang, and Bibo Lu*. Low-Light Image Deraining Based on Higher Order Variational Model, 2024. 
-                    <i>Circuits, Systems, and Signal Processing</i>, 2024. <b>Accepted</b>. <b>(IF:1.800)</b> 
-                  </li>
-                  <li>
-                    Weijia Hou, Liwen Zou, and <b>Dong Wang*</b>. Tumor Segmentation in Intraoperative Fluorescence Images Based on Transfer Learning and Convolutional Neural Networks.
-                    <i>Surgical Innovation</i>, 2024, 31(3):291-306. <b>(IF:1.700)</b> <a href="https://journals.sagepub.com/doi/10.1177/15533506241246576"> [Paper]</a>
-                  </li>  
-                  <li><b>Dong Wang</b>, Chong Jiang, Yue Teng, Hourong Qin, Jijun Liu, and Xiaoping Yang*. M<sup>3</sup>S-Net: Multi-Modality Multi-Branch Multi-Self-Attention Network with Structure-Promoting Loss for Low-Dose PET/CT Reconstruction.
-                    <i>Physics in Medicine & Biology</i>, 2024, 69:025001. <b>(IF:3.400)</b> <a href="https://iopscience.iop.org/article/10.1088/1361-6560/ad14c5"> [Paper]</a>
-                  <a href="https://github.com/dongwang881107/DeepPETCT">[Code]</a>
-                </li>
-                <li>Gu Yanan, Cao Ruyi, <b>Dong Wang</b>, and Lu Bibo*. CMP-UNet: A Retinal Vessel Segmentation Network Based on Multi-Scale Feature Fusion.
-                  <i>Electronics</i>, 2023, 12(23):4743. <b>(IF:2.900)</b> <a href="https://www.mdpi.com/2079-9292/12/23/4743"> [Paper]</a>
-                </li>
-                  <li>Yanan Gu, Yiming Gao, Hairong Liu, and <b>Dong Wang*</b>. Multi-Directional Rain Streak Removal Based on Infimal Convolution of Oscillation TGV.
-                    <i>Neurocomputing</i>, 2022, 486:61-76. <b>(IF:6.000)</b>  <a href="https://doi.org/10.1016/j.neucom.2022.02.059"> [Paper]</a>
-                    <a href="https://github.com/dongwang881107/ICTGV_deraining">[Code]</a>
-                  </li>
-                 <li><b>Dong Wang</b>, David S. Smith, and Xiaoping Yang*. Dynamic MR Image Reconstruction using TGV and Low-Rank Decomposition.
-                  <i>Magnetic Resonance in Medicine</i>, 2020, 83(6):2064-2076. <b>(IF:3.600)</b> <a href="https://doi.org/10.1002/mrm.28064"> [Paper]</a>
-                  <a href="https://github.com/dongwang881107/tgvnn">[Code]</a><a href="https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fmrm.28064&file=mrm28064-sup-0001-FigS1-S2.pdf"> [Supplement]</a>
-                </li>
-
-                <li><b>Dong Wang*</b>, Jason Ostenson, and David S. Smith. snapMRF: GPU-Accelerated Magnetic Resonance Fingerprinting Dictionary Generation and Matching using Extended Phase Graphs.
-                  <i>Magnetic Resonance Imaging</i>, 2020, 66:248-256. <b>(IF:2.500)</b> <a href="https://doi.org/10.1016/j.mri.2019.11.015"> [Paper]</a>
-                  <a href="https://github.com/dongwang881107/snapMRF">[Code]</a>
-                </li>
-
-                <li><b>Dong Wang*</b>, Lori R. Arlinghaus, Thomas E. Yankeelov, Xiaoping Yang, and David S. Smith. Quantitative Evaluation of Temporal Regularizers in Compressed Sensing Dynamic Contrast Enhanced MRI of the Breast.
-                  <i>International Journal of Biomedical Imaging</i>, 2017, 2017:1-11. <b>(IF:3.153)</b> <a href="https://doi.org/10.1155/2017/7835749"> [Paper]</a>
-                  <a href="https://github.com/dongwang881107/qetsr">[Code]</a>
-                </li>
-
-                </ol>  
-              <h3>Conference Papers</h3>
-                <ol>
-                 <li><b>Dong Wang</b>, Lori R. Arlinghaus, Thomas E. Yankeelov, and David S. Smith. Quantitative Evaluation of Temporal Sparse Regularizers for Compressed Sensing Breast DCE-MRI.
-                  <i>Proccedings of 25th Annual Meeting of ISMRM</i>, Honolulu, USA, 2017. <a href="http://ismrm.gitlab.io/2017/1428.html"> [Paper]</a>
-                </li>
-
-                </ol> 
-            </div>
-            
-            <div id="Patents">
-              <h2>Patents</h2>
-                <ul>
-                  <li>
-                    <font size="3">丘成桐, 刘继军, 王丽艳, <b>王冬</b>. 基于压缩感知的线圈敏感度和磁共振图像联合重建方法. 2023 <b>(已申请)</b></font>
-                  </li>
-                  <li>
-                    <font size="3">丘成桐, 刘继军, 钟敏, <b>王冬</b>. 基于两点梯度迭代算法的声电断层扫描图像重建算法. 2023 <b>(已申请)</b></font>
-                  </li>
-                  <li>
-                    <font size="3">丘成桐, 刘继军, <b>王冬</b>, 王丽艳. 基于多模态结构相似度神经网络的低剂量PET-CT重建方法. 专利号: ZL 202211366435.9. 2023 <b>(已授权)</b></font>
-                  </li>
-                 <li>
-                   <font size="3">丘成桐, 刘继军, <b>王冬</b>, 王丽艳. 基于背景低秩和多方向纹理稀疏的动态磁共振图像重建方法. 专利号: ZL 202210065873.5. 2022 <b>(已授权)</b></font>
-                 </li>
-                </ul>  
-            </div>
-
-            <div id="Talks">
-              <h2>Talks</h2>
-                <ol>
-                  <li> Dec. 2022. Medical Imaging: Model-Driven VS Data-Driven. 
-                    <i>Frontiers in Mathematical Science</i>, TSIMF, Sanya. <a href="talk/医学成像：从模型到数据.pptx">[Slide]</a> 
-                  </li>
-                  <li> Jan. 2022. Progress and problems in the construction of pancreaticobiliary multimodal medical imaging database and high-precision imaging. 
-                    <i>Symposium on intelligent diagnosis and accurate image analysis</i>, Nanjing Drum Tower Hospital, Nanjing. <a href="talk/胰胆多模态医学影像数据库建设和高精度成像中的进展与问题.pptx">[Slide]</a> 
-                  </li>
-
-                  <li> Oct. 2021. TGV and low-rank decomposition based dynamic MR resconstruction. 
-                    <i>CSIAM 19th Annual Meeting</i>, Hefei. <a href="talk/基于广义全变分和低秩分解的动态MR图像重建.pdf">[Slide]</a> 
-                   </li>
-
-                  <li> May. 2021. The construction of medical image platform of Jiangsu national center of applied mathematics.
-                    <i>Symposium on accurate image analysis that supports intelligent diagnosis</i>, Nanjing University, Nanjing. <a href="talk/江苏国家应用数学中心医学影像数据平台建设.pptx">[Slide]</a> 
-                   </li>
-
-                 <li> Aug. 2020. TGV and low-rank decomposition based dynamic MR resconstruction. 
-                   <i>Young Scholars Forum of National Computational Mathematics</i>, Nankai University, Tianjin. <a href="talk/基于广义全变分和低秩分解的动态MR图像重建.pdf">[Slide]</a> 
-                  </li>
-
-                  
-
-                </ol>  
-            </div>
-
-            <div id="Awards">
-              <h2>Awards</h2>
-                <ul>
-                 <li> 2022 - 2023, Zhishan Postdoc </li>
-                 <li> 2013 - 2016, Outstanding Ph.D Student Grant </li>
-                 <li> 2013 - 2014, Joint Ph.D Program of China Scholarship Council </li>
-                 <li> 2011, Outstanding Undergraduate Award </li>
-                </ul>  
-            </div>
-
-            <!-- <div id="Skills">
-              <h2>Skills</h2>
-                <ul>
-                 <li> Language: English (IELTS 6.5) </li>
-                 <li> Programming: Matlab, Python, PyTorch, C, CUDA, Julia </li>
-                 <li> Others: LaTex, Linux, Office </li>
-                </ul>  
-            </div> -->
-
-          </div>
-        </div>
-      </div>
-
-      <div style="clear: both" />
-            <br /><br />
-      
-            <div style="clear: both">&nbsp;</div>
-            
-            <input id="foot" type="checkbox" />
-          </div>
-        </div>
-
-      <div class="footer">
-      </div>
-      </div>
+  <section class="home-section" aria-labelledby="resources-heading">
+    <div class="section-heading">
+      <h2 id="resources-heading">研究资料</h2>
+      <span class="section-note" lang="en">Resources</span>
     </div>
-    
-  </body>
-</html>
+    {% assign resources = site.data.navigation | where_exp: "entry", "entry.summary" %}
+    {% assign latest_issue = site.literature | sort: "date" | last %}
+    <ul class="ruled-list resource-list">
+      {% for entry in resources %}
+        <li>
+          <h3><a href="{{ entry.url | relative_url }}">{{ entry.label | escape }}</a></h3>
+          {% if entry.id == 'literature' and latest_issue %}
+            <p><a class="row-detail" href="{{ latest_issue.url | relative_url }}">{{ latest_issue.date | date: '%Y-%m-%d' }}{% if latest_issue.sample %} · 预览样例{% else %} · {{ latest_issue.title | escape }}{% endif %}</a></p>
+          {% else %}
+            <p>{{ entry.summary | escape }}</p>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
+
+<div class="home-grid home-grid-secondary">
+  <section class="home-section" aria-labelledby="publications-heading">
+    <div class="section-heading">
+      <h2 id="publications-heading">代表成果</h2>
+      <a href="{{ '/cv/' | relative_url }}#Publications">查看论文列表</a>
+    </div>
+    <ul class="ruled-list">
+      <li>
+        <h3 lang="en"><a href="https://doi.org/10.1088/1361-6560/ad14c5">M<sup>3</sup>S-Net for Low-Dose PET/CT Reconstruction</a></h3>
+        <p lang="en"><cite>Physics in Medicine &amp; Biology</cite> · 2024</p>
+      </li>
+      <li>
+        <h3 lang="en"><a href="https://doi.org/10.1002/mrm.28064">Dynamic MR Image Reconstruction Using TGV and Low-Rank Decomposition</a></h3>
+        <p lang="en"><cite>Magnetic Resonance in Medicine</cite> · 2020</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="home-section" aria-labelledby="group-heading">
+    <div class="section-heading">
+      <h2 id="group-heading">课题组动态</h2>
+      <a href="{{ '/group/' | relative_url }}">打开栏目</a>
+    </div>
+    {% assign latest_updates = site.group_updates | sort: "date" | reverse %}
+    {% if latest_updates.size > 0 %}
+      <ul class="ruled-list">
+        {% for update in latest_updates limit: 3 %}
+          <li>
+            <h3><a href="{{ update.url | relative_url }}">{{ update.title | escape }}</a></h3>
+            <p><time datetime="{{ update.date | date_to_xmlschema }}">{{ update.date | date: '%Y-%m-%d' }}</time>{% if update.kind %} · {{ update.kind | escape }}{% endif %}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="home-empty muted">首批动态整理中。</p>
+    {% endif %}
+  </section>
+</div>
+
+<div class="legacy-links">
+  {% for entry in site.data.legacy_sections %}
+    <a class="legacy-link" id="{{ entry.id }}" href="{{ '/cv/' | relative_url }}#{{ entry.id }}">在个人简历中查看{{ entry.label }}</a>
+  {% endfor %}
+</div>

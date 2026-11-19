@@ -1,0 +1,33 @@
+---
+layout: default
+title: CCF 会议追踪
+description: 计算机与医学影像会议的投稿、录用通知与会期。
+section: conferences
+permalink: /conferences/
+lang: zh-CN
+---
+<header class="page-header">
+  <h1>{{ page.title }}</h1>
+  <p class="muted">{{ page.description }}</p>
+</header>
+
+{% assign editions = site.conference_editions | sort: "date" %}
+{% if editions.size > 0 %}
+<ul class="archive-list" aria-label="会议届次">
+  {% for edition in editions %}
+  <li class="archive-item">
+    {% if edition.status %}<p class="muted">{{ edition.status | escape }}</p>{% endif %}
+    <h2><a href="{{ edition.url | relative_url }}">{{ edition.title | escape }}</a></h2>
+    {% if edition.next_milestone %}<p>{{ edition.next_milestone | escape }}</p>{% endif %}
+    {% if edition.last_verified %}
+    <p class="muted">最后核对于 <time datetime="{{ edition.last_verified | date: '%Y-%m-%d' }}">{{ edition.last_verified | date: '%Y-%m-%d' }}</time></p>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<section class="content-section" aria-labelledby="conference-agenda">
+  <h2 id="conference-agenda">会议日程</h2>
+  <p>公开日程正在整理。每个会议条目将附上官方来源、时区与最后核对日期。</p>
+</section>
+{% endif %}

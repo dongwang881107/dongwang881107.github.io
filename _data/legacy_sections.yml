@@ -1,0 +1,16 @@
+- id: Education
+  label: 教育经历
+- id: Employment
+  label: 任职经历
+- id: Research
+  label: 研究方向
+- id: Projects
+  label: 科研项目
+- id: Publications
+  label: 论文
+- id: Patents
+  label: 专利
+- id: Talks
+  label: 学术报告
+- id: Awards
+  label: 荣誉
