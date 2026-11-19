@@ -4,32 +4,7 @@ title: 文献日报
 description: 医学成像、逆问题及相关方法的论文选读与归档。
 section: literature
 permalink: /literature/
+alternate_url: /en/literature/
 lang: zh-CN
 ---
-<header class="page-header">
-  <h1>{{ page.title | escape }}</h1>
-  <p>{{ page.description | escape }}</p>
-</header>
-
-{% assign issues = site.literature | sort: 'date' | reverse %}
-{% if issues.size > 0 %}
-  {% assign latest = issues | first %}
-  <section aria-labelledby="literature-archive-title">
-    <h2 id="literature-archive-title">最新一期</h2>
-    <div class="archive-list">
-      {% include issue-summary.html issue=latest %}
-    </div>
-  </section>
-  {% if issues.size > 1 %}
-    <section aria-labelledby="literature-past-title">
-      <h2 id="literature-past-title">往期归档</h2>
-      <div class="archive-list">
-        {% for issue in issues offset:1 %}
-          {% include issue-summary.html issue=issue %}
-        {% endfor %}
-      </div>
-    </section>
-  {% endif %}
-{% else %}
-  <p class="muted">暂无已发布的文献日报。</p>
-{% endif %}
+{% include literature-index.html %}

@@ -4,30 +4,7 @@ title: 课题组最新进展
 description: 课题组公开的论文、软件、学术活动与项目进展。
 section: group
 permalink: /group/
+alternate_url: /en/group/
 lang: zh-CN
 ---
-<header class="page-header">
-  <h1>{{ page.title }}</h1>
-  <p class="muted">{{ page.description }}</p>
-</header>
-
-{% assign updates = site.group_updates | sort: "date" | reverse %}
-{% if updates.size > 0 %}
-<ul class="archive-list" aria-label="课题组动态">
-  {% for update in updates %}
-  <li class="archive-item">
-    <p class="muted">
-      <time datetime="{{ update.date | date_to_xmlschema }}">{{ update.date | date: "%Y-%m-%d" }}</time>
-      {% if update.kind %} · {{ update.kind | escape }}{% endif %}
-    </p>
-    <h2><a href="{{ update.url | relative_url }}">{{ update.title | escape }}</a></h2>
-    {% if update.summary %}<p>{{ update.summary | escape }}</p>{% endif %}
-  </li>
-  {% endfor %}
-</ul>
-{% else %}
-<section class="content-section" aria-labelledby="group-research">
-  <h2 id="group-research">科研成果</h2>
-  <p>课题组动态将在这里发布。已有成果可参阅<a href="{{ '/cv/' | relative_url }}#Publications">论文列表</a>与<a href="{{ '/cv/' | relative_url }}#Projects">科研项目</a>。</p>
-</section>
-{% endif %}
+{% include group-index.html %}

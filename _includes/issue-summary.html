@@ -1,7 +1,7 @@
 <article class="archive-item">
   <p class="muted">
     <time datetime="{{ include.issue.date | date: '%Y-%m-%d' }}">{{ include.issue.date | date: '%Y-%m-%d' }}</time>
-    {% if include.issue.sample %}<span class="label">试刊</span>{% endif %}
+    {% if include.issue.sample %}<span class="label">{{ site.data.archive_labels[page.lang].literature.sample | escape }}</span>{% endif %}
   </p>
   <h3><a href="{{ include.issue.url | relative_url }}">{{ include.issue.title | escape }}</a></h3>
   {% if include.issue.summary %}<p>{{ include.issue.summary | escape }}</p>{% endif %}

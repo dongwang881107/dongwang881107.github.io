@@ -1,0 +1,122 @@
+---
+layout: default
+---
+{% assign copy = site.data.home.zh %}
+{% assign locale_prefix = '' %}
+{% assign institution = site.data.profile.institution %}
+{% if page.lang == 'en' %}
+  {% assign copy = site.data.home.en %}
+  {% assign locale_prefix = '/en' %}
+  {% assign institution = site.data.profile.institution_en %}
+{% endif %}
+{% assign cv_url = locale_prefix | append: '/cv/' | relative_url %}
+{% assign group_url = locale_prefix | append: '/group/' | relative_url %}
+<section class="hero" aria-labelledby="profile-name">
+  <div class="hero-copy">
+    <p class="eyebrow">{{ copy.field | escape }}</p>
+    <h1 id="profile-name"><span lang="en">Dong Wang</span><span class="hero-name-cn" lang="zh-CN">王冬</span></h1>
+    <p class="hero-affiliation"><a href="{{ cv_url }}#Employment">{{ institution | escape }}</a></p>
+    <p class="hero-lead">{{ copy.intro | escape }}</p>
+    <div class="profile-links">
+      <a class="primary-link" href="{{ cv_url }}">{{ copy.cv | escape }}</a>
+      <a href="https://scholar.google.com/citations?user=354GQLQAAAAJ" lang="en">Google Scholar</a>
+      <a href="https://github.com/dongwang881107" lang="en">GitHub</a>
+    </div>
+    <address class="profile-emails">
+      {% for email in site.data.profile.emails %}
+        <a href="mailto:{{ email | escape }}">{{ email | escape }}</a>
+      {% endfor %}
+    </address>
+  </div>
+  <figure class="profile-photo">
+    <img src="{{ '/assets/images/dong-wang.jpg' | relative_url }}" width="700" height="900"
+      alt="{% if page.lang == 'en' %}Dong Wang{% else %}王冬{% endif %}">
+  </figure>
+</section>
+
+<div class="home-grid">
+  <section class="home-section" aria-labelledby="research-heading">
+    <div class="section-heading">
+      <h2 id="research-heading">{{ copy.research_heading | escape }}</h2>
+    </div>
+    <ul class="ruled-list">
+      {% for direction in copy.research %}
+        <li>
+          <h3>{{ direction.title | escape }}</h3>
+          <p>{{ direction.description | escape }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="home-section" aria-labelledby="resources-heading">
+    <div class="section-heading">
+      <h2 id="resources-heading">{{ copy.resources_heading | escape }}</h2>
+    </div>
+    {% assign resources = site.data.navigation | where_exp: "entry", "entry.summary" %}
+    {% assign latest_issue = site.literature | where: 'lang', page.lang | sort: 'date' | last %}
+    <ul class="ruled-list resource-list">
+      {% for entry in resources %}
+        {% assign entry_url = locale_prefix | append: entry.url | relative_url %}
+        <li>
+          <h3><a href="{{ entry_url }}">{% if page.lang == 'en' %}{{ entry.label_en | escape }}{% else %}{{ entry.label | escape }}{% endif %}</a></h3>
+          {% if entry.id == 'literature' and latest_issue %}
+            <p><a class="row-detail" href="{{ latest_issue.url | relative_url }}">{{ latest_issue.date | date: '%Y-%m-%d' }} · {% if latest_issue.sample %}{{ copy.sample | escape }}{% else %}{{ latest_issue.title | escape }}{% endif %}</a></p>
+          {% else %}
+            <p>{% if page.lang == 'en' %}{{ entry.summary_en | escape }}{% else %}{{ entry.summary | escape }}{% endif %}</p>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
+
+<div class="home-grid home-grid-secondary">
+  <section class="home-section" aria-labelledby="publications-heading">
+    <div class="section-heading">
+      <h2 id="publications-heading">{{ copy.publications_heading | escape }}</h2>
+      <a href="{{ cv_url }}#Publications">{{ copy.publications_link | escape }}</a>
+    </div>
+    <ul class="ruled-list" lang="en">
+      {% for paper in site.data.profile.publications %}
+        <li>
+          <h3><a href="{{ paper.doi | escape }}">{{ paper.title | escape }}</a></h3>
+          <p><cite>{{ paper.journal | escape }}</cite> · {{ paper.year }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="home-section" aria-labelledby="group-heading">
+    <div class="section-heading">
+      <h2 id="group-heading">{{ copy.group_heading | escape }}</h2>
+      <a href="{{ group_url }}">{{ copy.group_link | escape }}</a>
+    </div>
+    {% assign latest_updates = site.group_updates | where: 'lang', page.lang | sort: 'date' | reverse %}
+    {% if latest_updates.size > 0 %}
+      <ul class="ruled-list">
+        {% for update in latest_updates limit: 3 %}
+          <li>
+            <h3><a href="{{ update.url | relative_url }}">{{ update.title | escape }}</a></h3>
+            <p><time datetime="{{ update.date | date_to_xmlschema }}">{{ update.date | date: '%Y-%m-%d' }}</time>{% if update.kind %} · {{ update.kind | escape }}{% endif %}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="home-empty muted">{{ copy.group_empty | escape }}</p>
+    {% endif %}
+  </section>
+</div>
+
+<section class="home-background" aria-labelledby="background-heading">
+  <h2 id="background-heading">{{ copy.background_heading | escape }}</h2>
+  <p>{{ copy.background | escape }}</p>
+</section>
+
+{% if page.lang != 'en' %}
+  <div class="legacy-links">
+    {% for entry in site.data.legacy_sections %}
+      <a class="legacy-link" id="{{ entry.id }}" href="{{ cv_url }}#{{ entry.id }}">在个人简历中查看{{ entry.label }}</a>
+    {% endfor %}
+  </div>
+{% endif %}

@@ -1,0 +1,110 @@
+{% assign cv = site.data.cv %}
+{% assign cv_lang = page.lang %}
+{% assign cv_english = false %}
+{% if cv_lang == 'en' %}{% assign cv_english = true %}{% endif %}
+
+<header class="page-header">
+  <p class="eyebrow">{{ cv.heading[cv_lang] | escape }}</p>
+  {% if cv_english %}
+    <h1>Dong Wang <span lang="zh-CN">王冬</span></h1>
+  {% else %}
+    <h1>王冬 <span lang="en">Dong Wang</span></h1>
+  {% endif %}
+  <p class="muted">{{ cv.subtitle[cv_lang] | escape }}</p>
+</header>
+
+<div class="content-layout">
+  <aside class="section-nav">
+    <nav aria-label="{% if cv_english %}CV sections{% else %}简历目录{% endif %}">
+      <ul>
+        {% for section in cv.sections %}
+          <li><a href="#{{ section.id }}">{{ section.label[cv_lang] | escape }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="article-body">
+    {% for section in cv.sections %}
+      <section class="content-section" id="{{ section.id }}">
+        <h2>{{ section.label[cv_lang] | escape }}</h2>
+        {% case section.id %}
+        {% when 'Employment' %}
+          <ul>
+            {% for item in cv.appointments %}
+              <li>
+                <strong>{{ item.institution[cv_lang] | escape }}</strong><br>
+                {% if item.role %}{{ item.role[cv_lang] | escape }}<br>{% endif %}
+                {% if item.unit %}{{ item.unit[cv_lang] | escape }}<br>{% endif %}
+                <span class="muted">{{ item.dates[cv_lang] | escape }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        {% when 'Education' %}
+          <ul>
+            {% for item in cv.education %}
+              <li>
+                <strong>{{ item.title[cv_lang] | escape }}</strong><br>
+                {{ item.details[cv_lang] | escape }}<br>
+                <span class="muted">{{ item.dates[cv_lang] | escape }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        {% when 'Research' %}
+          <p>{{ cv.research.intro[cv_lang] | escape }}</p>
+          <ul>
+            {% for topic in cv.research.topics %}
+              <li>{{ topic[cv_lang] | escape }}</li>
+            {% endfor %}
+          </ul>
+        {% when 'Projects' %}
+          <ul>
+            {% for item in cv.projects %}
+              <li>
+                <strong>{{ item.title[cv_lang] | escape }}</strong><br>
+                <span class="muted">{{ item.details[cv_lang] | escape }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        {% when 'Publications' %}
+          <p class="muted">{% if cv_english %}An asterisk marks a corresponding author.{% else %}星号（*）标注通讯作者。{% endif %}</p>
+          <h3>{% if cv_english %}Journal articles{% else %}期刊论文{% endif %}</h3>
+          {% include cv-publications.html items=cv.publications.journals english=cv_english %}
+          <h3>{% if cv_english %}Conference papers{% else %}会议论文{% endif %}</h3>
+          {% include cv-publications.html items=cv.publications.conferences english=cv_english %}
+          <details>
+            <summary>{% if cv_english %}Manuscripts listed in the July 2024 record{% else %}2024 年 7 月简历所列稿件{% endif %}</summary>
+            {% include cv-publications.html items=cv.publications.manuscripts english=cv_english %}
+          </details>
+        {% when 'Patents' %}
+          <ul>
+            {% for item in cv.patents %}
+              <li>
+                <strong>{{ item.title[cv_lang] | escape }}</strong><br>
+                {{ item.inventors[cv_lang] | escape }}<br>
+                <span class="muted">{{ item.status[cv_lang] | escape }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        {% when 'Talks' %}
+          <ol>
+            {% for item in cv.talks %}
+              <li>
+                <strong>{{ item.title[cv_lang] | escape }}</strong> {{ item.details[cv_lang] | escape }}
+                {% if item.slides %}
+                  <a href="{{ item.slides | relative_url | uri_escape }}">{% if cv_english %}Slides{% else %}报告材料{% endif %} ({{ item.format }})</a>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ol>
+        {% when 'Awards' %}
+          <ul>
+            {% for item in cv.awards %}
+              <li>{{ item[cv_lang] | escape }}</li>
+            {% endfor %}
+          </ul>
+        {% endcase %}
+      </section>
+    {% endfor %}
+  </div>
+</div>

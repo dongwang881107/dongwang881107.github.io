@@ -1,0 +1,25 @@
+{% include section-heading.html %}
+{% assign copy = site.data.archive_labels[page.lang].literature %}
+
+{% assign issues = site.literature | where: 'lang', page.lang | sort: 'date' | reverse %}
+{% if issues.size > 0 %}
+  {% assign latest = issues | first %}
+  <section aria-labelledby="literature-archive-title">
+    <h2 id="literature-archive-title">{{ copy.latest | escape }}</h2>
+    <div class="archive-list">
+      {% include issue-summary.html issue=latest %}
+    </div>
+  </section>
+  {% if issues.size > 1 %}
+    <section aria-labelledby="literature-past-title">
+      <h2 id="literature-past-title">{{ copy.archive | escape }}</h2>
+      <div class="archive-list">
+        {% for issue in issues offset:1 %}
+          {% include issue-summary.html issue=issue %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+{% else %}
+  <p class="muted">{{ copy.empty | escape }}</p>
+{% endif %}

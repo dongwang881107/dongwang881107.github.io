@@ -1,0 +1,27 @@
+{% include section-heading.html %}
+
+{% assign updates = site.group_updates | where: 'lang', page.lang | sort: 'date' | reverse %}
+{% if updates.size > 0 %}
+  <ul class="archive-list" aria-label="{{ page.title | escape }}">
+    {% for update in updates %}
+      <li class="archive-item">
+        <p class="muted">
+          <time datetime="{{ update.date | date_to_xmlschema }}">{{ update.date | date: '%Y-%m-%d' }}</time>
+          {% if update.kind %} · {{ update.kind | escape }}{% endif %}
+        </p>
+        <h2><a href="{{ update.url | relative_url }}">{{ update.title | escape }}</a></h2>
+        {% if update.summary %}<p>{{ update.summary | escape }}</p>{% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <section class="content-section" aria-labelledby="group-research">
+    {% if page.lang == 'en' %}
+      <h2 id="group-research">Research Output</h2>
+      <p>Explore the group's <a href="{{ '/en/cv/' | relative_url }}#Publications">publications</a> and <a href="{{ '/en/cv/' | relative_url }}#Projects">research projects</a>.</p>
+    {% else %}
+      <h2 id="group-research">科研成果</h2>
+      <p>已有成果可参阅<a href="{{ '/cv/' | relative_url }}#Publications">论文列表</a>与<a href="{{ '/cv/' | relative_url }}#Projects">科研项目</a>。</p>
+    {% endif %}
+  </section>
+{% endif %}

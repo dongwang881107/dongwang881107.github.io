@@ -1,0 +1,11 @@
+<ol>
+  {% for item in include.items %}
+    <li>
+      <span lang="en">{{ item.citation }}</span>
+      {%- if item.paper %} <a href="{{ item.paper | escape }}">{% if include.english %}Paper{% else %}论文{% endif %}</a>{% endif -%}
+      {%- if item.abstract %} <a href="{{ item.abstract | escape }}">{% if include.english %}Abstract{% else %}摘要{% endif %}</a>{% endif -%}
+      {%- if item.code %} <a href="{{ item.code | escape }}">{% if include.english %}Code{% else %}代码{% endif %}</a>{% endif -%}
+      {%- if item.supplement %} <a href="{{ item.supplement | escape }}">{% if include.english %}Supplement{% else %}补充材料{% endif %}</a>{% endif %}
+    </li>
+  {% endfor %}
+</ol>

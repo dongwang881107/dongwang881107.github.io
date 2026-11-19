@@ -1,6 +1,6 @@
 # 王冬科研主页
 
-网站使用 GitHub Pages 支持的 Jekyll 生成静态页面。共用导航在 `_data/navigation.yml`，页面外壳和文章模板在 `_layouts/`，站点样式在 `style.css`。
+网站使用 GitHub Pages 支持的 Jekyll 生成静态页面。共用导航在 `_data/navigation.yml`，双语首页文案在 `_data/home.yml`，公开联系方式和代表成果在 `_data/profile.yml`。页面模板在 `_layouts/`，站点样式在 `style.css`。
 
 ## 本地预览
 
@@ -17,8 +17,8 @@ bundle exec jekyll serve
 
 | 栏目 | 从哪里更新 | 详情地址 |
 | --- | --- | --- |
-| 科研首页 | `index.html` | `/` |
-| 英文简历 | `cv/index.html` | `/cv/` |
+| 科研首页 | `_data/home.yml`、`_data/profile.yml` | `/`、`/en/` |
+| 个人简历 | `_data/cv.yml` | `/cv/`、`/en/cv/` |
 | 课题组动态 | `_group_updates/<slug>.md` | `/group/updates/<slug>/` |
 | 文献日报 | `_literature/YYYY-MM-DD.md` | `/literature/YYYY-MM-DD/` |
 | CCF 会议追踪 | `_conference_editions/<series>/<year>.md` | `/conferences/<series>/<year>/` |
@@ -28,4 +28,6 @@ bundle exec jekyll serve
 
 只将可公开的条目放进本仓库。`sample: true` 会标注预览样例并为详情页添加 `noindex`。预览样例的内容仍会生成可访问的页面。
 
-旧首页的八个履历锚点由 `_data/legacy_sections.yml` 映射到英文简历。保留简历中的对应 ID 和历史报告路径。
+中文版沿用现有路径，英文版位于 `/en/` 下。写英文条目时设置 `lang: en` 和以 `/en/` 开头的 `permalink`。有对应译文时，两条记录的 `alternate_url` 互指。语言设置与日间／夜间模式保存在访问者的浏览器中。
+
+旧首页的八个履历锚点由 `_data/legacy_sections.yml` 映射到中文版简历。保留两个简历页面中的对应 ID 和历史报告路径。

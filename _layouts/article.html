@@ -5,14 +5,14 @@ layout: default
 <article class="article-page">
   <header class="page-header">
     {% if section_link %}
-      <p class="breadcrumbs"><a href="{{ section_link.url | relative_url }}">{{ section_link.label | escape }}</a></p>
+      <p class="breadcrumbs"><a href="{% if page.lang == 'en' %}{{ section_link.url | prepend: '/en' | relative_url }}{% else %}{{ section_link.url | relative_url }}{% endif %}">{% if page.lang == 'en' %}{{ section_link.label_en | escape }}{% else %}{{ section_link.label | escape }}{% endif %}</a></p>
     {% endif %}
     <h1>{{ page.title | escape }}</h1>
     {% if page.summary %}<p>{{ page.summary | escape }}</p>{% endif %}
     {% if page.date or page.sample or page.topics %}
       <div class="article-meta">
         {% if page.date %}<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y-%m-%d' }}</time>{% endif %}
-        {% if page.sample %}<span class="label">预览样例</span>{% endif %}
+        {% if page.sample %}<span class="label">{% if page.lang == 'en' %}Sample issue{% else %}预览样例{% endif %}</span>{% endif %}
         {% for topic in page.topics %}<span class="label">{{ topic | escape }}</span>{% endfor %}
       </div>
     {% endif %}

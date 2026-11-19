@@ -1,0 +1,44 @@
+zh-CN:
+  conferences:
+    editions: 会议届次
+    verified: 最后核对于
+    schedule: 会议日程
+    empty: 公开日程正在整理。每个会议条目将附上官方来源、时区与最后核对日期。
+  knowledge:
+    other_notes: 其他笔记
+    updated: 更新于
+    planned_topics: 拟收录主题
+    topics:
+      - title: 电阻抗成像（EIT）
+        description: 正问题与测量模型、灵敏度、重建与误差分析。
+      - title: 逆问题与正则化
+        description: 病态性与可辨识性、正则化模型、数值求解。
+      - title: 医学影像重建
+        description: CT、MRI 和 PET 的成像模型与重建方法。
+  literature:
+    latest: 最新一期
+    archive: 往期归档
+    empty: 暂无已发布的文献日报。
+    sample: 试刊
+en:
+  conferences:
+    editions: Conference editions
+    verified: Last verified
+    schedule: Conference Schedule
+    empty: The schedule is being compiled. Each entry will include its official source, time zone, and last verification date.
+  knowledge:
+    other_notes: Other Notes
+    updated: Updated
+    planned_topics: Planned Topics
+    topics:
+      - title: Electrical Impedance Tomography (EIT)
+        description: Forward problems, measurement models, sensitivity, reconstruction, and error analysis.
+      - title: Inverse Problems and Regularization
+        description: Ill-posedness, identifiability, regularization models, and numerical methods.
+      - title: Medical Image Reconstruction
+        description: Imaging models and reconstruction methods for CT, MRI, and PET.
+  literature:
+    latest: Latest Issue
+    archive: Past Issues
+    empty: No issues have been published yet.
+    sample: Sample issue

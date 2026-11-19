@@ -1,21 +1,30 @@
 - id: home
   label: 首页
+  label_en: Home
   url: /
 - id: cv
   label: 个人简历
+  label_en: CV
   url: /cv/
 - id: group
   label: 课题组
+  label_en: Group
   url: /group/
 - id: literature
   label: 文献日报
+  label_en: Literature Digest
   url: /literature/
   summary: 医学成像与逆问题方向的文献精选
+  summary_en: Selected papers on medical imaging and inverse problems
 - id: conferences
   label: CCF 会议追踪
+  label_en: CCF Conferences
   url: /conferences/
   summary: 会议届次、投稿节点与官方来源
+  summary_en: Conference editions, deadlines, and official sources
 - id: knowledge
   label: 知识库
+  label_en: Knowledge Base
   url: /knowledge/
   summary: 电阻抗成像、逆问题与医学影像重建
+  summary_en: Electrical impedance tomography, inverse problems, and image reconstruction

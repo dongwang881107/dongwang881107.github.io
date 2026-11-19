@@ -1,0 +1,23 @@
+{% include section-heading.html %}
+{% assign copy = site.data.archive_labels[page.lang].conferences %}
+
+{% assign editions = site.conference_editions | where: 'lang', page.lang | sort: 'date' %}
+{% if editions.size > 0 %}
+  <ul class="archive-list" aria-label="{{ copy.editions | escape }}">
+    {% for edition in editions %}
+      <li class="archive-item">
+        {% if edition.status %}<p class="muted">{{ edition.status | escape }}</p>{% endif %}
+        <h2><a href="{{ edition.url | relative_url }}">{{ edition.title | escape }}</a></h2>
+        {% if edition.next_milestone %}<p>{{ edition.next_milestone | escape }}</p>{% endif %}
+        {% if edition.last_verified %}
+          <p class="muted">{{ copy.verified | escape }} <time datetime="{{ edition.last_verified | date: '%Y-%m-%d' }}">{{ edition.last_verified | date: '%Y-%m-%d' }}</time></p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <section class="content-section" aria-labelledby="conference-agenda">
+    <h2 id="conference-agenda">{{ copy.schedule | escape }}</h2>
+    <p>{{ copy.empty | escape }}</p>
+  </section>
+{% endif %}

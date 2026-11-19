@@ -1,0 +1,43 @@
+zh:
+  field: 医学成像 · 反问题 · 科学计算
+  intro: 我的研究聚焦医学成像与分析中的数学模型和算法，结合压缩感知、反问题和深度学习，研究 MRI、CT、PET 和 EIT 的图像重建与分析。
+  cv: 个人简历
+  research_heading: 研究方向
+  resources_heading: 研究资料
+  publications_heading: 代表成果
+  publications_link: 查看论文列表
+  group_heading: 课题组动态
+  group_link: 打开栏目
+  group_empty: 首批动态整理中。
+  sample: 预览样例
+  background_heading: 学术经历
+  background: 获南京理工大学控制科学与工程博士学位，曾在东南大学数学学院与丘成桐中心担任至善博士后，并在南京应用数学中心从事科研。主持的国家自然科学基金青年科学基金项目聚焦低剂量 PET 重建与病灶识别，已于 2025 年 12 月结题。
+  research:
+    - title: 电阻抗成像与反问题
+      description: 研究电导率成像中的测量建模、数据利用与绝对重建。
+    - title: 医学影像重建
+      description: 研究低剂量 PET/CT、快速 MRI 等成像任务中的模型、正则化与数值求解。
+    - title: 医学影像分析
+      description: 将数学模型与深度学习应用于影像分割、配准、融合与生成。
+
+en:
+  field: Medical Imaging · Inverse Problems · Scientific Computing
+  intro: I develop mathematical models and algorithms for medical imaging and analysis. My work combines compressed sensing, inverse problems, and deep learning for image reconstruction and analysis in MRI, CT, PET, and EIT.
+  cv: Curriculum Vitae
+  research_heading: Research
+  resources_heading: Research Resources
+  publications_heading: Selected Publications
+  publications_link: View publications
+  group_heading: Group Updates
+  group_link: View updates
+  group_empty: The first updates are in preparation.
+  sample: Sample issue
+  background_heading: Academic Background
+  background: I received my Ph.D. in Control Science and Engineering from Nanjing University of Science and Technology. I was a Zhishan Postdoctoral Fellow at Southeast University’s School of Mathematics and S. T. Yau Center and conducted research at the Nanjing Center for Applied Mathematics. My NSFC Young Scientists Fund project on low-dose PET reconstruction and lesion recognition was completed in December 2025.
+  research:
+    - title: Electrical Impedance Tomography and Inverse Problems
+      description: Measurement models, use of measurement data, and absolute conductivity reconstruction.
+    - title: Medical Image Reconstruction
+      description: Modeling, regularization, and numerical methods for low-dose PET/CT and fast MRI.
+    - title: Medical Image Analysis
+      description: Mathematical modeling and deep learning for segmentation, registration, fusion, and generation.

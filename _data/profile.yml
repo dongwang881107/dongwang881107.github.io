@@ -1,0 +1,18 @@
+institution: 南京中医药大学
+institution_en: Nanjing University of Chinese Medicine
+emails:
+  - dongwang@njucm.edu.cn
+  - dongwang881107@gmail.com
+publications:
+  - title: Spatially adaptive oscillation total generalized variation for image restoration with structured textures
+    journal: Applied Mathematical Modelling
+    year: 2025
+    doi: https://doi.org/10.1016/j.apm.2024.115784
+  - title: M³S-Net for Low-Dose PET/CT Reconstruction
+    journal: Physics in Medicine & Biology
+    year: 2024
+    doi: https://doi.org/10.1088/1361-6560/ad14c5
+  - title: Dynamic MR Image Reconstruction Using TGV and Low-Rank Decomposition
+    journal: Magnetic Resonance in Medicine
+    year: 2020
+    doi: https://doi.org/10.1002/mrm.28064

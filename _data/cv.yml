@@ -1,0 +1,253 @@
+heading:
+  zh-CN: 个人简历
+  en: Curriculum Vitae
+subtitle:
+  zh-CN: 医学成像、反问题与科学计算
+  en: Medical imaging, inverse problems, and scientific computing
+sections:
+  - id: Employment
+    label: { zh-CN: 工作经历, en: Appointments }
+  - id: Education
+    label: { zh-CN: 教育背景, en: Education }
+  - id: Research
+    label: { zh-CN: 研究方向, en: Research }
+  - id: Projects
+    label: { zh-CN: 科研项目, en: Projects }
+  - id: Publications
+    label: { zh-CN: 学术论文, en: Publications }
+  - id: Patents
+    label: { zh-CN: 发明专利, en: Patents }
+  - id: Talks
+    label: { zh-CN: 学术报告, en: Talks }
+  - id: Awards
+    label: { zh-CN: 荣誉与奖项, en: Honors }
+appointments:
+  - institution: { zh-CN: 南京中医药大学, en: Nanjing University of Chinese Medicine }
+    dates: { zh-CN: 2026.11 至今, en: November 2026–present }
+  - institution: { zh-CN: 南京应用数学中心, en: Nanjing Center for Applied Mathematics }
+    role: { zh-CN: 助理研究员, en: Assistant Research Fellow }
+    unit: { zh-CN: 大规模科学计算和介质成像课题组, en: Large-Scale Scientific Computing and Media Imaging Group }
+    dates:
+      zh-CN: 2023.12 起（2026 年 8 月简历记录在任）
+      en: Since December 2023 (ongoing as of August 2026)
+  - institution: { zh-CN: 南京应用数学中心, en: Nanjing Center for Applied Mathematics }
+    role: { zh-CN: 访问学者, en: Visiting Scholar }
+    unit: { zh-CN: 大规模科学计算和介质成像课题组, en: Large-Scale Scientific Computing and Media Imaging Group }
+    dates: { zh-CN: 2023.08–2023.11, en: August–November 2023 }
+  - institution: { zh-CN: 东南大学, en: Southeast University }
+    role: { zh-CN: 至善博士后（出站考核优秀）, en: Zhishan Postdoctoral Fellow (rated excellent on completion) }
+    unit:
+      zh-CN: 数学学院、丘成桐中心，合作导师刘继军教授
+      en: School of Mathematics and S.T. Yau Center. Supervisor Prof. Jijun Liu.
+    dates: { zh-CN: 2020.08–2023.07, en: August 2020–July 2023 }
+  - institution: { zh-CN: 南京应用数学中心, en: Nanjing Center for Applied Mathematics }
+    role: { zh-CN: 兼职博士后, en: Part-time Postdoctoral Fellow }
+    unit: { zh-CN: 大规模科学计算和介质成像课题组, en: Large-Scale Scientific Computing and Media Imaging Group }
+    dates: { zh-CN: 2020.08–2023.07, en: August 2020–July 2023 }
+education:
+  - title:
+      zh-CN: 控制科学与工程博士（硕博连读）
+      en: Ph.D. in Control Science and Engineering (integrated master’s and doctoral program)
+    details:
+      zh-CN: 南京理工大学理学院，导师杨孝平教授。
+      en: School of Science, Nanjing University of Science and Technology. Supervisor Prof. Xiaoping Yang.
+    dates: { zh-CN: 2011.09–2020.01, en: September 2011–January 2020 }
+  - title: { zh-CN: 国家留学基金委联合培养博士生, en: China Scholarship Council Joint Ph.D. Student }
+    details:
+      zh-CN: 美国范德比尔特大学数学与成像相关院系，导师 Akram Aldroubi 教授、David Smith 教授。
+      en: Vanderbilt University, in mathematics and imaging. Supervisors Prof. Akram Aldroubi and Prof. David Smith.
+    dates: { zh-CN: 2013.10–2014.10, en: October 2013–October 2014 }
+  - title: { zh-CN: 数学与应用数学学士, en: B.S. in Applied Mathematics }
+    details:
+      zh-CN: 南京理工大学理学院。
+      en: School of Science, Nanjing University of Science and Technology.
+    dates: { zh-CN: 2007.09–2011.06, en: September 2007–June 2011 }
+research:
+  intro:
+    zh-CN: 研究医学成像与分析中的数学理论、模型和算法，重点关注反问题、压缩感知、变分正则化与深度学习。
+    en: I develop mathematical models and computational methods for medical imaging and analysis, focusing on inverse problems, compressed sensing, variational regularization, and deep learning.
+  topics:
+    - zh-CN: MRI、CT 与核医学（PET、SPECT）图像重建。
+      en: Image reconstruction for MRI, CT, and nuclear medicine (PET and SPECT).
+    - zh-CN: 电阻抗成像与电导率重建。
+      en: Electrical impedance tomography and conductivity reconstruction.
+    - zh-CN: 医学图像分割、配准、融合与生成。
+      en: Medical image segmentation, registration, fusion, and generation.
+    - zh-CN: 面向医学成像的科学计算、并行编程与科研软件。
+      en: Scientific computing, parallel programming, and research software for medical imaging.
+projects:
+  - title:
+      zh-CN: 基于变分正则化的低剂量 PET 智能重建和病灶识别模型与算法
+      en: Variational methods for low-dose PET reconstruction and lesion recognition
+    details:
+      zh-CN: 主持 · 国家自然科学基金青年项目（12201109） · 2023.01–2025.12 · 已结题
+      en: Principal investigator · National Natural Science Foundation of China (12201109) · January 2023–December 2025 · Completed
+  - title:
+      zh-CN: 胰胆恶性肿瘤精准诊疗的数学理论和算法
+      en: Mathematical methods for precise diagnosis and treatment of pancreaticobiliary malignancies
+    details:
+      zh-CN: 参与 · 国家重点研发计划（2020YFA0713800） · 2020.12–2025.11 · 已结题
+      en: Core investigator · National Key Research and Development Program (2020YFA0713800) · December 2020–November 2025 · Completed
+  - title:
+      zh-CN: 大气数据同化的高效数值算法及数学理论分析
+      en: Numerical algorithms and mathematical analysis for atmospheric data assimilation
+    details:
+      zh-CN: 参与 · 国家自然科学基金专项基金（12241102） · 2023.01–2026.12
+      en: Core investigator · National Natural Science Foundation of China (12241102) · January 2023–December 2026
+  - title:
+      zh-CN: 基于眼动与 fMRI 的 A-SCD 空间导航神经环路研究
+      en: Spatial navigation circuits in A-SCD studied with eye tracking and fMRI
+    details:
+      zh-CN: 参与 · 国家自然科学基金面上项目（82271965） · 2023.01–2026.12
+      en: Core investigator · National Natural Science Foundation of China (82271965) · January 2023–December 2026
+  - title:
+      zh-CN: 多起源兴奋传导建模及其在心电图成像中的应用
+      en: Modeling multi-origin excitation conduction for ECG imaging
+    details:
+      zh-CN: 参与 · 国家自然科学基金面上项目（12271094） · 2023.01–2026.12
+      en: Core investigator · National Natural Science Foundation of China (12271094) · January 2023–December 2026
+  - title:
+      zh-CN: 高阶非线性偏微分方程图像模型及其基础算法
+      en: Image models and algorithms based on high-order nonlinear partial differential equations
+    details:
+      zh-CN: 参与 · 国家自然科学基金重大研究计划培育项目（91330101） · 2014.01–2016.12 · 已结题
+      en: Core investigator · National Natural Science Foundation of China (91330101) · January 2014–December 2016 · Completed
+  - title:
+      zh-CN: 面向快速定量 MRI 的变分与稀疏表示方法
+      en: Variational and sparse-representation methods for fast quantitative MRI
+    details:
+      zh-CN: 博士研究 · 2014.01–2019.12
+      en: Doctoral research · January 2014–December 2019
+publications:
+  journals:
+    - citation: >-
+        Yanan Gu, Chenchen Liu, Qing Li, Yingxu Qiao, Fenglu Zhu, and <strong>Dong Wang*</strong>. BRFNet: Bandwise Rectangle Attention Fusion Network for Image Dehazing. <cite>Circuits, Systems, and Signal Processing</cite>, 2026, 45, 6753–6777.
+      paper: https://doi.org/10.1007/s00034-026-03504-7
+    - citation: >-
+        Yiming Gao, Luying Gui, and <strong>Dong Wang*</strong>. Spatially adaptive oscillation total generalized variation for image restoration with structured textures. <cite>Applied Mathematical Modelling</cite>, 2025, 138, 115784.
+      paper: https://doi.org/10.1016/j.apm.2024.115784
+    - citation: >-
+        Jing Chen, Xin Fan, Qiao-Liang Chen, Wei Ren, Qi Li, <strong>Dong Wang*</strong>, and Jian He*. Research status and progress of deep learning in automatic esophageal cancer detection. <cite>World Journal of Gastrointestinal Oncology</cite>, 2025, 17(5), 104410.
+      paper: https://doi.org/10.4251/wjgo.v17.i5.104410
+    - citation: >-
+        Heming Chen, <strong>Dong Wang</strong>, Jiayi Li, Qingqiang Yao, Nicola Pugno, Zhiyong Li, and Qiang Chen*. A simple projection method to correlate the principal mechanical direction with the principal microstructural direction of human osteoporotic femoral heads. <cite>Medical &amp; Biological Engineering &amp; Computing</cite>, 2024.
+      paper: https://doi.org/10.1007/s11517-024-03162-4
+    - citation: >-
+        Yanan Gu, Yiming Gao, <strong>Dong Wang</strong>, Chunyang Wang, and Bibo Lu*. Low-Light Image Deraining Based on Higher Order Variational Model. <cite>Circuits, Systems, and Signal Processing</cite>, 2024, 43, 7714–7728.
+      paper: https://doi.org/10.1007/s00034-024-02762-7
+    - citation: >-
+        Weijia Hou, Liwen Zou, and <strong>Dong Wang*</strong>. Tumor Segmentation in Intraoperative Fluorescence Images Based on Transfer Learning and Convolutional Neural Networks. <cite>Surgical Innovation</cite>, 2024, 31(3), 291–306.
+      paper: https://doi.org/10.1177/15533506241246576
+    - citation: >-
+        <strong>Dong Wang</strong>, Chong Jiang, Yue Teng, Hourong Qin, Jijun Liu, and Xiaoping Yang*. M<sup>3</sup>S-Net: Multi-Modality Multi-Branch Multi-Self-Attention Network with Structure-Promoting Loss for Low-Dose PET/CT Reconstruction. <cite>Physics in Medicine &amp; Biology</cite>, 2024, 69, 025001.
+      paper: https://doi.org/10.1088/1361-6560/ad14c5
+      code: https://github.com/dongwang881107/DeepPETCT
+    - citation: >-
+        Yanan Gu, Ruyi Cao, <strong>Dong Wang</strong>, and Bibo Lu*. CMP-UNet: A Retinal Vessel Segmentation Network Based on Multi-Scale Feature Fusion. <cite>Electronics</cite>, 2023, 12(23), 4743.
+      paper: https://doi.org/10.3390/electronics12234743
+    - citation: >-
+        Yanan Gu, Yiming Gao, Hairong Liu, and <strong>Dong Wang*</strong>. Multi-Directional Rain Streak Removal Based on Infimal Convolution of Oscillation TGV. <cite>Neurocomputing</cite>, 2022, 486, 61–76.
+      paper: https://doi.org/10.1016/j.neucom.2022.02.059
+      code: https://github.com/dongwang881107/ICTGV_deraining
+    - citation: >-
+        <strong>Dong Wang</strong>, David S. Smith, and Xiaoping Yang*. Dynamic MR Image Reconstruction using TGV and Low-Rank Decomposition. <cite>Magnetic Resonance in Medicine</cite>, 2020, 83(6), 2064–2076.
+      paper: https://doi.org/10.1002/mrm.28064
+      code: https://github.com/dongwang881107/tgvnn
+      supplement: https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fmrm.28064&file=mrm28064-sup-0001-FigS1-S2.pdf
+    - citation: >-
+        <strong>Dong Wang*</strong>, Jason Ostenson, and David S. Smith. snapMRF: GPU-Accelerated Magnetic Resonance Fingerprinting Dictionary Generation and Matching using Extended Phase Graphs. <cite>Magnetic Resonance Imaging</cite>, 2020, 66, 248–256.
+      paper: https://doi.org/10.1016/j.mri.2019.11.015
+      code: https://github.com/dongwang881107/snapMRF
+    - citation: >-
+        <strong>Dong Wang*</strong>, Lori R. Arlinghaus, Thomas E. Yankeelov, and David S. Smith. Quantitative Evaluation of Temporal Regularizers in Compressed Sensing Dynamic Contrast Enhanced MRI of the Breast. <cite>International Journal of Biomedical Imaging</cite>, 2017, 1–11.
+      paper: https://doi.org/10.1155/2017/7835749
+      code: https://github.com/dongwang881107/qetsr
+  conferences:
+    - citation: >-
+        <strong>Dong Wang</strong>, Lori R. Arlinghaus, Thomas E. Yankeelov, and David S. Smith. Quantitative Evaluation of Temporal Sparse Regularizers for Compressed Sensing Breast DCE-MRI. <cite>Proceedings of the 25th Annual Meeting of ISMRM</cite>, Honolulu, 2017.
+      abstract: https://ismrm.gitlab.io/2017/1428.html
+  manuscripts:
+    - citation: >-
+        Heming Chen, <strong>Dong Wang</strong>, Jiayi Li, Qingqiang Yao, Nicola Pugno, Zhiyong Li, and Qiang Chen*. Match analysis of the primary microstructural and mechanical directions of human osteoporotic femoral heads.
+    - citation: >-
+        <strong>Dong Wang</strong>, Qiang Zhang, and Jijun Liu*. On the Recovery of Conductivity in 3-Dimensional Medium by Neural Network Approximation.
+      code: https://github.com/dongwang881107/DeepEIT
+    - citation: >-
+        <strong>Dong Wang</strong>, Jian He, Qianqian Tan, and Jijun Liu*. Deep Progressive Learning for Medical Imaging.
+    - citation: >-
+        <strong>Dong Wang</strong>, Liyan Wang, and Jijun Liu*. Deep Texture Learning for Dynamic MR Reconstruction.
+patents:
+  - title:
+      zh-CN: 基于压缩感知的线圈敏感度和磁共振图像联合重建方法
+      en: Joint reconstruction of coil sensitivities and MR images using compressed sensing
+    inventors:
+      zh-CN: 丘成桐、刘继军、王丽艳、王冬
+      en: Shing-Tung Yau, Jijun Liu, Liyan Wang, and Dong Wang
+    status: { zh-CN: 2023 年申请, en: Filed in 2023 }
+  - title:
+      zh-CN: 基于两点梯度迭代方法的声电断层扫描成像算法
+      en: Acousto-electric tomography imaging algorithm using two-point gradient iteration
+    inventors:
+      zh-CN: 丘成桐、刘继军、钟敏、王冬
+      en: Shing-Tung Yau, Jijun Liu, Min Zhong, and Dong Wang
+    status: { zh-CN: 2024 年授权 · ZL202311836633.1, en: Granted in 2024 · ZL202311836633.1 }
+  - title:
+      zh-CN: 基于多模态结构相似度神经网络的低剂量 PET/CT 重建方法
+      en: Low-dose PET/CT reconstruction with a multimodal structural-similarity neural network
+    inventors:
+      zh-CN: 丘成桐、刘继军、王冬、王丽艳
+      en: Shing-Tung Yau, Jijun Liu, Dong Wang, and Liyan Wang
+    status: { zh-CN: 2023 年授权 · ZL202211366435.9, en: Granted in 2023 · ZL202211366435.9 }
+  - title:
+      zh-CN: 基于背景低秩和多方向纹理稀疏的动态磁共振图像重建方法
+      en: Dynamic MR image reconstruction using a low-rank background and multidirectional texture sparsity
+    inventors:
+      zh-CN: 丘成桐、刘继军、王冬、王丽艳
+      en: Shing-Tung Yau, Jijun Liu, Dong Wang, and Liyan Wang
+    status: { zh-CN: 2022 年授权 · ZL202210065873.5, en: Granted in 2022 · ZL202210065873.5 }
+talks:
+  - title: { zh-CN: 医学成像：模型驱动与数据驱动, en: "Medical Imaging: Model-Driven vs. Data-Driven" }
+    details:
+      zh-CN: 数学科学前沿大会，三亚，2022 年 12 月。
+      en: Frontiers in Mathematical Science, TSIMF, Sanya, December 2022.
+  - title:
+      zh-CN: 胰胆多模态医学影像数据库建设和高精度成像中的进展与问题
+      en: Progress and challenges in multimodal pancreaticobiliary imaging
+    details:
+      zh-CN: 智能诊断与精准影像分析研讨会，南京鼓楼医院，2022 年 1 月。
+      en: Symposium on Intelligent Diagnosis and Accurate Image Analysis, Nanjing Drum Tower Hospital, January 2022.
+    slides: /talk/胰胆多模态医学影像数据库建设和高精度成像中的进展与问题.pptx
+    format: PPTX
+  - title:
+      zh-CN: 基于广义全变分和低秩分解的动态 MR 图像重建
+      en: Dynamic MR image reconstruction using TGV and low-rank decomposition
+    details:
+      zh-CN: 中国工业与应用数学学会第十九届年会，合肥，2021 年 10 月。
+      en: 19th Annual Meeting of CSIAM, Hefei, October 2021.
+    slides: /talk/基于广义全变分和低秩分解的动态MR图像重建.pdf
+    format: PDF
+  - title:
+      zh-CN: 江苏国家应用数学中心医学影像数据平台建设
+      en: Building a medical imaging platform at the Jiangsu National Center of Applied Mathematics
+    details:
+      zh-CN: 精准影像分析与智能诊断研讨会，南京大学，2021 年 5 月。
+      en: Symposium on Accurate Image Analysis for Intelligent Diagnosis, Nanjing University, May 2021.
+    slides: /talk/江苏国家应用数学中心医学影像数据平台建设.pptx
+    format: PPTX
+  - title:
+      zh-CN: 基于广义全变分和低秩分解的动态 MR 图像重建
+      en: Dynamic MR image reconstruction using TGV and low-rank decomposition
+    details:
+      zh-CN: 全国计算数学青年论坛，南开大学，天津，2020 年 8 月。
+      en: Young Scholars Forum of National Computational Mathematics, Nankai University, Tianjin, August 2020.
+    slides: /talk/基于广义全变分和低秩分解的动态MR图像重建.pdf
+    format: PDF
+awards:
+  - zh-CN: 东南大学至善博士后 · 2021–2023
+    en: Zhishan Postdoctoral Fellowship, Southeast University · 2021–2023
+  - zh-CN: 南京理工大学优秀博士生奖学金 · 2013–2016
+    en: Outstanding Doctoral Student Scholarship, Nanjing University of Science and Technology · 2013–2016
+  - zh-CN: 中国留学基金委联合培养博士生奖学金 · 2013–2014
+    en: China Scholarship Council Joint Ph.D. Scholarship · 2013–2014
+  - zh-CN: 南京理工大学优秀本科毕业生 · 2011
+    en: Outstanding Undergraduate Graduate, Nanjing University of Science and Technology · 2011

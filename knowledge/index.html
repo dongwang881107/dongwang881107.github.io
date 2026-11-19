@@ -4,48 +4,7 @@ title: 知识库
 description: 医学成像、逆问题与数值计算的主题笔记。
 section: knowledge
 permalink: /knowledge/
+alternate_url: /en/knowledge/
 lang: zh-CN
 ---
-<header class="page-header">
-  <h1>{{ page.title }}</h1>
-  <p class="muted">{{ page.description }}</p>
-</header>
-
-{% assign notes = site.knowledge_notes | sort: "title" %}
-{% if notes.size > 0 %}
-  {% assign topics = notes | group_by: "topic" | sort: "name" %}
-  {% for topic in topics %}
-  <section class="content-section">
-    <h2>{{ topic.name | default: "其他笔记" | escape }}</h2>
-    <ul class="archive-list">
-      {% for note in topic.items %}
-      <li class="archive-item">
-        <h3><a href="{{ note.url | relative_url }}">{{ note.title | escape }}</a></h3>
-        {% if note.summary %}<p>{{ note.summary | escape }}</p>{% endif %}
-        {% if note.updated %}
-        <p class="muted">更新于 <time datetime="{{ note.updated | date: '%Y-%m-%d' }}">{{ note.updated | date: '%Y-%m-%d' }}</time></p>
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-  {% endfor %}
-{% else %}
-<section class="content-section" aria-labelledby="knowledge-topics">
-  <h2 id="knowledge-topics">拟收录主题</h2>
-  <ul class="archive-list">
-    <li class="archive-item">
-      <h3>电阻抗成像（EIT）</h3>
-      <p>正问题与测量模型、灵敏度、重建与误差分析。</p>
-    </li>
-    <li class="archive-item">
-      <h3>逆问题与正则化</h3>
-      <p>病态性与可辨识性、正则化模型、数值求解。</p>
-    </li>
-    <li class="archive-item">
-      <h3>医学影像重建</h3>
-      <p>CT、MRI 和 PET 的成像模型与重建方法。</p>
-    </li>
-  </ul>
-</section>
-{% endif %}
+{% include knowledge-index.html %}

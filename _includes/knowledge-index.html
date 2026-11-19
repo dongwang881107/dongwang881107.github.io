@@ -1,0 +1,35 @@
+{% include section-heading.html %}
+{% assign copy = site.data.archive_labels[page.lang].knowledge %}
+
+{% assign notes = site.knowledge_notes | where: 'lang', page.lang | sort: 'title' %}
+{% if notes.size > 0 %}
+  {% assign topics = notes | group_by: 'topic' | sort: 'name' %}
+  {% for topic in topics %}
+    <section class="content-section">
+      <h2>{{ topic.name | default: copy.other_notes | escape }}</h2>
+      <ul class="archive-list">
+        {% for note in topic.items %}
+          <li class="archive-item">
+            <h3><a href="{{ note.url | relative_url }}">{{ note.title | escape }}</a></h3>
+            {% if note.summary %}<p>{{ note.summary | escape }}</p>{% endif %}
+            {% if note.updated %}
+              <p class="muted">{{ copy.updated | escape }} <time datetime="{{ note.updated | date: '%Y-%m-%d' }}">{{ note.updated | date: '%Y-%m-%d' }}</time></p>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+{% else %}
+  <section class="content-section" aria-labelledby="knowledge-topics">
+    <h2 id="knowledge-topics">{{ copy.planned_topics | escape }}</h2>
+    <ul class="archive-list">
+      {% for topic in copy.topics %}
+        <li class="archive-item">
+          <h3>{{ topic.title | escape }}</h3>
+          <p>{{ topic.description | escape }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}
