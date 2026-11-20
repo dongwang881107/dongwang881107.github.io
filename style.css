@@ -340,7 +340,19 @@ a:hover { color: var(--accent-hover); }
 .prose code { font-size: .94em; }
 .prose pre { overflow-x: auto; padding: .7rem 1rem; background: var(--soft); }
 .literature-toc { display: flex; flex-wrap: wrap; gap: .35rem .9rem; margin-block: 1.1rem; padding: .6rem .85rem; background: var(--soft); }
-.literature-equation { margin-block: .8rem; padding: .65rem .85rem; background: var(--soft); font-family: var(--display); text-align: center; }
+.literature-math,
+.literature-equation,
+.literature-math math,
+.literature-equation math {
+  font-family: "Cambria Math", "STIX Two Math", "Latin Modern Math", "Libertinus Math", "DejaVu Math TeX Gyre", math, serif;
+}
+.literature-equation { margin-block: .8rem; padding: .65rem .85rem; overflow-x: auto; background: var(--soft); text-align: center; }
+.literature-equation math + math { margin-block-start: .35rem; }
+.literature-results { width: 100%; margin-block: .85rem; border-collapse: collapse; font-size: .92rem; font-variant-numeric: tabular-nums; }
+.literature-results th, .literature-results td { padding: .45rem .4rem; border-block-end: 1px solid var(--line); }
+.literature-results th:not(:first-child), .literature-results td:not(:first-child) { white-space: nowrap; }
+.literature-results thead { background: var(--soft); }
+.literature-results th:first-child { text-align: start; }
 .literature-figure { margin-block: 1.35rem; }
 .literature-figure img { max-inline-size: 100%; inline-size: 100%; block-size: auto; border: 1px solid var(--line); }
 .literature-figure figcaption { margin-block-start: .45rem; color: var(--muted); font-size: .88rem; line-height: 1.55; }
