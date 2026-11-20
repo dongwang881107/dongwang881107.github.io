@@ -1,0 +1,115 @@
+{% assign schedule_data = include.schedule %}
+{% assign schedule_copy = include.copy %}
+{% assign schedule_categories = 'submission,decision,conference' | split: ',' %}
+<section class="conference-schedule" id="conference-schedule" data-conference-view aria-labelledby="conference-schedule-heading">
+  <h2 class="conference-view-heading" id="conference-schedule-heading" tabindex="-1">{{ schedule_copy.views.upcoming | escape }}</h2>
+  <nav class="conference-schedule-tabs" aria-label="{{ schedule_copy.views.schedule_browse | escape }}">
+    {% for key in schedule_categories %}
+      {% assign count = schedule_data.events | where: 'kind', key | size %}
+      <a href="#conference-{{ key }}" data-conference-category-link>
+        <span>{{ schedule_copy.categories[key] | escape }}</span> <span class="conference-count">{{ count }}</span>
+      </a>
+    {% endfor %}
+    {% if schedule_data.pending.size > 0 %}
+      <a href="#conference-pending" data-conference-category-link>
+        <span>{{ schedule_copy.views.pending_short | escape }}</span> <span class="conference-count">{{ schedule_data.pending.size }}</span>
+      </a>
+    {% endif %}
+  </nav>
+
+  <dl class="conference-snapshot">
+    <div>
+      <dt>{{ schedule_copy.window | escape }}</dt>
+      <dd>
+        <time datetime="{{ schedule_data.as_of | escape }}">{{ schedule_data.as_of | escape }}</time>
+        {{ schedule_copy.date_separator | escape }}
+        <time datetime="{{ schedule_data.through | escape }}">{{ schedule_data.through | escape }}</time>
+      </dd>
+    </div>
+    <div>
+      <dt>{{ schedule_copy.snapshot | escape }}</dt>
+      <dd><time datetime="{{ schedule_data.verified_as_of | escape }}">{{ schedule_data.verified_as_of | escape }}</time></dd>
+    </div>
+  </dl>
+  <p class="conference-date-note">{{ schedule_copy.date_note | escape }}</p>
+
+  {% for key in schedule_categories %}
+    {% assign events = schedule_data.events | where: 'kind', key %}
+    <section class="conference-category" id="conference-{{ key }}" data-conference-category aria-labelledby="conference-heading-{{ key }}">
+      <h3 class="conference-category-heading" id="conference-heading-{{ key }}" tabindex="-1">{{ schedule_copy.categories[key] | escape }}</h3>
+      {% if events.size > 0 %}
+        <ul class="conference-events">
+          {% for event in events %}
+            {% if page.lang == 'en' %}
+              {% assign event_label = event.label_en %}
+            {% else %}
+              {% assign event_label = event.label_zh %}
+            {% endif %}
+            <li class="conference-event">
+              <div class="conference-event-date">
+                {% if event.clock %}
+                  <time datetime="{{ event.start | escape }}T{{ event.clock | escape }}:00+08:00">{{ event.start | escape }} {{ event.clock | escape }}</time>
+                  <span class="conference-event-zone">{{ schedule_copy.beijing | escape }}</span>
+                  {% if event.original %}
+                    <span class="conference-event-original">
+                      {{ schedule_copy.original_time | escape }} {{ event.original.date | escape }} {{ event.original.clock | escape }}
+                      {% if event.original.timezone == 'UTC-12:00' %}{{ schedule_copy.aoe | escape }}{% else %}{{ event.original.timezone | escape }}{% endif %}
+                    </span>
+                  {% endif %}
+                {% else %}
+                  <div class="conference-event-dates">
+                    <time datetime="{{ event.start | escape }}">{{ event.start | escape }}</time>
+                    {% if event.end %}
+                      {{ schedule_copy.date_separator | escape }}
+                      <time datetime="{{ event.end | escape }}">{{ event.end | escape }}</time>
+                    {% endif %}
+                  </div>
+                  <span class="conference-event-zone">
+                    {% if event.timezone == 'UTC-12:00' %}
+                      {{ schedule_copy.aoe_date | escape }}
+                    {% else %}
+                      {{ schedule_copy.official_date | escape }}{% if event.timezone %} · {{ event.timezone | escape }}{% endif %}
+                    {% endif %}
+                  </span>
+                {% endif %}
+              </div>
+              <div>
+                <h4 class="conference-event-title">{{ event.conference | escape }}{% if event.ccf %} <span class="conference-rank">CCF-{{ event.ccf | escape }}</span>{% endif %}</h4>
+                <p class="conference-event-label">{{ event_label | escape }}</p>
+              </div>
+              <div class="conference-event-source">
+                <a href="{{ event.source | escape }}" aria-label="{{ schedule_copy.official_source | escape }} · {{ event.conference | escape }} · {{ event_label | escape }}">{{ schedule_copy.official_source | escape }}</a>
+                {% if event.checked %}
+                  <span>{{ schedule_copy.checked | escape }} <time datetime="{{ event.checked | escape }}">{{ event.checked | escape }}</time></span>
+                {% endif %}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p class="muted">{{ schedule_copy.no_events | escape }}</p>
+      {% endif %}
+    </section>
+  {% endfor %}
+
+  {% if schedule_data.pending.size > 0 %}
+    <section class="conference-category conference-pending" id="conference-pending" data-conference-category aria-labelledby="conference-pending-heading">
+      <h3 class="conference-category-heading" id="conference-pending-heading" tabindex="-1">{{ schedule_copy.pending | escape }}</h3>
+      <ul class="conference-events">
+        {% for item in schedule_data.pending %}
+          <li class="conference-event">
+            <h4 class="conference-event-title">{{ item.conference | escape }}</h4>
+            <p class="conference-event-label">{% if page.lang == 'en' %}{{ item.label_en | escape }}{% else %}{{ item.label_zh | escape }}{% endif %}</p>
+            {% if item.source %}
+              <div class="conference-event-source">
+                <a href="{{ item.source | escape }}" aria-label="{{ schedule_copy.official_source | escape }} · {{ item.conference | escape }}">{{ schedule_copy.official_source | escape }}</a>
+              </div>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+
+  {% include conference-top-link.html label=schedule_copy.views.top %}
+</section>

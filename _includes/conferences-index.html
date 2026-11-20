@@ -1,136 +1,57 @@
-{% include section-heading.html %}
 {% assign copy = site.data.archive_labels[page.lang].conferences %}
 {% assign schedule = site.data.conference_schedule %}
 {% assign archive = site.data.conference_archive %}
-{% assign category_keys = 'submission,decision,conference' | split: ',' %}
+{% assign review = site.data.conference_review.languages[page.lang] %}
 
-{% assign editions = site.conference_editions | where: 'lang', page.lang | sort: 'date' %}
-{% if schedule %}
-  <div class="conference-schedule">
-    <nav class="conference-jump{% if archive.editions.size > 0 %} conference-jump-with-archive{% endif %}" aria-label="{{ copy.browse | escape }}">
-      {% for key in category_keys %}
-        {% assign count = schedule.events | where: 'kind', key | size %}
-        <a href="#conference-{{ key }}">{{ copy.categories[key] | escape }} <span class="conference-count">{{ count }}</span></a>
-      {% endfor %}
-      {% if archive.editions.size > 0 %}
-        <a href="#conference-archive">{{ copy.archive.heading | escape }} <span class="conference-count">{{ archive.editions.size }}</span></a>
-      {% endif %}
-    </nav>
+<div class="conference-tracker" data-conference-tracker>
+  <div id="conference-top" tabindex="-1">
+    {% include section-heading.html %}
+  </div>
 
-    <dl class="conference-snapshot">
-      <div>
-        <dt>{{ copy.window | escape }}</dt>
-        <dd>
-          <time datetime="{{ schedule.as_of | escape }}">{{ schedule.as_of | escape }}</time>
-          {{ copy.date_separator | escape }}
-          <time datetime="{{ schedule.through | escape }}">{{ schedule.through | escape }}</time>
-        </dd>
-      </div>
-      <div>
-        <dt>{{ copy.snapshot | escape }}</dt>
-        <dd><time datetime="{{ schedule.verified_as_of | escape }}">{{ schedule.verified_as_of | escape }}</time></dd>
-      </div>
-    </dl>
-    <p class="conference-date-note">{{ copy.date_note | escape }}</p>
+  <nav class="conference-view-nav" aria-label="{{ copy.browse | escape }}">
+    <a href="#conference-schedule" data-conference-view-link>{{ copy.views.upcoming | escape }}</a>
+    {% if archive.editions.size > 0 %}
+      <a href="#conference-papers" data-conference-view-link>{{ copy.views.papers | escape }}</a>
+      <a href="#conference-archive" data-conference-view-link>{{ copy.views.archive | escape }}</a>
+    {% endif %}
+    {% if review %}<a href="#conference-review" data-conference-view-link>{{ copy.views.review | escape }}</a>{% endif %}
+  </nav>
 
-    {% for key in category_keys %}
-      {% assign events = schedule.events | where: 'kind', key %}
-      <section class="conference-category" id="conference-{{ key }}" aria-labelledby="conference-heading-{{ key }}">
-        <h2 id="conference-heading-{{ key }}">{{ copy.categories[key] | escape }}</h2>
-        {% if events.size > 0 %}
-          <ul class="conference-events">
-            {% for event in events %}
-              {% if page.lang == 'en' %}
-                {% assign event_label = event.label_en %}
-              {% else %}
-                {% assign event_label = event.label_zh %}
-              {% endif %}
-              <li class="conference-event">
-                <div class="conference-event-date">
-                  {% if event.clock %}
-                    <time datetime="{{ event.start | escape }}T{{ event.clock | escape }}:00+08:00">{{ event.start | escape }} {{ event.clock | escape }}</time>
-                    <span class="conference-event-zone">{{ copy.beijing | escape }}</span>
-                    {% if event.original %}
-                      <span class="conference-event-original">
-                        {{ copy.original_time | escape }} {{ event.original.date | escape }} {{ event.original.clock | escape }}
-                        {% if event.original.timezone == 'UTC-12:00' %}{{ copy.aoe | escape }}{% else %}{{ event.original.timezone | escape }}{% endif %}
-                      </span>
-                    {% endif %}
-                  {% else %}
-                    <div class="conference-event-dates">
-                      <time datetime="{{ event.start | escape }}">{{ event.start | escape }}</time>
-                      {% if event.end %}
-                        {{ copy.date_separator | escape }}
-                        <time datetime="{{ event.end | escape }}">{{ event.end | escape }}</time>
-                      {% endif %}
-                    </div>
-                    <span class="conference-event-zone">
-                      {% if event.timezone == 'UTC-12:00' %}
-                        {{ copy.aoe_date | escape }}
-                      {% else %}
-                        {{ copy.official_date | escape }}{% if event.timezone %} · {{ event.timezone | escape }}{% endif %}
-                      {% endif %}
-                    </span>
-                  {% endif %}
-                </div>
-                <div>
-                  <h3>{{ event.conference | escape }}{% if event.ccf %} <span class="conference-rank">CCF-{{ event.ccf | escape }}</span>{% endif %}</h3>
-                  <p class="conference-event-label">{{ event_label | escape }}</p>
-                </div>
-                <div class="conference-event-source">
-                  <a href="{{ event.source | escape }}" aria-label="{{ copy.official_source | escape }} · {{ event.conference | escape }} · {{ event_label | escape }}">{{ copy.official_source | escape }}</a>
-                  {% if event.checked %}
-                    <span>{{ copy.checked | escape }} <time datetime="{{ event.checked | escape }}">{{ event.checked | escape }}</time></span>
-                  {% endif %}
-                </div>
-              </li>
-            {% endfor %}
-          </ul>
-        {% else %}
-          <p class="muted">{{ copy.no_events | escape }}</p>
-        {% endif %}
-      </section>
-    {% endfor %}
-
-    {% if schedule.pending.size > 0 %}
-      <section class="conference-category conference-pending" aria-labelledby="conference-pending-heading">
-        <h2 id="conference-pending-heading">{{ copy.pending | escape }}</h2>
-        <ul class="conference-events">
-          {% for item in schedule.pending %}
-            <li class="conference-event">
-              <h3>{{ item.conference | escape }}</h3>
-              <p class="conference-event-label">{% if page.lang == 'en' %}{{ item.label_en | escape }}{% else %}{{ item.label_zh | escape }}{% endif %}</p>
-              {% if item.source %}
-                <div class="conference-event-source">
-                  <a href="{{ item.source | escape }}" aria-label="{{ copy.official_source | escape }} · {{ item.conference | escape }}">{{ copy.official_source | escape }}</a>
-                </div>
+  {% if schedule %}
+    {% include conference-schedule.html schedule=schedule copy=copy %}
+  {% else %}
+    {% assign editions = site.conference_editions | where: 'lang', page.lang | sort: 'date' %}
+    <section class="conference-schedule" id="conference-schedule" aria-labelledby="conference-agenda" data-conference-view>
+      <h2 id="conference-agenda" class="conference-view-heading" tabindex="-1">{{ copy.schedule | escape }}</h2>
+      {% if editions.size > 0 %}
+        <ul class="archive-list" aria-label="{{ copy.editions | escape }}">
+          {% for edition in editions %}
+            <li class="archive-item">
+              {% if edition.status %}<p class="muted">{{ edition.status | escape }}</p>{% endif %}
+              <h3><a href="{{ edition.url | relative_url }}">{{ edition.title | escape }}</a></h3>
+              {% if edition.next_milestone %}<p>{{ edition.next_milestone | escape }}</p>{% endif %}
+              {% if edition.last_verified %}
+                <p class="muted">{{ copy.verified | escape }} <time datetime="{{ edition.last_verified | date: '%Y-%m-%d' }}">{{ edition.last_verified | date: '%Y-%m-%d' }}</time></p>
               {% endif %}
             </li>
           {% endfor %}
         </ul>
-      </section>
-    {% endif %}
-  </div>
-{% elsif editions.size > 0 %}
-  <ul class="archive-list" aria-label="{{ copy.editions | escape }}">
-    {% for edition in editions %}
-      <li class="archive-item">
-        {% if edition.status %}<p class="muted">{{ edition.status | escape }}</p>{% endif %}
-        <h2><a href="{{ edition.url | relative_url }}">{{ edition.title | escape }}</a></h2>
-        {% if edition.next_milestone %}<p>{{ edition.next_milestone | escape }}</p>{% endif %}
-        {% if edition.last_verified %}
-          <p class="muted">{{ copy.verified | escape }} <time datetime="{{ edition.last_verified | date: '%Y-%m-%d' }}">{{ edition.last_verified | date: '%Y-%m-%d' }}</time></p>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-{% else %}
-  <section class="content-section" aria-labelledby="conference-agenda">
-    <h2 id="conference-agenda">{{ copy.schedule | escape }}</h2>
-    <p>{{ copy.empty | escape }}</p>
-  </section>
-{% endif %}
+      {% else %}
+        <p>{{ copy.empty | escape }}</p>
+      {% endif %}
+      {% include conference-top-link.html label=copy.views.top %}
+    </section>
+  {% endif %}
 
-{% if archive.editions.size > 0 %}
-  {% include conference-archive.html archive=archive labels=copy.archive %}
-{% endif %}
+  {% if archive.editions.size > 0 %}
+    {% assign conference_years = archive.editions | group_by: 'year' %}
+    {% include conference-papers.html groups=conference_years labels=copy.archive.proceedings top_label=copy.views.top %}
+    {% include conference-archive.html archive=archive groups=conference_years labels=copy.archive top_label=copy.views.top %}
+  {% endif %}
+  {% if review %}
+    {% include conference-review.html review=review papers_label=copy.archive.papers top_label=copy.views.top %}
+  {% endif %}
+
+  <a class="conference-view-button conference-top-floating" href="#conference-top" data-conference-top-link data-conference-floating-top hidden>{{ copy.views.top | escape }}</a>
+</div>
+<script src="{{ '/assets/conference-views.js' | relative_url }}" defer></script>

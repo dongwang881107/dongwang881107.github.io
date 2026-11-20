@@ -6,17 +6,17 @@
   const query = catalogue.querySelector('#conference-papers-query');
   const status = catalogue.querySelector('[data-papers-status]');
   const list = catalogue.querySelector('[data-papers-list]');
-  const pagination = catalogue.querySelector('[data-papers-pagination]');
-  const previous = pagination.querySelector('[data-papers-previous]');
-  const next = pagination.querySelector('[data-papers-next]');
-  const pageLabel = pagination.querySelector('[data-papers-page]');
+  const paginations = Array.from(catalogue.querySelectorAll('[data-papers-pagination]'), (nav) => ({
+    nav,
+    previous: nav.querySelector('[data-papers-previous]'),
+    next: nav.querySelector('[data-papers-next]'),
+    label: nav.querySelector('[data-papers-page]'),
+  }));
   const retry = catalogue.querySelector('[data-papers-retry]');
-  const languageLink = document.querySelector('.site-preferences [data-set-language]');
-  const alternateUrl = languageLink?.href;
   const labels = catalogue.dataset;
   const editions = new Set(Array.from(edition.options, (option) => option.value).filter(Boolean));
   const number = new Intl.NumberFormat(document.documentElement.lang);
-  const pageSize = 25;
+  const pageSize = 10;
   const base = new URL(labels.papersBase, location.href);
   const normalize = (value) => value.normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{M}\p{N}]+/gu, ' ').trim();
   let request;
@@ -48,7 +48,7 @@
 
   function paperRow([title, authors, source, abstract, archivalStatus]) {
     const row = document.createElement('li');
-    const titleNode = element('h4', title);
+    const titleNode = element('h3', title);
     titleNode.className = 'conference-paper-title';
     if (archivalStatus === 'retracted' || archivalStatus === 'nonresearch') {
       const badge = element('span', labels[archivalStatus]);
@@ -91,10 +91,12 @@
     if (matches.length === 0) status.textContent = labels.empty;
     else if (matches.length === 1) status.textContent = labels.oneResult;
     else status.textContent = format(template, { first: first + 1, last, total: matches.length });
-    pagination.hidden = pages <= 1;
-    previous.disabled = page <= 1;
-    next.disabled = page >= pages;
-    pageLabel.textContent = pages ? format(labels.page, { page, pages }) : '';
+    for (const { nav, previous, next, label } of paginations) {
+      nav.hidden = pages <= 1;
+      previous.disabled = page <= 1;
+      next.disabled = page >= pages;
+      label.textContent = pages ? format(labels.page, { page, pages }) : '';
+    }
   }
 
   function search() {
@@ -112,19 +114,11 @@
   async function load(preserveQuery = false) {
     request?.abort();
     const selected = edition.value;
-    if (languageLink) {
-      const url = new URL(alternateUrl);
-      if (selected) {
-        url.searchParams.set('edition', selected);
-        url.hash = 'conference-papers';
-      }
-      languageLink.href = url;
-    }
     papers = [];
     matches = [];
     searchIndex = undefined;
     list.replaceChildren();
-    pagination.hidden = true;
+    for (const { nav } of paginations) nav.hidden = true;
     retry.hidden = true;
     query.disabled = true;
     query.placeholder = labels.queryMetadata;
@@ -163,12 +157,16 @@
     }
   }
 
-  function setLocation() {
+  function setLocation(addHistoryEntry = false) {
     const url = new URL(location.href);
     if (edition.value) url.searchParams.set('edition', edition.value);
     else url.searchParams.delete('edition');
     url.hash = 'conference-papers';
-    history.replaceState(history.state, '', url);
+    if (url.href !== location.href) {
+      if (addHistoryEntry) history.pushState(history.state, '', url);
+      else history.replaceState(history.state, '', url);
+    }
+    catalogue.dispatchEvent(new CustomEvent('conference:view', { bubbles: true }));
   }
 
   function fromLocation() {
@@ -176,9 +174,17 @@
     return editions.has(value) ? value : '';
   }
 
-  function changePage(offset, trigger, replacement) {
+  function changePage(offset, controls) {
     page += offset;
     render();
+    const atStart = controls === paginations[0];
+    const { previous, next } = paginations[0];
+    const [trigger, replacement] = offset > 0 ? [next, previous] : [previous, next];
+    if (!atStart) {
+      (trigger.disabled ? replacement : trigger).focus({ preventScroll: true });
+      paginations[0].nav.scrollIntoView({ block: 'start' });
+      return;
+    }
     if (trigger.disabled && !replacement.disabled) replacement.focus();
   }
 
@@ -190,8 +196,10 @@
     if (!event.isComposing) search();
   });
   query.addEventListener('compositionend', search);
-  previous.addEventListener('click', () => changePage(-1, previous, next));
-  next.addEventListener('click', () => changePage(1, next, previous));
+  for (const controls of paginations) {
+    controls.previous.addEventListener('click', () => changePage(-1, controls));
+    controls.next.addEventListener('click', () => changePage(1, controls));
+  }
   retry.addEventListener('click', () => {
     edition.focus();
     load(true);
@@ -210,7 +218,7 @@
     if (!editions.has(selected)) return;
     event.preventDefault();
     edition.value = selected;
-    setLocation();
+    setLocation(true);
     const heading = catalogue.querySelector('#conference-papers-heading');
     (heading?.hasAttribute('tabindex') ? heading : edition).focus({ preventScroll: true });
     catalogue.scrollIntoView({ block: 'start' });

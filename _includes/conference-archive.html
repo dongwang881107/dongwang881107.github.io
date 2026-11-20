@@ -1,56 +1,17 @@
 {% assign archive = include.archive %}
 {% assign labels = include.labels %}
-{% assign year_groups = archive.editions | group_by: 'year' %}
-{% assign review = site.data.conference_review.languages[page.lang] %}
-<section class="conference-schedule conference-category conference-archive" id="conference-archive" aria-labelledby="conference-archive-heading">
+{% assign year_groups = include.groups %}
+<section class="conference-archive" id="conference-archive" aria-labelledby="conference-archive-heading" data-conference-view>
   <header class="conference-archive-heading">
-    <h2 id="conference-archive-heading">{{ labels.heading | escape }}</h2>
-    <p>{{ labels.summary | escape }}</p>
+    <h2 id="conference-archive-heading" class="conference-view-heading" tabindex="-1">{{ labels.catalog | escape }}</h2>
     <p class="conference-archive-coverage">
       {{ archive.series_count }} {{ labels.series | escape }} · {{ archive.editions.size }} {{ labels.editions | escape }} ·
       {{ labels.as_of | escape }} <time datetime="{{ archive.as_of | escape }}">{{ archive.as_of | escape }}</time>
     </p>
   </header>
 
-  {% include conference-papers.html groups=year_groups labels=labels.proceedings %}
-
-  {% if review %}
-    <section class="conference-review" aria-labelledby="conference-review-heading">
-      <div class="conference-review-heading">
-        <h3 id="conference-review-heading">{{ review.title | escape }}</h3>
-        <time datetime="{{ site.data.conference_review.date | escape }}">{{ site.data.conference_review.date | escape }}</time>
-      </div>
-      <dl class="conference-review-findings">
-        {% for finding in review.findings %}
-          <div>
-            <dt>{{ finding.title | escape }}</dt>
-            <dd>{{ finding.text | escape }}</dd>
-          </div>
-        {% endfor %}
-      </dl>
-      <p class="conference-review-scope">{{ review.scope | escape }}</p>
-      {% if review.outlook %}
-        <p class="conference-review-outlook"><strong>{{ review.outlook.title | escape }}</strong> {{ review.outlook.text | escape }}</p>
-      {% endif %}
-      {% if review.papers.size > 0 %}
-        <details class="conference-review-papers">
-          <summary>{{ labels.papers | escape }} <span class="conference-count">{{ review.papers.size }}</span></summary>
-          <ul>
-            {% for paper in review.papers %}
-              <li>
-                <a href="{{ paper.url | escape }}" lang="en">{{ paper.title | escape }}</a>
-                <p>{{ paper.conference | escape }} · {{ paper.note | escape }}</p>
-              </li>
-            {% endfor %}
-          </ul>
-        </details>
-      {% endif %}
-    </section>
-  {% endif %}
-
-  <section id="conference-catalog" aria-labelledby="conference-catalog-heading">
-    <h3 class="conference-catalog-heading" id="conference-catalog-heading">{{ labels.catalog | escape }}</h3>
-    <p class="conference-catalog-note">{{ labels.catalog_note | escape }}</p>
+  <div id="conference-catalog">
+    <p id="conference-catalog-heading" class="conference-catalog-note">{{ labels.catalog_note | escape }}</p>
     <div class="conference-archive-controls" data-archive-filters hidden>
       <div class="conference-archive-field">
         <label for="conference-archive-search">{{ labels.search | escape }}</label>
@@ -68,13 +29,13 @@
     <p class="conference-archive-status" role="status" data-archive-status data-results="{{ labels.results | escape }}" data-one-result="{{ labels.one_result | escape }}" data-no-results="{{ labels.no_results | escape }}" hidden></p>
 
     {% for group in year_groups %}
-      <details class="conference-archive-year" data-archive-year="{{ group.name | escape }}"{% if forloop.first %} open{% endif %}>
+      <details class="conference-archive-year" data-archive-year="{{ group.name | escape }}">
         <summary>{{ group.name | escape }} <span class="conference-count" data-year-count>{{ group.items.size }}</span></summary>
         <ul class="conference-archive-entries">
           {% for edition in group.items %}
             <li class="conference-archive-entry" data-archive-entry data-search="{{ edition.series | escape }} {{ edition.year | escape }} {{ edition.title | escape }}{% if edition.ccf %} CCF-{{ edition.ccf | escape }}{% endif %}">
               <div class="conference-archive-identity">
-                <h4>{{ edition.series | escape }} {{ edition.year | escape }}{% if edition.ccf %} <span class="conference-rank">CCF-{{ edition.ccf | escape }}</span>{% endif %}</h4>
+                <h3>{{ edition.series | escape }} {{ edition.year | escape }}{% if edition.ccf %} <span class="conference-rank">CCF-{{ edition.ccf | escape }}</span>{% endif %}</h3>
                 {% if edition.title %}<p lang="en">{{ edition.title | escape }}</p>{% endif %}
                 {% if edition.start %}
                   <p><time datetime="{{ edition.start | escape }}">{{ edition.start | escape }}</time>{% if edition.end and edition.end != edition.start %} – <time datetime="{{ edition.end | escape }}">{{ edition.end | escape }}</time>{% endif %}</p>
@@ -99,6 +60,7 @@
         </ul>
       </details>
     {% endfor %}
-  </section>
+  </div>
+  {% include conference-top-link.html label=include.top_label %}
 </section>
 <script src="{{ '/assets/conference-archive.js' | relative_url }}" defer></script>

@@ -1,29 +1,9 @@
-.conference-papers {
-  margin-block: 1.65rem;
-  padding: clamp(.85rem, 2vw, 1.25rem);
-  border: 1px solid var(--line);
-  border-radius: .24rem;
-  scroll-margin-block-start: .75rem;
-}
-
-.conference-papers:target {
-  border-inline-start-color: var(--accent);
-}
-
-.conference-papers [hidden] {
-  display: none;
-}
-
 .conference-archive .conference-edition-papers {
   font-weight: 650;
 }
 
-.conference-papers h3 {
-  font-size: 1.13rem;
-}
-
-.conference-papers h3 + p {
-  margin-block: .35rem .8rem;
+.conference-papers-intro {
+  margin-block: .35rem .85rem;
   color: var(--muted);
 }
 
@@ -85,6 +65,10 @@
   align-items: center;
   gap: .4rem .7rem;
   margin-block: .6rem .25rem;
+}
+
+.conference-papers ol + [data-papers-pagination]:not([hidden]) {
+  margin-block-start: .9rem;
 }
 
 .conference-papers [data-papers-list] {

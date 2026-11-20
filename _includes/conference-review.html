@@ -1,0 +1,35 @@
+{% assign review = include.review %}
+<section id="conference-review" aria-labelledby="conference-review-heading" data-conference-view>
+  <div class="conference-review-heading">
+    <h2 class="conference-view-heading" id="conference-review-heading" tabindex="-1">{{ review.title | escape }}</h2>
+    <time datetime="{{ site.data.conference_review.date | escape }}">{{ site.data.conference_review.date | escape }}</time>
+  </div>
+  <div class="conference-review">
+    <dl class="conference-review-findings">
+      {% for finding in review.findings %}
+        <div>
+          <dt>{{ finding.title | escape }}</dt>
+          <dd>{{ finding.text | escape }}</dd>
+        </div>
+      {% endfor %}
+    </dl>
+    <p class="conference-review-scope">{{ review.scope | escape }}</p>
+    {% if review.outlook %}
+      <p class="conference-review-outlook"><strong>{{ review.outlook.title | escape }}</strong> {{ review.outlook.text | escape }}</p>
+    {% endif %}
+    {% if review.papers.size > 0 %}
+      <details class="conference-review-papers">
+        <summary>{{ include.papers_label | escape }} <span class="conference-count">{{ review.papers.size }}</span></summary>
+        <ul>
+          {% for paper in review.papers %}
+            <li>
+              <a href="{{ paper.url | escape }}" lang="en">{{ paper.title | escape }}</a>
+              <p>{{ paper.conference | escape }} · {{ paper.note | escape }}</p>
+            </li>
+          {% endfor %}
+        </ul>
+      </details>
+    {% endif %}
+  </div>
+  {% include conference-top-link.html label=include.top_label %}
+</section>

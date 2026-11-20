@@ -22,9 +22,15 @@ zh-CN:
     checked: 核对于
     no_events: 这个区间暂无已核实的节点。
     pending: 日程待确认
+    views:
+      upcoming: 近期日程
+      papers: 历届论文
+      archive: 历届会议
+      review: 研究趋势
+      schedule_browse: 按日程类型浏览
+      pending_short: 待确认
+      top: 返回顶部
     archive:
-      heading: 往期回顾
-      summary: 浏览已收录的历届论文，回顾医学影像及相关方向的研究变化。
       series: 个会议系列
       editions: 届会议
       as_of: 资料更新于
@@ -71,7 +77,8 @@ zh-CN:
         results: 第 {first}–{last} 条，共 {total} 条匹配
         results_all: 第 {first}–{last} 条，共 {total} 条题录
         page: 第 {page} / {pages} 页
-        pagination: 论文分页
+        pagination: 论文分页（列表上方）
+        pagination_bottom: 论文分页（列表下方）
         previous: 上一页
         next: 下一页
         retry: 重新加载
@@ -121,9 +128,15 @@ en:
     checked: Checked
     no_events: No verified events in this date range.
     pending: Dates pending confirmation
+    views:
+      upcoming: Upcoming
+      papers: Past papers
+      archive: Past editions
+      review: Research trends
+      schedule_browse: Browse by event type
+      pending_short: Pending
+      top: Back to top
     archive:
-      heading: Past editions
-      summary: Browse collected papers from past conferences and revisit trends in medical imaging and related fields.
       series: conference series
       editions: editions
       as_of: Data updated
@@ -170,7 +183,8 @@ en:
         results: '{first}–{last} of {total} matching records'
         results_all: '{first}–{last} of {total} records'
         page: 'Page {page} of {pages}'
-        pagination: Proceedings pages
+        pagination: Proceedings pages above the results
+        pagination_bottom: Proceedings pages below the results
         previous: Previous
         next: Next
         retry: Retry loading

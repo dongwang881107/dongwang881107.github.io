@@ -1,5 +1,107 @@
-.conference-schedule {
+.conference-tracker {
+  --conference-nav-offset: 3.8rem;
   max-width: 64rem;
+}
+
+.conference-tracker [hidden] {
+  display: none;
+}
+
+.conference-tracker .page-header {
+  margin-block-end: 1rem;
+  padding-block-end: 1.15rem;
+}
+
+.conference-tracker [data-conference-view],
+.conference-tracker [data-conference-category],
+.conference-tracker [data-papers-pagination],
+.conference-tracker [id$="-heading"],
+#conference-catalog {
+  scroll-margin-block-start: var(--conference-nav-offset);
+}
+
+.conference-view-nav {
+  position: sticky;
+  z-index: 2;
+  inset-block-start: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: .3rem;
+  margin-block: 0 1.65rem;
+  padding-block: .45rem;
+  border-block-end: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.conference-view-nav a {
+  display: grid;
+  align-content: center;
+  min-height: 2.75rem;
+  padding: .4rem .58rem;
+  border-radius: .24rem .24rem 0 0;
+  border-block-end: 2px solid transparent;
+  color: var(--muted);
+  font-size: .94rem;
+  font-weight: 620;
+  line-height: 1.33;
+  text-align: center;
+  text-decoration: none;
+}
+
+.conference-view-nav a:hover,
+.conference-view-nav a[aria-current] {
+  background: var(--soft);
+  color: var(--accent);
+}
+
+.conference-view-nav a[aria-current] {
+  border-block-end-color: var(--accent);
+}
+
+.conference-view-heading {
+  margin: 0 0 .65rem;
+  font-size: clamp(1.3rem, 3vw, 1.63rem);
+}
+
+.conference-tracker [data-conference-view]:not([hidden]) ~ [data-conference-view]:not([hidden]) {
+  margin-block-start: 2.1rem;
+}
+
+.conference-view-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: .5rem;
+  margin-block-start: 1rem;
+}
+
+.conference-view-button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: .35rem .7rem;
+  border: 1px solid var(--line);
+  border-radius: .28rem;
+  background: var(--paper);
+  color: var(--accent);
+  font-size: .9rem;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.conference-view-button:hover {
+  border-color: var(--accent);
+  background: var(--soft);
+}
+
+.conference-top-floating {
+  position: fixed;
+  z-index: 3;
+  inset-inline-end: max(1rem, calc((100vw - 73rem) / 2));
+  inset-block-end: max(1rem, env(safe-area-inset-bottom, 0px));
+  border-color: var(--accent);
+  font-weight: 650;
+  box-shadow: 0 2px 10px rgb(0 0 0 / .12);
 }
 
 .conference-snapshot {
@@ -32,39 +134,38 @@
 }
 
 .conference-date-note {
-  margin-block: .65rem 1.5rem;
+  margin-block: .5rem 1rem;
   color: var(--muted);
   font-size: .875rem;
 }
 
-.conference-jump {
+.conference-schedule-tabs {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: .55rem;
-  margin-block-end: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+  gap: .45rem;
+  margin-block-end: .75rem;
 }
 
-.conference-jump-with-archive {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.conference-jump a {
+.conference-schedule-tabs a {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: .35rem;
   min-height: 2.75rem;
   padding: .5rem .75rem;
   border: 1px solid var(--line);
   border-radius: .22rem;
+  color: var(--ink);
   font-size: .91rem;
   font-weight: 600;
   text-decoration: none;
 }
 
-.conference-jump a:hover {
+.conference-schedule-tabs a:hover,
+.conference-schedule-tabs a[aria-current] {
   border-color: var(--accent);
   background: var(--soft);
+  color: var(--accent);
 }
 
 .conference-count {
@@ -72,16 +173,18 @@
   font-variant-numeric: tabular-nums;
 }
 
-.conference-category + .conference-category {
+.conference-category:not([hidden]) + .conference-category:not([hidden]) {
   margin-block-start: 1.85rem;
 }
 
-.conference-category h2 {
-  margin-block-end: .66rem;
+.conference-category-heading {
+  margin-block-end: .5rem;
+  font-size: 1.08rem;
 }
 
-.conference-category:target h2 {
-  color: var(--accent);
+.conference-category-heading:focus-visible,
+.conference-view-heading:focus-visible {
+  outline-offset: .2rem;
 }
 
 .conference-events {
@@ -121,7 +224,8 @@
   line-height: 1.45;
 }
 
-.conference-event h3 {
+.conference-event-title {
+  margin: 0;
   font-size: .97rem;
   line-height: 1.45;
 }
@@ -159,16 +263,6 @@
   margin-block-start: 0;
 }
 
-.conference-archive {
-  margin-block-start: 2.5rem;
-  padding-block-start: 1.4rem;
-  border-block-start: 1px solid var(--line);
-}
-
-.conference-archive [hidden] {
-  display: none;
-}
-
 .conference-archive-heading > p {
   color: var(--muted);
 }
@@ -180,7 +274,7 @@
 }
 
 .conference-review {
-  margin-block: 1.25rem 1.6rem;
+  margin-block: .55rem 0;
   padding: clamp(.85rem, 2vw, 1.25rem);
   border: 1px solid var(--line);
   border-inline-start: 3px solid var(--accent);
@@ -196,9 +290,8 @@
   gap: .25rem 1rem;
 }
 
-.conference-review-heading h3,
-.conference-catalog-heading {
-  font-size: 1.13rem;
+.conference-review-heading h2 {
+  margin-block-end: 0;
 }
 
 .conference-review-heading time,
@@ -213,7 +306,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: .8rem 1.2rem;
-  margin: .8rem 0;
+  margin: 0 0 .8rem;
 }
 
 .conference-review-findings dt {
@@ -328,7 +421,7 @@
 }
 
 .conference-archive-year summary {
-  padding: .55rem .75rem;
+  padding: .48rem .75rem;
   background: var(--soft);
 }
 
@@ -348,7 +441,7 @@
   border-block-start: 1px solid var(--line);
 }
 
-.conference-archive-entry h4 {
+.conference-archive-entry h3 {
   margin: 0;
   font-size: 1rem;
   line-height: 1.45;
@@ -396,12 +489,18 @@
   }
 }
 
-@media (max-width: 31rem) {
-  .conference-jump {
-    gap: .38rem;
+@media (max-width: 42rem) {
+  .conference-tracker {
+    --conference-nav-offset: 6.65rem;
   }
 
-  .conference-jump-with-archive,
+  .conference-view-nav,
+  .conference-schedule-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 31rem) {
   .conference-archive-controls {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -410,10 +509,9 @@
     grid-column: 1 / -1;
   }
 
-  .conference-jump a {
-    flex-direction: column;
-    padding: .38rem .45rem;
-    font-size: .84rem;
-    line-height: 1.36;
+  .conference-schedule-tabs a {
+    padding: .35rem .55rem;
+    font-size: .87rem;
+    line-height: 1.33;
   }
 }
