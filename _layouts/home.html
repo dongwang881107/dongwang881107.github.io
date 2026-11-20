@@ -83,17 +83,17 @@ layout: default
     <section aria-labelledby="resources-heading">
       <h2 id="resources-heading">{{ copy.resources_heading | escape }}</h2>
       {% assign resources = site.data.navigation | where_exp: "entry", "entry.summary" %}
-      {% assign latest_issue = site.literature | where: 'lang', page.lang | sort: 'date' | last %}
+      {% assign latest_highlight = site.literature | where: 'lang', page.lang | where_exp: 'issue', 'issue.paper != nil' | where_exp: 'issue', 'issue.sample != true' | sort: 'date' | last %}
       <ul class="resource-list">
         {% for entry in resources %}
           {% assign entry_url = locale_prefix | append: entry.url | relative_url %}
           <li>
             <h3><a href="{{ entry_url }}">{% if page.lang == 'en' %}{{ entry.label_en | escape }}{% else %}{{ entry.label | escape }}{% endif %}</a></h3>
             <p>{% if page.lang == 'en' %}{{ entry.summary_en | escape }}{% else %}{{ entry.summary | escape }}{% endif %}</p>
-            {% if entry.id == 'literature' and latest_issue %}
-              <a class="row-detail" href="{{ latest_issue.url | relative_url }}">
-                <span>{{ latest_issue.title | escape }}</span>
-                <span class="resource-date">{{ latest_issue.date | date: '%Y-%m-%d' }}{% if latest_issue.sample %} · {{ copy.sample | escape }}{% endif %}</span>
+            {% if entry.id == 'literature' and latest_highlight %}
+              <a class="row-detail" href="{{ latest_highlight.url | relative_url }}">
+                <span>{{ latest_highlight.title | escape }}</span>
+                <span class="resource-date">{{ latest_highlight.date | date: '%Y-%m-%d' }}</span>
               </a>
             {% endif %}
           </li>

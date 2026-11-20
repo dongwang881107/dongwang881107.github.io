@@ -100,9 +100,10 @@ zh-CN:
       - title: 医学影像重建
         description: CT、MRI 和 PET 的成像模型与重建方法。
   literature:
-    latest: 最新一期
-    archive: 往期归档
-    empty: 暂无已发布的文献日报。
+    latest: 最新解析
+    archive: 往期解析
+    legacy: 早期试刊
+    empty: 暂无已发布的论文解析。
     sample: 试刊
 en:
   conferences:
@@ -206,7 +207,8 @@ en:
       - title: Medical Image Reconstruction
         description: Imaging models and reconstruction methods for CT, MRI, and PET.
   literature:
-    latest: Latest Issue
-    archive: Past Issues
-    empty: No issues have been published yet.
+    latest: Latest Analysis
+    archive: Past Analyses
+    legacy: Early Digests
+    empty: No paper analyses have been published yet.
     sample: Sample issue

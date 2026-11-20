@@ -1,6 +1,8 @@
 <article class="archive-item">
   <p class="muted">
     <time datetime="{{ include.issue.date | date: '%Y-%m-%d' }}">{{ include.issue.date | date: '%Y-%m-%d' }}</time>
+    {% if include.issue.paper.venue %} · {{ include.issue.paper.venue | escape }}{% endif %}
+    {% if include.issue.paper.tier %}<span class="label">{{ include.issue.paper.tier | escape }}</span>{% endif %}
     {% if include.issue.sample %}<span class="label">{{ site.data.archive_labels[page.lang].literature.sample | escape }}</span>{% endif %}
   </p>
   <h3><a href="{{ include.issue.url | relative_url }}">{{ include.issue.title | escape }}</a></h3>

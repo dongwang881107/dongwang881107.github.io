@@ -11,11 +11,11 @@
   label_en: Group
   url: /group/
 - id: literature
-  label: 文献日报
-  label_en: Literature Digest
+  label: 文献热点
+  label_en: Literature Highlights
   url: /literature/
-  summary: 医学成像与逆问题方向的文献精选
-  summary_en: Selected papers on medical imaging and inverse problems
+  summary: 医学成像、电阻抗成像与逆问题的每日论文解析
+  summary_en: Daily paper analysis on medical imaging, electrical impedance tomography, and inverse problems
 - id: conferences
   label: CCF 会议追踪
   label_en: CCF Conferences

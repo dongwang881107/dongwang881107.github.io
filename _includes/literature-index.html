@@ -2,19 +2,20 @@
 {% assign copy = site.data.archive_labels[page.lang].literature %}
 
 {% assign issues = site.literature | where: 'lang', page.lang | sort: 'date' | reverse %}
-{% if issues.size > 0 %}
-  {% assign latest = issues | first %}
+{% assign highlights = issues | where_exp: 'issue', 'issue.paper != nil' | where_exp: 'issue', 'issue.sample != true' %}
+{% if highlights.size > 0 %}
+  {% assign latest = highlights | first %}
   <section aria-labelledby="literature-archive-title">
     <h2 id="literature-archive-title">{{ copy.latest | escape }}</h2>
     <div class="archive-list">
       {% include issue-summary.html issue=latest %}
     </div>
   </section>
-  {% if issues.size > 1 %}
+  {% if highlights.size > 1 %}
     <section aria-labelledby="literature-past-title">
       <h2 id="literature-past-title">{{ copy.archive | escape }}</h2>
       <div class="archive-list">
-        {% for issue in issues offset:1 %}
+        {% for issue in highlights offset:1 %}
           {% include issue-summary.html issue=issue %}
         {% endfor %}
       </div>
@@ -22,4 +23,15 @@
   {% endif %}
 {% else %}
   <p class="muted">{{ copy.empty | escape }}</p>
+{% endif %}
+
+{% if issues.size > highlights.size %}
+  <details class="archive-list">
+    <summary>{{ copy.legacy | escape }}</summary>
+    {% for issue in issues %}
+      {% if issue.paper == nil or issue.sample == true %}
+        {% include issue-summary.html issue=issue %}
+      {% endif %}
+    {% endfor %}
+  </details>
 {% endif %}

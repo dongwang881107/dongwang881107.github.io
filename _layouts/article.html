@@ -9,12 +9,17 @@ layout: default
     {% endif %}
     <h1>{{ page.title | escape }}</h1>
     {% if page.summary %}<p>{{ page.summary | escape }}</p>{% endif %}
-    {% if page.date or page.sample or page.topics %}
+    {% if page.date or page.sample or page.topics or page.paper %}
       <div class="article-meta">
         {% if page.date %}<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y-%m-%d' }}</time>{% endif %}
+        {% if page.paper.venue %}<span class="muted">{{ page.paper.venue | escape }}</span>{% endif %}
+        {% if page.paper.tier %}<span class="label">{{ page.paper.tier | escape }}</span>{% endif %}
         {% if page.sample %}<span class="label">{% if page.lang == 'en' %}Sample issue{% else %}预览样例{% endif %}</span>{% endif %}
         {% for topic in page.topics %}<span class="label">{{ topic | escape }}</span>{% endfor %}
       </div>
+    {% endif %}
+    {% if page.paper.title %}
+      <p><cite>{% if page.paper.url %}<a href="{{ page.paper.url | escape }}">{{ page.paper.title | escape }}</a>{% else %}{{ page.paper.title | escape }}{% endif %}</cite></p>
     {% endif %}
     {% if page.coverage %}<p class="muted">{{ page.coverage | escape }}</p>{% endif %}
   </header>
