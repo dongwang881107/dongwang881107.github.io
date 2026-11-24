@@ -12,7 +12,15 @@ publications:
     journal: Physics in Medicine & Biology
     year: 2024
     doi: https://doi.org/10.1088/1361-6560/ad14c5
+  - title: Multi-Directional Rain Streak Removal Based on Infimal Convolution of Oscillation TGV
+    journal: Neurocomputing
+    year: 2022
+    doi: https://doi.org/10.1016/j.neucom.2022.02.059
   - title: Dynamic MR Image Reconstruction Using TGV and Low-Rank Decomposition
     journal: Magnetic Resonance in Medicine
     year: 2020
     doi: https://doi.org/10.1002/mrm.28064
+  - title: 'snapMRF: GPU-Accelerated Magnetic Resonance Fingerprinting Dictionary Generation and Matching using Extended Phase Graphs'
+    journal: Magnetic Resonance Imaging
+    year: 2020
+    doi: https://doi.org/10.1016/j.mri.2019.11.015

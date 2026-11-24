@@ -77,10 +77,6 @@
           {% include cv-publications.html items=cv.publications.journals english=cv_english %}
           <h3>{% if cv_english %}Conference papers{% else %}会议论文{% endif %}</h3>
           {% include cv-publications.html items=cv.publications.conferences english=cv_english %}
-          <details>
-            <summary>{% if cv_english %}Manuscripts listed in the July 2024 record{% else %}2024 年 7 月简历所列稿件{% endif %}</summary>
-            {% include cv-publications.html items=cv.publications.manuscripts english=cv_english %}
-          </details>
         {% when 'Patents' %}
           <ul>
             {% for item in cv.patents %}

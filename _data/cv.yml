@@ -27,9 +27,7 @@ appointments:
   - institution: { zh-CN: 南京应用数学中心, en: Nanjing Center for Applied Mathematics }
     role: { zh-CN: 助理研究员, en: Assistant Research Fellow }
     unit: { zh-CN: 大规模科学计算和介质成像课题组, en: Large-Scale Scientific Computing and Media Imaging Group }
-    dates:
-      zh-CN: 2023.12 起（2026 年 8 月简历记录在任）
-      en: Since December 2023 (ongoing as of August 2026)
+    dates: { zh-CN: 2023.12–2026.10, en: December 2023–October 2026 }
   - institution: { zh-CN: 南京应用数学中心, en: Nanjing Center for Applied Mathematics }
     role: { zh-CN: 访问学者, en: Visiting Scholar }
     unit: { zh-CN: 大规模科学计算和介质成像课题组, en: Large-Scale Scientific Computing and Media Imaging Group }
@@ -92,20 +90,20 @@ projects:
       zh-CN: 大气数据同化的高效数值算法及数学理论分析
       en: Numerical algorithms and mathematical analysis for atmospheric data assimilation
     details:
-      zh-CN: 参与 · 国家自然科学基金专项基金（12241102） · 2023.01–2026.12
-      en: Core investigator · National Natural Science Foundation of China (12241102) · January 2023–December 2026
+      zh-CN: 参与 · 国家自然科学基金专项基金（12241102） · 2023.01–2026.12 · 已结题
+      en: Core investigator · National Natural Science Foundation of China (12241102) · January 2023–December 2026 · Completed
   - title:
       zh-CN: 基于眼动与 fMRI 的 A-SCD 空间导航神经环路研究
       en: Spatial navigation circuits in A-SCD studied with eye tracking and fMRI
     details:
-      zh-CN: 参与 · 国家自然科学基金面上项目（82271965） · 2023.01–2026.12
-      en: Core investigator · National Natural Science Foundation of China (82271965) · January 2023–December 2026
+      zh-CN: 参与 · 国家自然科学基金面上项目（82271965） · 2023.01–2026.12 · 已结题
+      en: Core investigator · National Natural Science Foundation of China (82271965) · January 2023–December 2026 · Completed
   - title:
       zh-CN: 多起源兴奋传导建模及其在心电图成像中的应用
       en: Modeling multi-origin excitation conduction for ECG imaging
     details:
-      zh-CN: 参与 · 国家自然科学基金面上项目（12271094） · 2023.01–2026.12
-      en: Core investigator · National Natural Science Foundation of China (12271094) · January 2023–December 2026
+      zh-CN: 参与 · 国家自然科学基金面上项目（12271094） · 2023.01–2026.12 · 已结题
+      en: Core investigator · National Natural Science Foundation of China (12271094) · January 2023–December 2026 · Completed
   - title:
       zh-CN: 高阶非线性偏微分方程图像模型及其基础算法
       en: Image models and algorithms based on high-order nonlinear partial differential equations
@@ -166,16 +164,6 @@ publications:
     - citation: >-
         <strong>Dong Wang</strong>, Lori R. Arlinghaus, Thomas E. Yankeelov, and David S. Smith. Quantitative Evaluation of Temporal Sparse Regularizers for Compressed Sensing Breast DCE-MRI. <cite>Proceedings of the 25th Annual Meeting of ISMRM</cite>, Honolulu, 2017.
       abstract: https://ismrm.gitlab.io/2017/1428.html
-  manuscripts:
-    - citation: >-
-        Heming Chen, <strong>Dong Wang</strong>, Jiayi Li, Qingqiang Yao, Nicola Pugno, Zhiyong Li, and Qiang Chen*. Match analysis of the primary microstructural and mechanical directions of human osteoporotic femoral heads.
-    - citation: >-
-        <strong>Dong Wang</strong>, Qiang Zhang, and Jijun Liu*. On the Recovery of Conductivity in 3-Dimensional Medium by Neural Network Approximation.
-      code: https://github.com/dongwang881107/DeepEIT
-    - citation: >-
-        <strong>Dong Wang</strong>, Jian He, Qianqian Tan, and Jijun Liu*. Deep Progressive Learning for Medical Imaging.
-    - citation: >-
-        <strong>Dong Wang</strong>, Liyan Wang, and Jijun Liu*. Deep Texture Learning for Dynamic MR Reconstruction.
 patents:
   - title:
       zh-CN: 基于压缩感知的线圈敏感度和磁共振图像联合重建方法
@@ -183,7 +171,9 @@ patents:
     inventors:
       zh-CN: 丘成桐、刘继军、王丽艳、王冬
       en: Shing-Tung Yau, Jijun Liu, Liyan Wang, and Dong Wang
-    status: { zh-CN: 2023 年申请, en: Filed in 2023 }
+    status:
+      zh-CN: 2026 年 11 月 13 日授权 · ZL202311547299.8 · 授权公告号 CN117491929B
+      en: Granted on November 13, 2026 · ZL202311547299.8 · Grant publication no. CN117491929B
   - title:
       zh-CN: 基于两点梯度迭代方法的声电断层扫描成像算法
       en: Acousto-electric tomography imaging algorithm using two-point gradient iteration
