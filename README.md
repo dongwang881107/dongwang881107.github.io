@@ -19,7 +19,11 @@ bundle exec jekyll serve
 | --- | --- | --- |
 | 科研首页 | `_data/home.yml`、`_data/profile.yml` | `/`、`/en/` |
 | 个人简历 | `_data/cv.yml` | `/cv/`、`/en/cv/` |
-| 课题组动态 | `_group_updates/<slug>.md` | `/group/updates/<slug>/` |
+| 课题组概览和团队 | `_data/group.yml` | `/group/`、`/en/group/` |
+| 课题组科研进展 | `_data/group.yml`、`_data/group_publications.json` | `/group/research/`、`/en/group/research/` |
+| 课题组产业化进展 | `_data/group_progress.yml` | `/group/industry/`、`/en/group/industry/` |
+| 课题组研究前沿 | `group/frontiers/<slug>.md`、`en/group/frontiers/<slug>.md` | `/group/frontiers/<slug>/`、`/en/group/frontiers/<slug>/` |
+| 课题组动态 | `_group_updates/<slug>.md`、`_group_updates/en/<slug>.md` | `/group/updates/`、`/en/group/updates/` |
 | 文献热点 | `_literature/YYYY-MM-DD.md`、`_literature/en/YYYY-MM-DD.md` | `/literature/YYYY-MM-DD/`、`/en/literature/YYYY-MM-DD/` |
 | CCF 会议追踪 | `_data/conference_schedule.json`、`_data/conference_archive.json`、`_data/conference_review.yml` | `/conferences/`、`/en/conferences/` |
 | 知识库 | `_knowledge_notes/<topic>/<slug>.md` | `/knowledge/<topic>/<slug>/` |
@@ -31,6 +35,16 @@ bundle exec jekyll serve
 中文版沿用现有路径，英文版位于 `/en/` 下。写英文条目时设置 `lang: en` 和以 `/en/` 开头的 `permalink`。有对应译文时，两条记录的 `alternate_url` 互指。语言设置与日间／夜间模式保存在访问者的浏览器中。
 
 旧首页的八个履历锚点由 `_data/legacy_sections.yml` 映射到中文版简历。保留两个简历页面中的对应 ID 和历史报告路径。
+
+## 更新课题组页面
+
+`_data/group.yml` 集中维护双语简介、人员、方向和代表成果。`_data/group_progress.yml` 维护科研进展入口和产业化时间线，新专题可放在 `group/research/` 和 `en/group/research/`。产业化活动按日期倒序排列，图像填 `image`，视频填 `video`，并填写相应的双语说明。同一条目可同时提供照片和可展开的视频。人员条目注明课题组角色或合作经历。需要加入组照时，在该文件添加 `photo`，字段为 `path`、`width`、`height`、双语 `alt` 和可选双语 `caption`。
+
+历年文献的中英文页面共用 `_data/group_publications.json`，取自 Zotero「项目:课题组-刘」标签和团队成员提供的简历，并核对公开出版记录。同一文献按 DOI 或原始题名去重。原则上按正式卷期年份归档，已在线发表而卷期尚未刊出的论文按上线年份归档，公开预印本按首发年份归档。每条记录使用 `title`、`creators`、`year`、`language`，并可提供 `venue`、`locator` 和公开 `url`。`kind` 可标记 `proceedings`、`monograph`、`preprint` 或 `online`。科研项目在 `_data/group.yml` 的 `projects` 中维护，结题状态依据结题记录。
+
+研究前沿页设置 `section: group`、`group_kind: frontier`、`date`、`summary`、`lang`、`permalink` 和互指的 `alternate_url`。用可选的 `image` 添加主页缩略图。专题从科学问题切入，注明已公开的课题组工作、外部证据与后续验证设想。
+
+动态按实际发生或公布的日期维护，设置 `title`、`summary`、`date`、`kind`、`lang`、`permalink` 和互指的 `alternate_url`。科研首页和课题组首页各展示三条，完整列表由中英文归档页生成。
 
 ## 更新文献热点
 

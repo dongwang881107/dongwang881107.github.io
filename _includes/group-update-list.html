@@ -1,0 +1,18 @@
+{% assign entries = include.entries %}
+{% assign heading = include.heading | default: "h3" %}
+{% if include.limit %}{% assign entries = entries | slice: 0, include.limit %}{% endif %}
+{% if entries.size > 0 %}
+  <ul class="group-updates" role="list">
+    {% for update in entries %}
+      <li>
+        <p class="muted"><time datetime="{{ update.date | date_to_xmlschema }}">{{ update.date | date: '%Y-%m-%d' }}</time>{% if update.kind %} · {{ update.kind | escape }}{% endif %}</p>
+        <{{ heading }}><a href="{{ update.url | relative_url }}">{{ update.title | escape }}</a></{{ heading }}>
+        {% if update.summary %}<p>{{ update.summary | escape }}</p>{% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% elsif page.lang == 'en' %}
+  <p class="muted">Public research milestones will appear here.</p>
+{% else %}
+  <p class="muted">本栏将记录可公开的研究进展。</p>
+{% endif %}

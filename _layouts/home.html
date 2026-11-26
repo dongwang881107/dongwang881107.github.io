@@ -103,7 +103,7 @@ layout: default
 
     <section aria-labelledby="group-heading">
       <h2 id="group-heading">{{ copy.group_heading | escape }}</h2>
-      {% assign latest_updates = site.group_updates | where: 'lang', page.lang | sort: 'date' | reverse %}
+      {% assign latest_updates = site.group_updates | where: 'lang', page.lang | where_exp: 'item', 'item.sample != true' | sort: 'date' | reverse %}
       {% if latest_updates.size > 0 %}
         <ul class="resource-list">
           {% for update in latest_updates limit: 3 %}

@@ -1,0 +1,18 @@
+---
+layout: default
+---
+{% assign group_layout_copy = site.data.group.copy[page.lang] %}
+{% assign group_layout_prefix = '' %}
+{% if page.lang == 'en' %}{% assign group_layout_prefix = '/en' %}{% endif %}
+<header class="group-page-header" id="group-top">
+  <h1>{{ page.title | escape }}</h1>
+</header>
+
+{% include group-nav.html current=page.group_area %}
+
+{{ content }}
+
+<div class="group-page-actions">
+  <a href="{{ '/group/' | prepend: group_layout_prefix | relative_url }}">{{ group_layout_copy.back_to_overview | escape }}</a>
+  <a href="#group-top">{{ group_layout_copy.top | escape }}</a>
+</div>

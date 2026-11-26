@@ -2,10 +2,16 @@
 layout: default
 ---
 {% assign section_link = site.data.navigation | where: "id", page.section | first %}
+{% assign article_parent_url = section_link.url %}
+{% assign article_parent_label = section_link.label %}
+{% if page.lang == 'en' %}
+  {% assign article_parent_url = article_parent_url | prepend: '/en' %}
+  {% assign article_parent_label = section_link.label_en %}
+{% endif %}
 <article class="article-page">
   <header class="page-header">
-    {% if section_link %}
-      <p class="breadcrumbs"><a href="{% if page.lang == 'en' %}{{ section_link.url | prepend: '/en' | relative_url }}{% else %}{{ section_link.url | relative_url }}{% endif %}">{% if page.lang == 'en' %}{{ section_link.label_en | escape }}{% else %}{{ section_link.label | escape }}{% endif %}</a></p>
+    {% if page.parent_url or section_link %}
+      <p class="breadcrumbs"><a href="{{ page.parent_url | default: article_parent_url | relative_url }}">{{ page.parent_label | default: article_parent_label | escape }}</a></p>
     {% endif %}
     <h1>{{ page.title | escape }}</h1>
     {% if page.summary %}<p>{{ page.summary | escape }}</p>{% endif %}

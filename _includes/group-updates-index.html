@@ -1,0 +1,8 @@
+{% assign prefix = '' %}
+{% if page.lang == 'en' %}{% assign prefix = '/en' %}{% endif %}
+{% assign updates = site.group_updates | where: 'lang', page.lang | where_exp: 'item', 'item.sample != true' | sort: 'date' | reverse %}
+<header class="page-header">
+  <p class="breadcrumbs"><a href="{{ '/group/research/' | prepend: prefix | relative_url }}#updates">{{ site.data.group.copy[page.lang].research_progress | escape }}</a></p>
+  <h1>{{ page.title | escape }}</h1>
+</header>
+{% include group-update-list.html entries=updates %}

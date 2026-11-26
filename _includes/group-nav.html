@@ -1,0 +1,10 @@
+{% assign group_nav_copy = site.data.group.copy[page.lang] %}
+{% assign group_nav_prefix = '' %}
+{% if page.lang == 'en' %}{% assign group_nav_prefix = '/en' %}{% endif %}
+{% assign group_nav_home = '/group/' | prepend: group_nav_prefix | relative_url %}
+<nav class="group-nav" aria-label="{{ group_nav_copy.contents | escape }}">
+  <a href="{{ group_nav_home }}"{% if include.current == 'overview' %} aria-current="page"{% endif %}>{{ group_nav_copy.overview | escape }}</a>
+  <a href="{{ group_nav_home }}#team">{{ group_nav_copy.team | escape }}</a>
+  <a href="{{ '/group/research/' | prepend: group_nav_prefix | relative_url }}"{% if include.current == 'research' %} aria-current="page"{% endif %}>{{ group_nav_copy.research_progress | escape }}</a>
+  <a href="{{ '/group/industry/' | prepend: group_nav_prefix | relative_url }}"{% if include.current == 'industry' %} aria-current="page"{% endif %}>{{ group_nav_copy.industry_progress | escape }}</a>
+</nav>

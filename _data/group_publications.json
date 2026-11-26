@@ -1,0 +1,959 @@
+[
+  {
+    "title": "A source detection problem for thin plate vibration with L-curve regularization based on the Menger curvature",
+    "creators": [
+      "Lu Zheng",
+      "Rongwu Xu",
+      "Zhenyu Yao",
+      "Jijun Liu"
+    ],
+    "year": 2026,
+    "language": "en",
+    "venue": "Journal of Inverse and Ill-Posed Problems",
+    "url": "https://doi.org/10.1515/jiip-2026-0011",
+    "kind": "online"
+  },
+  {
+    "title": "Large-sized ornithopters achieve continuous flight through jump-assisted takeoff",
+    "creators": [
+      "Xinde Li",
+      "Zeyu Zhang",
+      "Fir Dunkin",
+      "Heqing Li",
+      "Junsheng Xu",
+      "Jijun Liu"
+    ],
+    "year": 2026,
+    "language": "en",
+    "venue": "npj Robotics",
+    "url": "https://doi.org/10.1038/s44182-025-00067-8",
+    "locator": "4, 4"
+  },
+  {
+    "title": "On the Identification of External Forces for Two-Layer Quasi-Geostrophic Model from Partial Observation Data",
+    "creators": [
+      "Jinchao Pan",
+      "Jijun Liu"
+    ],
+    "year": 2026,
+    "language": "en",
+    "venue": "SIAM Journal on Applied Mathematics",
+    "url": "https://doi.org/10.1137/25m183153x",
+    "locator": "86(5), 2405–2427"
+  },
+  {
+    "title": "On the recovery of boundary impedance for 3-dimensional obstacle by acoustic wave scattering using modified Kaczmarz iteration algorithm",
+    "creators": [
+      "Yingdi Yi",
+      "Jijun Liu"
+    ],
+    "year": 2026,
+    "language": "en",
+    "venue": "Applied Numerical Mathematics",
+    "url": "https://doi.org/10.1016/j.apnum.2025.08.010",
+    "locator": "219, 53–72"
+  },
+  {
+    "title": "On the recovery of source term for linearized pseudoparabolic equation by data assimilation",
+    "creators": [
+      "Jun-Liang Fu",
+      "Jijun Liu"
+    ],
+    "year": 2026,
+    "language": "en",
+    "venue": "Inverse Problems and Imaging",
+    "url": "https://doi.org/10.3934/ipi.2026040",
+    "locator": "28, 82–107 (2027)",
+    "kind": "online"
+  },
+  {
+    "title": "On the Simultaneous Recovery of Boundary Impedance and Internal Conductivity",
+    "creators": [
+      "Jinchao Pan",
+      "Jijun Liu"
+    ],
+    "year": 2026,
+    "language": "en",
+    "venue": "SIAM Journal on Applied Mathematics",
+    "url": "https://doi.org/10.1137/24m1687066",
+    "locator": "86(1), 52–75"
+  },
+  {
+    "title": "Conditional stability and the numerical solution of the backward problem in dynamical cardiac electrophysiology modeling",
+    "creators": [
+      "Qiang Zhang",
+      "Masahiro Yamamoto",
+      "Jijun Liu"
+    ],
+    "year": 2025,
+    "language": "en",
+    "venue": "Inverse Problems",
+    "url": "https://doi.org/10.1088/1361-6420/adf143",
+    "locator": "41(8), 085004"
+  },
+  {
+    "title": "Effective medium theory for Van-der-Waals heterostructures",
+    "creators": [
+      "Xinlin Cao",
+      "Ahcene Ghandriche",
+      "Mourad Sini"
+    ],
+    "year": 2025,
+    "language": "en",
+    "venue": "Journal of Differential Equations",
+    "url": "https://doi.org/10.1016/j.jde.2025.113260",
+    "locator": "433, 113260"
+  },
+  {
+    "title": "Enhanced Inversion of Nonsmooth Initial Status for the Convection-Diffusion Equation Utilizing Multitemporal Observations",
+    "creators": [
+      "Jiahao Hu",
+      "Jijun Liu",
+      "Haibing Wang",
+      "Min Zhong"
+    ],
+    "year": 2025,
+    "language": "en",
+    "venue": "SIAM Journal on Applied Mathematics",
+    "url": "https://doi.org/10.1137/25m1731873",
+    "locator": "85(4), 1572–1595"
+  },
+  {
+    "title": "On the Computation of Time-Domain Acoustic Scattering by Multiple Obstacles Using a Decomposition Method",
+    "creators": [
+      "Shutong Hou",
+      "Jijun Liu",
+      "Haibing Wang"
+    ],
+    "year": 2025,
+    "language": "en",
+    "venue": "SIAM Journal on Applied Mathematics",
+    "url": "https://doi.org/10.1137/24m1714873",
+    "locator": "85(6), 2683–2703"
+  },
+  {
+    "title": "On the detection of medium inhomogeneity by contrast agent: wave scattering models and numerical implementations",
+    "creators": [
+      "Zhe Wang",
+      "Ahcene Ghandriche",
+      "Jijun Liu"
+    ],
+    "year": 2025,
+    "language": "en",
+    "venue": "arXiv",
+    "url": "https://arxiv.org/abs/2507.05773",
+    "locator": "2507.05773",
+    "kind": "preprint"
+  },
+  {
+    "title": "Simultaneously identifying piecewise smooth conductivity and initial value for a heat conduction equation",
+    "creators": [
+      "Shuli Chen",
+      "Gen Nakamura",
+      "Haibing Wang"
+    ],
+    "year": 2025,
+    "language": "en",
+    "venue": "Inverse Problems and Imaging",
+    "url": "https://doi.org/10.3934/ipi.2024029",
+    "locator": "19(1), 142–173"
+  },
+  {
+    "title": "Solving the acousto-electric tomography by the adaptive Nesterov method of Kaczmarz type",
+    "creators": [
+      "Kai Zhu",
+      "Min Zhong"
+    ],
+    "year": 2025,
+    "language": "en",
+    "venue": "Inverse Problems",
+    "url": "https://doi.org/10.1088/1361-6420/adb3c4",
+    "locator": "41(3), 035007"
+  },
+  {
+    "title": "An efficient algorithm for time-domain acoustic scattering in three dimensions by layer potentials",
+    "creators": [
+      "Shutong Hou",
+      "Haibing Wang"
+    ],
+    "year": 2024,
+    "language": "en",
+    "venue": "Journal of Computational Physics",
+    "url": "https://doi.org/10.1016/j.jcp.2024.113258",
+    "locator": "514, 113258"
+  },
+  {
+    "title": "Double-parameter regularization for solving the backward diffusion problem with parallel-in-time algorithm",
+    "creators": [
+      "Jun-Liang Fu",
+      "Jijun Liu"
+    ],
+    "year": 2024,
+    "language": "en",
+    "venue": "Inverse Problems",
+    "url": "https://doi.org/10.1088/1361-6420/ad1131",
+    "locator": "40(1), 015010"
+  },
+  {
+    "title": "Estimation of the Eigenvalues and the integral of the eigenfunctions of the Newtonian potential operator",
+    "creators": [
+      "Abdulaziz Alsenafi",
+      "Ahcene Ghandriche",
+      "Mourad Sini"
+    ],
+    "year": 2024,
+    "language": "en",
+    "venue": "Proceedings of the American Mathematical Society",
+    "url": "https://doi.org/10.1090/proc/16871",
+    "locator": "152(10), 4379–4392"
+  },
+  {
+    "title": "Extract the information via multiple repeated observations under randomly distributed noise",
+    "creators": [
+      "Min Zhong",
+      "Xinyan Li",
+      "Xiaoman Liu"
+    ],
+    "year": 2024,
+    "language": "en",
+    "venue": "Journal of Inverse and Ill-posed Problems",
+    "url": "https://doi.org/10.1515/jiip-2022-0063",
+    "locator": "32(4), 683–699"
+  },
+  {
+    "title": "Local analysis for locating a single point target in time-domain fluorescence diffuse optical tomography",
+    "creators": [
+      "Junyong Eom",
+      "Gen Nakamura",
+      "Goro Nishimura",
+      "Chunlong Sun"
+    ],
+    "year": 2024,
+    "language": "en",
+    "venue": "Differential and Integral Equations",
+    "url": "https://doi.org/10.57262/die037-0102-27",
+    "locator": "37(1/2), 27–58"
+  },
+  {
+    "title": "M³S-Net: multi-modality multi-branch multi-self-attention network with structure-promoting loss for low-dose PET/CT enhancement",
+    "creators": [
+      "Dong Wang",
+      "Chong Jiang",
+      "Jian He",
+      "Yue Teng",
+      "Hourong Qin",
+      "Jijun Liu",
+      "Xiaoping Yang"
+    ],
+    "year": 2024,
+    "language": "en",
+    "venue": "Physics in Medicine & Biology",
+    "url": "https://doi.org/10.1088/1361-6560/ad14c5",
+    "locator": "69(2), 025001"
+  },
+  {
+    "title": "Numerical solution of the boundary value problem of elliptic equation by Levi function scheme",
+    "creators": [
+      "Jinchao Pan",
+      "Jijun Liu"
+    ],
+    "year": 2024,
+    "language": "en",
+    "venue": "Numerical Methods for Partial Differential Equations",
+    "url": "https://doi.org/10.1002/num.23142",
+    "locator": "40(6), e23142"
+  },
+  {
+    "title": "On fluorophore imaging by nonlinear diffusion model with dynamical iterative scheme",
+    "creators": [
+      "Qiang Zhang",
+      "Jijun Liu"
+    ],
+    "year": 2024,
+    "language": "en",
+    "venue": "Mathematics and Computers in Simulation",
+    "url": "https://doi.org/10.1016/j.matcom.2024.03.023",
+    "locator": "221, 533–549"
+  },
+  {
+    "title": "On the data assimilation of initial distribution for 2-dimensional shallow-water equation model",
+    "creators": [
+      "Hui Zhang",
+      "Jijun Liu"
+    ],
+    "year": 2024,
+    "language": "en",
+    "venue": "Physica Scripta",
+    "url": "https://doi.org/10.1088/1402-4896/ad3e3e",
+    "locator": "99(6), 065220"
+  },
+  {
+    "title": "On the reconstruction of cardiac transmembrane potential pattern from body surface measurement",
+    "creators": [
+      "Qiang Zhang",
+      "Liyan Wang",
+      "Jijun Liu"
+    ],
+    "year": 2024,
+    "language": "en",
+    "venue": "Physica Scripta",
+    "url": "https://doi.org/10.1088/1402-4896/ad6aef",
+    "locator": "99(9), 095233"
+  },
+  {
+    "title": "On the reconstruction of medium conductivity by integral equation method based on the Levi function",
+    "creators": [
+      "Qiang Zhang",
+      "Jijun Liu"
+    ],
+    "year": 2024,
+    "language": "en",
+    "venue": "Inverse Problems and Imaging",
+    "url": "https://doi.org/10.3934/ipi.2024008",
+    "locator": "18(5), 1096–1120"
+  },
+  {
+    "title": "On the recovery of initial status for linearized shallow-water wave equation by data assimilation with error analysis",
+    "creators": [
+      "Jun-Liang Fu",
+      "Jijun Liu"
+    ],
+    "year": 2024,
+    "language": "en",
+    "venue": "Advances in Computational Mathematics",
+    "url": "https://doi.org/10.1007/s10444-024-10210-y",
+    "locator": "50, 116"
+  },
+  {
+    "title": "Recovering both the wave speed and the source function in a time-domain wave equation by injecting contrasting droplets",
+    "creators": [
+      "Soumen Senapati",
+      "Mourad Sini",
+      "Haibing Wang"
+    ],
+    "year": 2024,
+    "language": "en",
+    "venue": "Discrete and Continuous Dynamical Systems",
+    "url": "https://doi.org/10.3934/dcds.2023151",
+    "locator": "44(5), 1446–1474"
+  },
+  {
+    "title": "Tumor Segmentation in Intraoperative Fluorescence Images Based on Transfer Learning and Convolutional Neural Networks",
+    "creators": [
+      "Weijia Hou",
+      "Liwen Zou",
+      "Dong Wang"
+    ],
+    "year": 2024,
+    "language": "en",
+    "venue": "Surgical Innovation",
+    "url": "https://doi.org/10.1177/15533506241246576",
+    "locator": "31(3), 291–306"
+  },
+  {
+    "title": "Uniqueness and numerical inversion in bioluminescence tomography with time-dependent boundary measurement",
+    "creators": [
+      "Rongfang Gong",
+      "Xinran Liu",
+      "Jun Shen",
+      "Qin Huang",
+      "Chunlong Sun",
+      "Ye Zhang"
+    ],
+    "year": 2024,
+    "language": "en",
+    "venue": "Inverse Problems",
+    "url": "https://doi.org/10.1088/1361-6420/ad49cb",
+    "locator": "40(7), 075002"
+  },
+  {
+    "title": "Wave propagation in pure-time modulated step media with applications to temporal-aiming",
+    "creators": [
+      "Mourad Sini",
+      "Haibing Wang",
+      "Qingyun Yao"
+    ],
+    "year": 2024,
+    "language": "en",
+    "venue": "Communications on Analysis and Computation",
+    "url": "https://doi.org/10.3934/cac.2024004",
+    "locator": "2(1), 48–70"
+  },
+  {
+    "title": "反问题的正则化理论和应用",
+    "creators": [
+      "刘继军",
+      "王海兵"
+    ],
+    "year": 2024,
+    "language": "zh-CN",
+    "venue": "科学出版社",
+    "url": "https://www.ecsponline.com/goods.php?id=226516",
+    "locator": "ISBN 978-7-03-079280-8",
+    "kind": "monograph"
+  },
+  {
+    "title": "A Multiscale RBF Method for Severely Ill-Posed Problems on Spheres",
+    "creators": [
+      "Min Zhong",
+      "Quoc Thong Le Gia",
+      "Ian Hugh Sloan"
+    ],
+    "year": 2023,
+    "language": "en",
+    "venue": "Journal of Scientific Computing",
+    "url": "https://doi.org/10.1007/s10915-022-02046-9",
+    "locator": "94(1), 22"
+  },
+  {
+    "title": "CMP-UNet: A Retinal Vessel Segmentation Network Based on Multi-Scale Feature Fusion",
+    "creators": [
+      "Yanan Gu",
+      "Ruyi Cao",
+      "Dong Wang",
+      "Bibo Lu"
+    ],
+    "year": 2023,
+    "language": "en",
+    "venue": "Electronics",
+    "url": "https://doi.org/10.3390/electronics12234743",
+    "locator": "12(23), 4743"
+  },
+  {
+    "title": "Convergence Analysis of the Harmonic Bz Algorithm with Single Injection Current in MREIT",
+    "creators": [
+      "Yizhuang Song",
+      "Rosalind Sadleir",
+      "Jijun Liu"
+    ],
+    "year": 2023,
+    "language": "en",
+    "venue": "SIAM Journal on Imaging Sciences",
+    "url": "https://doi.org/10.1137/22m1505438",
+    "locator": "16(2), 706–739"
+  },
+  {
+    "title": "Expressions of the peak time for time-domain boundary measurements of diffuse light",
+    "creators": [
+      "J. Y. Eom",
+      "M. Machida",
+      "G. Nakamura",
+      "G. Nishimura",
+      "C. L. Sun"
+    ],
+    "year": 2023,
+    "language": "en",
+    "venue": "Journal of Mathematical Physics",
+    "url": "https://doi.org/10.1063/5.0081169",
+    "locator": "64(8), 083504"
+  },
+  {
+    "title": "Fast algorithms for band-limited extrapolation by over sampling and Fourier series",
+    "creators": [
+      "Weidong Chen"
+    ],
+    "year": 2023,
+    "language": "en",
+    "venue": "EURASIP Journal on Advances in Signal Processing",
+    "url": "https://doi.org/10.1186/s13634-023-01060-9",
+    "locator": "2023(1), 107"
+  },
+  {
+    "title": "K-space and image domain collaborative energy-based model for parallel MRI reconstruction",
+    "creators": [
+      "Zongjiang Tu",
+      "Chen Jiang",
+      "Yu Guan",
+      "Jijun Liu",
+      "Qiegen Liu"
+    ],
+    "year": 2023,
+    "language": "en",
+    "venue": "Magnetic Resonance Imaging",
+    "url": "https://doi.org/10.1016/j.mri.2023.02.004",
+    "locator": "99, 110–122"
+  },
+  {
+    "title": "Landweber-type method with uniformly convex constraints under conditional stability assumptions",
+    "creators": [
+      "Min Zhong",
+      "Lingyun Qiu",
+      "Wei Wang"
+    ],
+    "year": 2023,
+    "language": "en",
+    "venue": "Applied Mathematics Letters",
+    "url": "https://doi.org/10.1016/j.aml.2023.108723",
+    "locator": "144, 108723"
+  },
+  {
+    "title": "Numerical studies of domain sampling methods for inverse boundary value problems by one measurement",
+    "creators": [
+      "Shiwei Sun",
+      "Gen Nakamura",
+      "Haibing Wang"
+    ],
+    "year": 2023,
+    "language": "en",
+    "venue": "Journal of Computational Physics",
+    "url": "https://doi.org/10.1016/j.jcp.2023.112099",
+    "locator": "485, 112099"
+  },
+  {
+    "title": "On stability and regularization for data-driven solution of parabolic inverse source problems",
+    "creators": [
+      "Mengmeng Zhang",
+      "Qianxiao Li",
+      "Jijun Liu"
+    ],
+    "year": 2023,
+    "language": "en",
+    "venue": "Journal of Computational Physics",
+    "url": "https://doi.org/10.1016/j.jcp.2022.111769",
+    "locator": "474, 111769"
+  },
+  {
+    "title": "On the determination of the spatial-dependent potential coefficient in a linear pseudoparabolic equation",
+    "creators": [
+      "Jun-Liang Fu",
+      "Jijun Liu"
+    ],
+    "year": 2023,
+    "language": "en",
+    "venue": "Advances in Computational Mathematics",
+    "url": "https://doi.org/10.1007/s10444-023-10023-5",
+    "locator": "49(2), 28"
+  },
+  {
+    "title": "On the recovery of internal source for an elliptic system by neural network approximation",
+    "creators": [
+      "Hui Zhang",
+      "Jijun Liu"
+    ],
+    "year": 2023,
+    "language": "en",
+    "venue": "Journal of Inverse and Ill-posed Problems",
+    "url": "https://doi.org/10.1515/jiip-2022-0005",
+    "locator": "31(5), 739–761"
+  },
+  {
+    "title": "Practical Inverse Problems and Their Prospects: Proceedings of PIPTP",
+    "creators": [
+      "Takashi Takiguchi",
+      "Takashi Ohe",
+      "Jin Cheng",
+      "Cheng Hua"
+    ],
+    "year": 2023,
+    "language": "en",
+    "venue": "Springer Nature Singapore",
+    "url": "https://doi.org/10.1007/978-981-99-2408-0",
+    "kind": "proceedings",
+    "editors": true,
+    "chapter": {
+      "title": "A Big Data Processing Technique Based on Tikhonov Regularization",
+      "creators": [
+        "Yu Chen",
+        "Jin Cheng",
+        "Jiantang Zhang",
+        "Min Zhong"
+      ],
+      "url": "https://doi.org/10.1007/978-981-99-2408-0_12"
+    },
+    "locator": "Mathematics for Industry 37"
+  },
+  {
+    "title": "Recovery of a potential coefficient in a pseudoparabolic system from nonlocal observation",
+    "creators": [
+      "Jun-Liang Fu",
+      "Jijun Liu"
+    ],
+    "year": 2023,
+    "language": "en",
+    "venue": "Applied Numerical Mathematics",
+    "url": "https://doi.org/10.1016/j.apnum.2022.09.014",
+    "locator": "184, 121–136"
+  },
+  {
+    "title": "Sampling algorithms by regularization and shifting",
+    "creators": [
+      "Weidong Chen"
+    ],
+    "year": 2023,
+    "language": "en",
+    "venue": "Signal, Image and Video Processing",
+    "url": "https://doi.org/10.1007/s11760-023-02568-1",
+    "locator": "17(7), 3461–3466"
+  },
+  {
+    "title": "Semi-discrete Tikhonov regularization in RKHS with large randomly distributed noise",
+    "creators": [
+      "Min Zhong",
+      "Yu Hu"
+    ],
+    "year": 2023,
+    "language": "en",
+    "venue": "Inverse Problems",
+    "url": "https://doi.org/10.1088/1361-6420/acdf16",
+    "locator": "39(9), 095005"
+  },
+  {
+    "title": "Solving an inverse source problem by deep neural network method with convergence and error analysis",
+    "creators": [
+      "Hui Zhang",
+      "Jijun Liu"
+    ],
+    "year": 2023,
+    "language": "en",
+    "venue": "Inverse Problems",
+    "url": "https://doi.org/10.1088/1361-6420/acdaef",
+    "locator": "39(7), 075013"
+  },
+  {
+    "title": "Uniqueness Results for Some Inverse Electromagnetic Scattering Problems with Phaseless Far-Field Data",
+    "creators": [
+      "Xianghe Zhu",
+      "Jun Guo",
+      "Haibing Wang"
+    ],
+    "year": 2023,
+    "language": "en",
+    "venue": "Axioms",
+    "url": "https://doi.org/10.3390/axioms12121069",
+    "locator": "12(12), 1069"
+  },
+  {
+    "title": "A numerical scheme for the time-fractional diffusion equation by layer potentials",
+    "creators": [
+      "Qingyun Yao",
+      "Haibing Wang"
+    ],
+    "year": 2022,
+    "language": "en",
+    "venue": "Journal of Computational Physics",
+    "url": "https://doi.org/10.1016/j.jcp.2021.110763",
+    "locator": "448, 110763"
+  },
+  {
+    "title": "Multi-directional rain streak removal based on infimal convolution of oscillation TGV",
+    "creators": [
+      "Yanan Gu",
+      "Yiming Gao",
+      "Hairong Liu",
+      "Dong Wang"
+    ],
+    "year": 2022,
+    "language": "en",
+    "venue": "Neurocomputing",
+    "url": "https://doi.org/10.1016/j.neucom.2022.02.059",
+    "locator": "486, 61–76"
+  },
+  {
+    "title": "On fluorescence imaging: The diffusion equation model and recovery of the absorption coefficient of fluorophores",
+    "creators": [
+      "Jijun Liu",
+      "Manabu Machida",
+      "Gen Nakamura",
+      "Goro Nishimura",
+      "Chunlong Sun"
+    ],
+    "year": 2022,
+    "language": "en",
+    "venue": "Science China Mathematics",
+    "url": "https://doi.org/10.1007/s11425-020-1731-y",
+    "locator": "65(6), 1179–1198"
+  },
+  {
+    "title": "On the asymptotical regularization with convex constraints for nonlinear ill-posed problems",
+    "creators": [
+      "Min Zhong",
+      "Wei Wang",
+      "Kai Zhu"
+    ],
+    "year": 2022,
+    "language": "en",
+    "venue": "Applied Mathematics Letters",
+    "url": "https://doi.org/10.1016/j.aml.2022.108247",
+    "locator": "133, 108247"
+  },
+  {
+    "title": "On the cavity detection in a heat conductive medium from time-average boundary temperature measurement",
+    "creators": [
+      "Yuchan Wang",
+      "Qun Chen",
+      "Jijun Liu"
+    ],
+    "year": 2022,
+    "language": "en",
+    "venue": "Journal of Computational and Applied Mathematics",
+    "url": "https://doi.org/10.1016/j.cam.2021.113780",
+    "locator": "401, 113780"
+  },
+  {
+    "title": "On the direct and inverse electromagnetic scattering by chiral media",
+    "creators": [
+      "Jun Guo",
+      "Haibing Wang"
+    ],
+    "year": 2022,
+    "language": "en",
+    "venue": "Journal of Differential Equations",
+    "url": "https://doi.org/10.1016/j.jde.2022.02.012",
+    "locator": "317, 495–523"
+  },
+  {
+    "title": "On the dynamical model for COVID-19 with vaccination and time-delay effects: A model analysis supported by Yangzhou epidemic in 2021",
+    "creators": [
+      "Liyan Wang",
+      "Qiang Zhang",
+      "Jijun Liu"
+    ],
+    "year": 2022,
+    "language": "en",
+    "venue": "Applied Mathematics Letters",
+    "url": "https://doi.org/10.1016/j.aml.2021.107783",
+    "locator": "125, 107783"
+  },
+  {
+    "title": "On the stability of recovering two sources and initial status in a stochastic hyperbolic-parabolic system",
+    "creators": [
+      "Bin Wu",
+      "Jijun Liu"
+    ],
+    "year": 2022,
+    "language": "en",
+    "venue": "Inverse Problems",
+    "url": "https://doi.org/10.1088/1361-6420/ac4426",
+    "locator": "38(2), 025010"
+  },
+  {
+    "title": "Simultaneous identification of initial value and source strength in a transmission problem for a parabolic equation",
+    "creators": [
+      "Shuli Chen",
+      "Daijun Jiang",
+      "Haibing Wang"
+    ],
+    "year": 2022,
+    "language": "en",
+    "venue": "Advances in Computational Mathematics",
+    "url": "https://doi.org/10.1007/s10444-022-09983-x",
+    "locator": "48(6), 77"
+  },
+  {
+    "title": "The Inverse Source Problem for the Wave Equation Revisited: A New Approach",
+    "creators": [
+      "Mourad Sini",
+      "Haibing Wang"
+    ],
+    "year": 2022,
+    "language": "en",
+    "venue": "SIAM Journal on Mathematical Analysis",
+    "url": "https://doi.org/10.1137/21m1463689",
+    "locator": "54(5), 5160–5181"
+  },
+  {
+    "title": "Uniqueness and numerical inversion in the time-domain fluorescence diffuse optical tomography",
+    "creators": [
+      "Chunlong Sun",
+      "Zhidong Zhang"
+    ],
+    "year": 2022,
+    "language": "en",
+    "venue": "Inverse Problems",
+    "url": "https://doi.org/10.1088/1361-6420/ac88f3",
+    "locator": "38(10), 104001"
+  },
+  {
+    "title": "Duality between range and no-response tests and its application for inverse problems",
+    "creators": [
+      "Yi-Hsuan Lin",
+      "Gen Nakamura",
+      "Roland Potthast",
+      "Haibing Wang"
+    ],
+    "year": 2021,
+    "language": "en",
+    "venue": "Inverse Problems & Imaging",
+    "url": "https://doi.org/10.3934/ipi.2020072",
+    "locator": "15(2), 367–386"
+  },
+  {
+    "title": "Extract the information from big data with randomly distributed noise",
+    "creators": [
+      "Jin Cheng",
+      "Jiantang Zhang",
+      "Min Zhong"
+    ],
+    "year": 2021,
+    "language": "en",
+    "venue": "Journal of Inverse and Ill-posed Problems",
+    "url": "https://doi.org/10.1515/jiip-2021-0016",
+    "locator": "29(4), 525–541"
+  },
+  {
+    "title": "On the simultaneous reconstruction of boundary Robin coefficient and internal source in a slow diffusion system",
+    "creators": [
+      "Mengmeng Zhang",
+      "Jijun Liu"
+    ],
+    "year": 2021,
+    "language": "en",
+    "venue": "Inverse Problems",
+    "url": "https://doi.org/10.1088/1361-6420/ac0967",
+    "locator": "37(7), 075008"
+  },
+  {
+    "title": "Recovering the weight function in distributed order fractional equation from interior measurement",
+    "creators": [
+      "J.J. Liu",
+      "C.L. Sun",
+      "M. Yamamoto"
+    ],
+    "year": 2021,
+    "language": "en",
+    "venue": "Applied Numerical Mathematics",
+    "url": "https://doi.org/10.1016/j.apnum.2021.05.026",
+    "locator": "168, 84–103"
+  },
+  {
+    "title": "The dynamical model for COVID-19 with asymptotic analysis and numerical implementations",
+    "creators": [
+      "Jijun Liu",
+      "Liyan Wang",
+      "Qiang Zhang",
+      "Shing-Tung Yau"
+    ],
+    "year": 2021,
+    "language": "en",
+    "venue": "Applied Mathematical Modelling",
+    "url": "https://doi.org/10.1016/j.apm.2020.07.057",
+    "locator": "89(2), 1965–1982"
+  },
+  {
+    "title": "The forward and inverse problems for the scattering of obliquely incident electromagnetic waves in a chiral medium",
+    "creators": [
+      "Lixin Feng",
+      "Haibing Wang",
+      "Lei Zhang"
+    ],
+    "year": 2021,
+    "language": "en",
+    "venue": "Journal of Differential Equations",
+    "url": "https://doi.org/10.1016/j.jde.2021.02.049",
+    "locator": "284, 102–125"
+  },
+  {
+    "title": "An inverse source problem for distributed order time-fractional diffusion equation",
+    "creators": [
+      "Chunlong Sun",
+      "Jijun Liu"
+    ],
+    "year": 2020,
+    "language": "en",
+    "venue": "Inverse Problems",
+    "url": "https://doi.org/10.1088/1361-6420/ab762c",
+    "locator": "36(5), 055008"
+  },
+  {
+    "title": "An inverse source problem for parabolic equations with local measurements",
+    "creators": [
+      "Jin Cheng",
+      "Jijun Liu"
+    ],
+    "year": 2020,
+    "language": "en",
+    "venue": "Applied Mathematics Letters",
+    "url": "https://doi.org/10.1016/j.aml.2020.106213",
+    "locator": "103, 106213"
+  },
+  {
+    "title": "Fast and robust reconstruction algorithm for fluorescence diffuse optical tomography assuming a cuboid target",
+    "creators": [
+      "Chunlong Sun",
+      "Gen Nakamura",
+      "Goro Nishimura",
+      "Yu Jiang",
+      "Jijun Liu",
+      "Manabu Machida"
+    ],
+    "year": 2020,
+    "language": "en",
+    "venue": "Journal of the Optical Society of America A",
+    "url": "https://doi.org/10.1364/josaa.37.000231",
+    "locator": "37(2), 231–239"
+  },
+  {
+    "title": "Image restoration from noisy incomplete frequency data by alternative iteration scheme",
+    "creators": [
+      "Xiaoman Liu",
+      "Jijun Liu"
+    ],
+    "year": 2020,
+    "language": "en",
+    "venue": "Inverse Problems and Imaging",
+    "url": "https://doi.org/10.3934/ipi.2020027",
+    "locator": "14(4), 583–606"
+  },
+  {
+    "title": "Locating small inclusions in diffuse optical tomography by a direct imaging method",
+    "creators": [
+      "Yu Jiang",
+      "Gen Nakamura",
+      "Haibing Wang"
+    ],
+    "year": 2020,
+    "language": "en",
+    "venue": "IMA Journal of Applied Mathematics",
+    "url": "https://doi.org/10.1093/imamat/hxaa028",
+    "locator": "85(6), 840–864"
+  },
+  {
+    "title": "On Fluorophore Imaging by Diffusion Equation Model: Decompositions and Optimizations",
+    "creators": [
+      "Li-yan Wang",
+      "Ji-jun Liu"
+    ],
+    "year": 2020,
+    "language": "en",
+    "venue": "Acta Mathematicae Applicatae Sinica, English Series",
+    "url": "https://doi.org/10.1007/s10255-020-0921-8",
+    "locator": "36(1), 203–222"
+  },
+  {
+    "title": "Reconstruction of the Space-dependent Source from Partial Neumann Data for Slow Diffusion System",
+    "creators": [
+      "Chun-long Sun",
+      "Ji-jun Liu"
+    ],
+    "year": 2020,
+    "language": "en",
+    "venue": "Acta Mathematicae Applicatae Sinica, English Series",
+    "url": "https://doi.org/10.1007/s10255-020-0919-2",
+    "locator": "36(1), 166–182"
+  },
+  {
+    "title": "Recovery of non-smooth radiative coefficient from nonlocal observation by diffusion system",
+    "creators": [
+      "Mengmeng Zhang",
+      "Jijun Liu"
+    ],
+    "year": 2020,
+    "language": "en",
+    "venue": "Journal of Inverse and Ill-posed Problems",
+    "url": "https://doi.org/10.1515/jiip-2019-0029",
+    "locator": "28(3), 389–410"
+  },
+  {
+    "title": "Simultaneous reconstruction of space-dependent heat transfer coefficients and initial temperature",
+    "creators": [
+      "K. Cao",
+      "D. Lesnic",
+      "Jijun Liu"
+    ],
+    "year": 2020,
+    "language": "en",
+    "venue": "Journal of Computational and Applied Mathematics",
+    "url": "https://doi.org/10.1016/j.cam.2020.112800",
+    "locator": "375, 112800"
+  }
+]

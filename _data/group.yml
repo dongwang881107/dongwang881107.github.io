@@ -1,0 +1,210 @@
+name:
+  zh-CN: 大规模科学计算与介质成像课题组
+  en: Large-Scale Scientific Computing and Imaging of Media Research Group
+affiliation:
+  zh-CN: 东南大学数学学院 · 反问题与介质成像
+  en: School of Mathematics, Southeast University · Inverse Problems and Imaging
+team_source: https://yauc.seu.edu.cn/2020/0319/c27551a321208/page.htm
+copy:
+  zh-CN:
+    intro: 围绕偏微分方程反问题开展研究。从测量和物理过程出发，研究怎样稳定地估计介质结构与参数，并发展适用于成像、波动散射和数据同化的数值方法。
+    contents: 课题组栏目
+    research_contents: 科研进展目录
+    outputs_contents: 科研成果目录
+    overview: 概览
+    back_to_overview: 返回课题组概览
+    industry_timeline: 进展时间线
+    team: 团队
+    team_context: 公开资料中的负责人、科研合作者、既往成员与校友。
+    team_source: 东南大学团队介绍与获奖记录
+    profile: 个人主页
+    research_progress: 科研进展
+    industry_progress: 产业化进展
+    research: 研究方向
+    outputs: 科研成果
+    outputs_selected: 代表成果
+    outputs_context: 选录课题组及合作研究中已公开的论文、专利与奖励。
+    publications: 历年文献
+    publication_count: "%COUNT% 条"
+    publication_types: { proceedings: 会议论文集, monograph: 学术专著, preprint: 预印本, online: 在线发表 }
+    publication_editors: 编
+    publication_chapter: 课题组参与章节
+    projects: 科研项目
+    project_funding: { nsfc: 国家自然科学基金面上项目, r_and_d: 国家重点研发计划, nsfc_special: 国家自然科学基金专项项目 }
+    project_roles: { lead: 刘继军主持, participant: 刘继军参与 }
+    project_status: { completed: 已结题 }
+    output_types: { article: 论文, patent: 发明专利, award: 奖励 }
+    output_source: { article: 论文原文, patent: 查看专利条目, award: 授奖记录 }
+    code: 代码
+    frontiers: 研究前沿
+    updates: 最新动态
+    all_updates: 查看全部动态
+    top: 返回顶部
+  en:
+    intro: The group studies inverse problems governed by partial differential equations, developing ways to recover material properties and structure from measurements and numerical methods for imaging, wave scattering, and data assimilation.
+    contents: Research group sections
+    research_contents: On this research page
+    outputs_contents: Research outputs sections
+    overview: Overview
+    back_to_overview: Back to group overview
+    industry_timeline: Timeline
+    team: Team
+    team_context: Group lead, research collaborators, former researchers, and alumni documented in public sources.
+    team_source: Southeast University group and award record
+    profile: Profile
+    research_progress: Research progress
+    industry_progress: Commercialization progress
+    research: Research directions
+    outputs: Research outputs
+    outputs_selected: Selected highlights
+    outputs_context: Public papers, patents, and awards from the group and its collaborations.
+    publications: Publications by year
+    publication_count: "%COUNT% records"
+    publication_types: { proceedings: Conference proceedings, monograph: Monograph, preprint: Preprint, online: Published online }
+    publication_editors: Editors
+    publication_chapter: Chapter with a group contributor
+    projects: Research projects
+    project_funding: { nsfc: NSFC General Program, r_and_d: National Key R&D Program of China, nsfc_special: NSFC Special Program }
+    project_roles: { lead: Led by Jijun Liu, participant: Jijun Liu participated }
+    project_status: { completed: Completed }
+    output_types: { article: Paper, patent: Invention patent, award: Award }
+    output_source: { article: Read the paper, patent: View the patent record, award: Award record }
+    code: Code
+    frontiers: Research frontiers
+    updates: Latest updates
+    all_updates: All updates
+    top: Back to top
+people:
+  - name: { zh-CN: 刘继军, en: Jijun Liu }
+    lead: true
+    role: { zh-CN: 课题组负责人 · 二级教授、博士生导师, en: Group lead · Professor and doctoral supervisor }
+    affiliation: { zh-CN: 东南大学数学学院, en: School of Mathematics, Southeast University }
+    focus:
+      zh-CN: 研究偏微分方程反问题与正则化，涵盖逆散射、介质与医学成像、分数阶扩散及数据同化。获第五届萧树铁应用数学奖，为 2017 年度教育部自然科学二等奖第一完成人。
+      en: Researches PDE inverse problems and regularization, including inverse scattering, imaging of media, biomedical imaging, fractional diffusion, and data assimilation. Received the fifth Xiao Shutie Applied Mathematics Award and was the lead recipient of a 2017 Ministry of Education natural sciences second prize.
+    url: https://math.seu.edu.cn/ljj/main.psp
+    photo: { path: /assets/images/group/jijun-liu.jpg, width: 395, height: 480 }
+  - name: { zh-CN: 王海兵, en: Haibing Wang }
+    role: { zh-CN: 教授、博士生导师 · 计算数学系主任, en: Professor and doctoral supervisor · Head of Computational Mathematics }
+    affiliation: { zh-CN: 东南大学数学学院, en: School of Mathematics, Southeast University }
+    focus:
+      zh-CN: 2012 年获北海道大学与东南大学理学博士学位。研究偏微分方程反问题及其数值方法，涵盖波动方程源项反演、时域声散射与扩散方程反问题。以第二完成人获 2017 年度教育部自然科学二等奖，2024 年与刘继军合著《反问题的正则化理论和应用》。
+      en: Earned doctoral degrees in science from Hokkaido University and Southeast University in 2012. He develops numerical methods for PDE inverse problems in wave source recovery, time-domain acoustic scattering, and diffusion. He was the second-listed contributor on a project that received a natural sciences second prize from China’s Ministry of Education in 2017. He coauthored a monograph on inverse problem regularization with Jijun Liu in 2024.
+    url: https://math.seu.edu.cn/2016/0921/c16529a170145/page1.htm
+    link_label: { zh-CN: 东南大学论文与著作列表, en: Publications at Southeast University }
+    photo: { path: /assets/images/group/haibing-wang.png, width: 308, height: 410 }
+  - name: { zh-CN: 钟敏, en: Min Zhong }
+    role: { zh-CN: 教授、博士生导师, en: Professor and doctoral supervisor }
+    affiliation: { zh-CN: 东南大学数学学院, en: School of Mathematics, Southeast University }
+    focus:
+      zh-CN: 本科毕业于兰州大学，2014 年获复旦大学理学博士学位，曾赴澳大利亚联邦科学与工业研究组织（CSIRO）联合培养。研究数学物理反问题，发展多尺度反演与 Banach 空间迭代正则化方法，并应用于电阻抗成像和声电层析成像。主持国家自然科学基金面上项目，入选东南大学首批「至善青年学者」。
+      en: Earned a bachelor’s degree from Lanzhou University and a Ph.D. from Fudan University in 2014, with part of her doctoral training at Australia’s CSIRO. She develops multiscale inversion and iterative regularization in Banach spaces for inverse problems in mathematical physics, including electrical impedance tomography and acousto-electric tomography. She leads general research projects funded by the National Natural Science Foundation of China and was named to Southeast University’s inaugural cohort of Zhishan Young Scholars.
+    url: https://math.seu.edu.cn/_s256/zm/list.psp
+    photo: { path: /assets/images/group/min-zhong.png, width: 296, height: 396 }
+  - name: { zh-CN: 张嫱, en: Qiang Zhang }
+    role: { zh-CN: 科研合作 · 生物医学成像反问题, en: Research collaborator · Inverse problems in biomedical imaging }
+    affiliation: { zh-CN: 河海大学数学与统计学院, en: School of Mathematics and Statistics, Hohai University }
+    focus:
+      zh-CN: 东南大学计算数学博士，师从刘继军教授，曾在东京大学联合培养。研究介质电导率反演、荧光扩散光学层析、心脏电活动反演及不适定问题的正则化。
+      en: Earned a Ph.D. in computational mathematics at Southeast University under Jijun Liu and was jointly trained at the University of Tokyo. Researches conductivity recovery, fluorescence diffuse optical tomography, cardiac electrophysiology inversion, and regularization.
+    url: https://doi.org/10.3934/ipi.2024008
+    link_label: { zh-CN: 查看代表论文, en: Selected paper }
+    photo: { path: /assets/images/group/qiang-zhang.jpg, width: 289, height: 405 }
+  - name: { zh-CN: 王冬, en: Dong Wang }
+    role: { zh-CN: 南京中医药大学副教授, en: Associate Professor at Nanjing University of Chinese Medicine }
+    focus:
+      zh-CN: 获南京理工大学控制科学与工程博士学位。曾在东南大学数学学院和丘成桐中心任至善博士后，合作导师为刘继军教授，后任南京应用数学中心助理研究员。主要研究医学成像反问题，运用变分正则化、压缩感知和深度学习发展电阻抗成像、快速 MRI 与低剂量 PET/CT 的重建算法。曾主持低剂量 PET 重建与病灶识别方向的国家自然科学基金青年项目。
+      en: Earned a Ph.D. in Control Science and Engineering at Nanjing University of Science and Technology. He was a Zhishan Postdoctoral Fellow with Jijun Liu at Southeast University’s School of Mathematics and S. T. Yau Center, then an Assistant Research Fellow at the Nanjing Center for Applied Mathematics. He studies inverse problems in medical imaging, using variational regularization, compressed sensing, and deep learning for electrical impedance tomography, fast MRI, and low-dose PET/CT reconstruction. He led an NSFC Young Scientists Fund project on low-dose PET reconstruction and lesion recognition.
+    path: /cv/
+    link_label: { zh-CN: 个人简历, en: Curriculum vitae }
+    photo: { path: /assets/images/group/dong-wang.png, width: 399, height: 600 }
+directions:
+  - title: { zh-CN: 偏微分方程反问题与正则化, en: PDE inverse problems and regularization }
+    description:
+      zh-CN: 研究从有限、含噪观测确定未知参数的条件，分析唯一性、稳定性与正则化误差。
+      en: Study when unknown parameters can be recovered from limited, noisy observations, with a focus on uniqueness, stability, and regularization error.
+  - title: { zh-CN: 电阻抗成像与介质反演, en: Electrical impedance tomography and material parameter recovery }
+    description:
+      zh-CN: 研究电极接触阻抗与内部电导率的相互影响，结合物理模型、正则化和实测数据评估重建结果。
+      en: Study the interaction between electrode contact impedance and internal conductivity using physical models, regularization, and measured-data validation.
+    path: /group/frontiers/quantitative-eit/
+    link_label: { zh-CN: 阅读电阻抗成像前沿专题, en: Read the EIT research frontier }
+  - title: { zh-CN: 大规模科学计算与成像, en: Large-scale scientific computing and imaging }
+    description:
+      zh-CN: 面向多障碍声波散射、数据同化与医学影像重建，发展可计算的模型、分解方法和求解算法。
+      en: Develop computational models, decomposition methods, and solvers for multiple-obstacle acoustic scattering, data assimilation, and medical image reconstruction.
+projects:
+  - number: '12241102'
+    funding: nsfc_special
+    role: lead
+    status: completed
+    period: { zh-CN: 2023.01–2026.12, en: January 2023–December 2026 }
+    title:
+      zh-CN: 大气数据同化的高效数值算法及数学理论分析
+      en: Efficient Numerical Algorithms and Mathematical Analysis for Atmospheric Data Assimilation
+  - number: '2020YFA0713800'
+    funding: r_and_d
+    role: participant
+    status: completed
+    period: { zh-CN: 2020.12–2025.11, en: December 2020–November 2025 }
+    title:
+      zh-CN: 胰胆恶性肿瘤精准诊疗的数学理论和算法
+      en: Mathematical Theory and Algorithms for the Precise Diagnosis and Treatment of Pancreaticobiliary Malignancies
+  - number: '11971104'
+    funding: nsfc
+    role: lead
+    status: completed
+    period: { zh-CN: 2020.01–2023.12, en: January 2020–December 2023 }
+    title:
+      zh-CN: 基于抛物型方程反问题的扩散过程的参数反演及应用
+      en: Parameter Recovery in Diffusion Processes Based on Inverse Problems for Parabolic Equations
+outputs:
+  - year: 2026
+    kind: award
+    title: { zh-CN: 第五届萧树铁应用数学奖, en: Fifth CSIAM Xiao Shutie Prize }
+    credit: Jijun Liu · Chinese Society for Industrial and Applied Mathematics
+    description:
+      zh-CN: 刘继军获奖，研究方向为数学物理反问题、大规模科学计算与介质成像。
+      en: Awarded to Jijun Liu, whose research spans inverse problems in mathematical physics, large-scale scientific computing, and imaging of media.
+    url: https://jsamath.seu.edu.cn/2026/1010/c54699a585379/page.htm
+  - year: 2026
+    kind: article
+    title: { zh-CN: 边界阻抗与内部电导率的同步恢复, en: On the Simultaneous Recovery of Boundary Impedance and Internal Conductivity }
+    credit: Jinchao Pan, Jijun Liu · SIAM Journal on Applied Mathematics
+    description:
+      zh-CN: 在可获得局部内部测量的条件下，研究怎样同时估计边界阻抗与介质内部电导率。
+      en: Studies joint recovery of boundary impedance and interior conductivity when local interior measurements are available.
+    url: https://doi.org/10.1137/24M1687066
+  - year: 2026
+    kind: patent
+    title: { zh-CN: 基于压缩感知的线圈敏感度和磁共振图像联合重建方法, en: Joint Reconstruction of Coil Sensitivities and MR Images Using Compressed Sensing }
+    credit: Shing-Tung Yau, Jijun Liu, Liyan Wang, Dong Wang
+    description:
+      zh-CN: 将线圈敏感度估计与 MRI 图像重建放在同一求解流程中。2026 年获授权（CN117491929B）。
+      en: Jointly estimates coil sensitivities and reconstructs MR images. The invention patent was granted in 2026 (CN117491929B).
+    path: /cv/#Patents
+  - year: 2025
+    kind: article
+    title: { zh-CN: 多障碍物时域声散射的分解计算, en: On the Computation of Time-Domain Acoustic Scattering by Multiple Obstacles Using a Decomposition Method }
+    credit: Shutong Hou, Jijun Liu, Haibing Wang · SIAM Journal on Applied Mathematics
+    description:
+      zh-CN: 用时域边界积分方程分析散射分解的存在性与唯一性，并据此构建多障碍散射计算方法。
+      en: Uses time-domain boundary integral equations to establish existence and uniqueness for a decomposition and build a numerical method for multiple scattering.
+    url: https://doi.org/10.1137/24M1714873
+  - year: 2024
+    kind: article
+    title: { zh-CN: M³S-Net 低剂量 PET/CT 影像增强, en: M³S-Net for Low-Dose PET/CT Enhancement }
+    credit: Dong Wang, Chong Jiang, Jian He, Yue Teng, Hourong Qin, Jijun Liu, Xiaoping Yang · Physics in Medicine & Biology
+    description:
+      zh-CN: 在合作研究中，将 CT 结构信息与低剂量 PET 观测结合，用于提升 PET 图像的细节表达。
+      en: This collaborative study combines CT structural information with low-dose PET data to improve detail in the estimated PET images.
+    url: https://doi.org/10.1088/1361-6560/ad14c5
+    code: https://github.com/dongwang881107/DeepPETCT
+  - year: 2017
+    kind: award
+    title: { zh-CN: 偏微分方程反问题数值解及应用, en: Numerical Solutions of PDE Inverse Problems and Their Applications }
+    credit: Jijun Liu, Haibing Wang, Liyan Wang, Ming Yang
+    description:
+      zh-CN: 获 2017 年度教育部高等学校科学研究优秀成果奖（自然科学）二等奖。
+      en: Recipient of a 2017 Ministry of Education award for outstanding research in higher education, second prize in natural sciences.
+    url: https://yauc.seu.edu.cn/2020/0319/c27551a321208/page.htm

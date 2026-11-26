@@ -1,0 +1,121 @@
+{% assign group = site.data.group %}
+{% assign copy = group.copy[page.lang] %}
+{% assign prefix = '' %}
+{% if page.lang == 'en' %}{% assign prefix = '/en' %}{% endif %}
+{% assign updates = site.group_updates | where: 'lang', page.lang | where_exp: 'item', 'item.sample != true' | sort: 'date' | reverse %}
+{% assign frontiers = site.pages | where: 'section', 'group' | where: 'group_kind', 'frontier' | where: 'lang', page.lang | sort: 'date' | reverse %}
+{% assign technical_report = site.data.group_progress.research[page.lang] %}
+
+<nav class="group-subnav" aria-label="{{ copy.research_contents | escape }}">
+  <a href="#directions">{{ copy.research | escape }}</a>
+  <a href="#outputs">{{ copy.outputs | escape }}</a>
+  <a href="#frontiers">{{ copy.frontiers | escape }}</a>
+  <a href="#updates">{{ copy.updates | escape }}</a>
+</nav>
+
+{% if technical_report %}
+  <section class="group-section group-track" id="research" aria-labelledby="research-progress-heading">
+    <article class="group-feature">
+      <div>
+        <h2 id="research-progress-heading">{{ technical_report.title | escape }}</h2>
+        <p>{{ technical_report.summary | escape }}</p>
+        <ul class="group-feature-points">
+          {% for highlight in technical_report.highlights %}<li>{{ highlight | escape }}</li>{% endfor %}
+        </ul>
+        <a href="{{ technical_report.path | prepend: prefix | relative_url }}">{{ technical_report.link_label | escape }}</a>
+      </div>
+      {% if technical_report.image %}
+        <figure>
+          <img src="{{ technical_report.image.path | relative_url }}" width="{{ technical_report.image.width }}" height="{{ technical_report.image.height }}" alt="{{ technical_report.image.alt | escape }}" loading="lazy" decoding="async">
+          <figcaption>{{ technical_report.image.caption | escape }}</figcaption>
+        </figure>
+      {% endif %}
+    </article>
+  </section>
+{% endif %}
+
+<section class="group-section group-subsection" id="directions" aria-labelledby="research-heading">
+  <h2 id="research-heading">{{ copy.research | escape }}</h2>
+  <ul class="group-directions" role="list">
+    {% for direction in group.directions %}
+      <li>
+        <h3>{{ direction.title[page.lang] | escape }}</h3>
+        <p>{{ direction.description[page.lang] | escape }}</p>
+        {% if direction.path %}
+          <a href="{{ direction.path | prepend: prefix | relative_url }}">{{ direction.link_label[page.lang] | escape }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="group-section group-subsection" id="outputs" aria-labelledby="outputs-heading">
+  <h2 id="outputs-heading">{{ copy.outputs | escape }}</h2>
+  <nav class="group-subnav group-output-nav" aria-label="{{ copy.outputs_contents | escape }}">
+    {% if site.data.group_publications.size > 0 %}<a href="#publications">{{ copy.publications | escape }}</a>{% endif %}
+    {% if group.projects.size > 0 %}<a href="#projects">{{ copy.projects | escape }}</a>{% endif %}
+    <a href="#selected-outputs">{{ copy.outputs_selected | escape }}</a>
+  </nav>
+  {% include group-publications.html copy=copy %}
+  {% if group.projects.size > 0 %}
+    <section class="group-projects" id="projects" aria-labelledby="group-projects-heading">
+      <h3 id="group-projects-heading">{{ copy.projects | escape }}</h3>
+      <ul class="group-project-list" role="list">
+        {% for project in group.projects %}
+          <li>
+            <p class="group-project-title">{{ project.title[page.lang] | escape }}</p>
+            <p class="group-project-meta">
+              {{ copy.project_funding[project.funding] | escape }} ({{ project.number | escape }}) · {{ project.period[page.lang] | escape }}
+              · {{ copy.project_roles[project.role] | escape }}{% if project.status %} · {{ copy.project_status[project.status] | escape }}{% endif %}
+            </p>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+  <h3 class="group-selected-heading" id="selected-outputs">{{ copy.outputs_selected | escape }}</h3>
+  {% if copy.outputs_context %}<p class="group-section-intro muted">{{ copy.outputs_context | escape }}</p>{% endif %}
+  <ul class="group-outputs" role="list">
+    {% for output in group.outputs %}
+      <li>
+        <p class="group-output-meta muted">{{ output.year }} · {{ copy.output_types[output.kind] | escape }}</p>
+        <h4>{{ output.title[page.lang] | escape }}</h4>
+        {% if output.credit %}<p class="muted" lang="en">{{ output.credit | escape }}</p>{% endif %}
+        <p>{{ output.description[page.lang] | escape }}</p>
+        <div class="group-links">
+          {% if output.url %}<a href="{{ output.url | escape }}">{{ copy.output_source[output.kind] | escape }}</a>{% endif %}
+          {% if output.path %}<a href="{{ output.path | prepend: prefix | relative_url }}">{{ copy.output_source[output.kind] | escape }}</a>{% endif %}
+          {% if output.code %}<a href="{{ output.code | escape }}">{{ copy.code | escape }}</a>{% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="group-section group-subsection" id="frontiers" aria-labelledby="frontiers-heading">
+  <h2 id="frontiers-heading">{{ copy.frontiers | escape }}</h2>
+  <div class="group-frontiers">
+    {% for frontier in frontiers %}
+      <article class="group-frontier">
+        <div>
+          <h3><a href="{{ frontier.url | relative_url }}">{{ frontier.title | escape }}</a></h3>
+          <p>{{ frontier.summary | default: frontier.description | escape }}</p>
+        </div>
+        {% if frontier.image %}
+          <figure>
+            <img src="{{ frontier.image.path | relative_url }}" width="{{ frontier.image.width }}" height="{{ frontier.image.height }}" alt="{{ frontier.image.alt | escape }}" loading="lazy" decoding="async">
+            <figcaption>{{ frontier.image.caption | escape }}</figcaption>
+          </figure>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="group-section group-subsection" id="updates" aria-labelledby="updates-heading">
+  <h2 id="updates-heading">{{ copy.updates | escape }}</h2>
+  {% include group-update-list.html entries=updates limit=3 heading="h3" %}
+  {% if updates.size > 3 %}
+    <a href="{{ '/group/updates/' | prepend: prefix | relative_url }}">{{ copy.all_updates | escape }}</a>
+  {% endif %}
+</section>

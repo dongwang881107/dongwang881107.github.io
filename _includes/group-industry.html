@@ -1,0 +1,47 @@
+{% assign industry = site.data.group_progress.industry %}
+{% assign industry_copy = site.data.group.copy[page.lang] %}
+<section class="group-section group-track" id="industry" aria-labelledby="industry-heading">
+  <h2 id="industry-heading">{{ industry_copy.industry_timeline | escape }}</h2>
+  <p class="group-section-intro">{{ industry.intro[page.lang] | escape }}</p>
+  <ol class="group-industry-events" role="list">
+    {% for event in industry.events %}
+      <li>
+        <article class="group-industry-event">
+          <div>
+            <p class="group-output-meta muted"><time datetime="{{ event.date | date: '%Y-%m-%d' }}">{{ event.date | date: '%Y-%m-%d' }}</time>{% if event.kind[page.lang] %} · {{ event.kind[page.lang] | escape }}{% endif %}</p>
+            <h3>{{ event.title[page.lang] | escape }}</h3>
+            <p>{{ event.summary[page.lang] | escape }}</p>
+            {% if event.source %}<p class="group-links"><a href="{{ event.source | escape }}">{{ industry.source_label[page.lang] | escape }}</a></p>{% endif %}
+          </div>
+          {% if event.image or event.video %}
+            <div class="group-industry-media">
+              {% if event.image %}
+                <figure>
+                  <img src="{{ event.image.path | relative_url }}" width="{{ event.image.width }}" height="{{ event.image.height }}" alt="{{ event.image.alt[page.lang] | escape }}" loading="lazy" decoding="async">
+                  <figcaption>{{ event.image.caption[page.lang] | escape }}</figcaption>
+                </figure>
+              {% endif %}
+              {% if event.video %}
+                {% if event.image %}
+                  <details>
+                    <summary>{{ industry.show_demo[page.lang] | escape }}</summary>
+                {% endif %}
+                <figure>
+                  <video controls playsinline preload="none" poster="{{ event.video.poster | relative_url }}" width="{{ event.video.width }}" height="{{ event.video.height }}" aria-label="{{ event.video.alt[page.lang] | escape }}">
+                    <source src="{{ event.video.path | relative_url }}" type="video/mp4">
+                    {% if event.video.captions[page.lang] %}
+                      <track kind="captions" src="{{ event.video.captions[page.lang] | relative_url }}" srclang="{{ page.lang }}">
+                    {% endif %}
+                    <a href="{{ event.video.path | relative_url }}">{{ industry.open_video[page.lang] | escape }}</a>
+                  </video>
+                  <figcaption>{{ event.video.caption[page.lang] | escape }}</figcaption>
+                </figure>
+                {% if event.image %}</details>{% endif %}
+              {% endif %}
+            </div>
+          {% endif %}
+        </article>
+      </li>
+    {% endfor %}
+  </ol>
+</section>

@@ -1,0 +1,113 @@
+research:
+  zh-CN:
+    title: 电阻抗成像科研进展
+    summary: 围绕电极测量建模、电导率重建和不规则边界有限元计算，梳理课题组 EIT 技术报告中的方法与验证。
+    path: /group/research/eit-technical-progress/
+    link_label: 查看技术进展与实验图
+    highlights:
+      - 完整电极模型与伴随灵敏度
+      - 多激励加速反演和公开 KIT4 水槽实例
+      - 不规则边界重建、电极标记与正演误差分析
+    image:
+      path: /assets/images/group/eit-irregular-domain-mesh.png
+      width: 1208
+      height: 427
+      alt: 由合成边界点恢复的曲线、电极标记及三角网格。
+      caption: 不规则边界、电极标记与有限元网格 · 技术报告图 14
+  en:
+    title: Research Progress in Electrical Impedance Tomography
+    summary: The research group’s technical report documents electrode modeling, conductivity reconstruction, and finite-element calculations on irregular boundaries.
+    path: /group/research/eit-technical-progress/
+    link_label: Read the technical progress and experiments
+    highlights:
+      - Complete electrode model and adjoint sensitivities
+      - Accelerated inversion with multiple current patterns and open KIT4 tank examples
+      - Boundary reconstruction, electrode tagging, and forward error analysis
+    image:
+      path: /assets/images/group/eit-irregular-domain-mesh.png
+      width: 1208
+      height: 427
+      alt: A reconstructed synthetic boundary, labeled electrodes, and a triangular mesh.
+      caption: Irregular boundary, electrode tags, and finite-element mesh · Technical report Figure 14
+industry:
+  intro:
+    zh-CN: 记录电阻抗成像原型展示、项目路演和创新创业活动。
+    en: Prototype demonstrations, project pitches, and innovation events for electrical impedance tomography.
+  show_demo:
+    zh-CN: 查看水槽实验演示
+    en: Watch the tank demonstration
+  open_video:
+    zh-CN: 打开视频
+    en: Open video
+  source_label:
+    zh-CN: 赛事报道
+    en: Event report
+  events:
+    - date: 2026-11-09
+      kind: { zh-CN: 路演筹备, en: Pitch preparation }
+      title:
+        zh-CN: 面向麒麟项目对接的路演筹备
+        en: Preparing the EIT pitch for the Qilin initiative
+      summary:
+        zh-CN: 11 月整理项目商业计划书和逐页讲稿，围绕 EIT 原型、测量与重建流程，以及后续验证安排准备项目展示。
+        en: The November business plan and speaker notes prepared a demonstration of the EIT prototype, the measurement-to-reconstruction workflow, and planned validation.
+      image:
+        path: /assets/images/group/eit-prototype.jpg
+        width: 1100
+        height: 826
+        alt:
+          zh-CN: 桌面上的白色 EIT 实验原型机外壳和连接口。
+          en: A white tabletop EIT prototype enclosure with a connector.
+        caption:
+          zh-CN: EIT 实验原型 · 项目资料
+          en: Experimental EIT prototype · Project materials
+      video:
+        path: /assets/videos/group/eit-water-tank-demo.mp4
+        poster: /assets/images/group/eit-water-tank-poster.jpg
+        width: 1024
+        height: 576
+        alt:
+          zh-CN: 在水槽中移动圆柱目标时，旁边屏幕上的重建图随之变化。
+          en: The on-screen reconstruction changes as a cylindrical inclusion moves in the tank.
+        caption:
+          zh-CN: EIT 台架演示 · 移动水槽中的圆柱目标并观察重建图变化（约 19 秒，无声）
+          en: EIT bench demonstration · Moving a cylindrical inclusion changes the reconstruction (about 19 seconds, silent)
+    - date: 2026-10-16
+      kind: { zh-CN: 决赛路演 · 团队组二等奖, en: Final pitch · Second prize, team division }
+      title:
+        zh-CN: 「智创泰州」科技创新创业大赛
+        en: Taizhou Technology Innovation and Entrepreneurship Competition
+      summary:
+        zh-CN: 电阻抗智能成像与设备研发项目参加决赛路演，获得团队组二等奖。
+        en: The intelligent electrical impedance imaging and equipment project reached the final pitch and received second prize in the team division.
+      source: https://tzcredit.taizhou.gov.cn/xydt/art/2026/art_6ad8ba94b4d54ef9abf343d9cdeb519c.html
+      video:
+        path: /assets/videos/group/taizhou-award.mp4
+        poster: /assets/images/group/taizhou-award-poster.jpg
+        width: 1024
+        height: 576
+        alt:
+          zh-CN: 获奖团队在 2026 年「智创泰州」大赛决赛舞台上领奖。
+          en: The winning teams receive awards on stage at the 2026 Taizhou competition final.
+        caption:
+          zh-CN: 「智创泰州」决赛颁奖现场片段 · 16 秒，无声
+          en: A 16-second silent excerpt from the Taizhou final awards ceremony
+    - date: 2026-05-22
+      kind: { zh-CN: 决赛路演 · 二等奖, en: Final pitch · Second prize }
+      title:
+        zh-CN: 「人工智能·靖江未来」创新创业大赛
+        en: AI for Jingjiang’s Future Innovation and Entrepreneurship Competition
+      summary:
+        zh-CN: 「模型和数据双驱动的电阻抗智能成像及设备研发」项目在上海参加决赛路演并获二等奖。
+        en: The project on model- and data-driven electrical impedance imaging and equipment pitched at the Shanghai final and received second prize.
+      source: https://www.jingjiang.gov.cn/xwzx/jrjj/art/2026/art_871d4921f3f64a949cf8a2412f6c6bb0.html
+      image:
+        path: /assets/images/group/jingjiang-award.jpg
+        width: 1280
+        height: 853
+        alt:
+          zh-CN: 「人工智能·靖江未来」创新创业大赛颁奖合影。
+          en: Participants pose with their awards at the AI for Jingjiang’s Future competition ceremony.
+        caption:
+          zh-CN: 「人工智能·靖江未来」大赛颁奖现场 · 上海
+          en: Awards ceremony for the AI for Jingjiang’s Future competition · Shanghai

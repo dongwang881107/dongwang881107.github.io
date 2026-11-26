@@ -1,27 +1,87 @@
-{% include section-heading.html %}
+{% assign group = site.data.group %}
+{% assign copy = group.copy[page.lang] %}
+{% assign prefix = '' %}
+{% if page.lang == 'en' %}{% assign prefix = '/en' %}{% endif %}
+{% assign research_url = '/group/research/' | prepend: prefix | relative_url %}
+{% assign industry_url = '/group/industry/' | prepend: prefix | relative_url %}
+{% assign latest_industry = site.data.group_progress.industry.events | sort: 'date' | last %}
+{% assign feature = site.data.group_progress.research[page.lang] %}
 
-{% assign updates = site.group_updates | where: 'lang', page.lang | sort: 'date' | reverse %}
-{% if updates.size > 0 %}
-  <ul class="archive-list" aria-label="{{ page.title | escape }}">
-    {% for update in updates %}
-      <li class="archive-item">
-        <p class="muted">
-          <time datetime="{{ update.date | date_to_xmlschema }}">{{ update.date | date: '%Y-%m-%d' }}</time>
-          {% if update.kind %} · {{ update.kind | escape }}{% endif %}
-        </p>
-        <h2><a href="{{ update.url | relative_url }}">{{ update.title | escape }}</a></h2>
-        {% if update.summary %}<p>{{ update.summary | escape }}</p>{% endif %}
+<header class="group-hero" id="group-top">
+  <div class="group-hero-copy">
+    <h1>{{ group.name[page.lang] | default: page.title | escape }}</h1>
+    {% if group.affiliation[page.lang] %}<p class="group-affiliation">{{ group.affiliation[page.lang] | escape }}</p>{% endif %}
+    <p>{{ copy.intro | escape }}</p>
+  </div>
+  {% if group.photo %}
+    <figure class="group-photo">
+      <img src="{{ group.photo.path | relative_url }}" width="{{ group.photo.width }}" height="{{ group.photo.height }}" alt="{{ group.photo.alt[page.lang] | escape }}">
+      {% if group.photo.caption[page.lang] %}<figcaption>{{ group.photo.caption[page.lang] | escape }}</figcaption>{% endif %}
+    </figure>
+  {% endif %}
+</header>
+
+{% include group-nav.html current='overview' %}
+
+<div class="group-pathways">
+  <section class="group-path-card" aria-labelledby="research-pathway-heading">
+    <h2 id="research-pathway-heading"><a href="{{ research_url }}">{{ copy.research_progress | escape }}</a></h2>
+    {% if feature %}
+      <p><a href="{{ feature.path | prepend: prefix | relative_url }}">{{ feature.title | escape }}</a></p>
+    {% endif %}
+    <ul class="group-path-links" role="list">
+      <li><a href="{{ research_url }}#directions">{{ copy.research | escape }}</a></li>
+      <li><a href="{{ research_url }}#outputs">{{ copy.outputs | escape }}</a></li>
+      <li><a href="{{ research_url }}#publications">{{ copy.publications | escape }} <span class="group-path-count">({{ site.data.group_publications.size }})</span></a></li>
+      <li><a href="{{ research_url }}#frontiers">{{ copy.frontiers | escape }}</a></li>
+    </ul>
+  </section>
+  <section class="group-path-card" aria-labelledby="industry-pathway-heading">
+    <h2 id="industry-pathway-heading"><a href="{{ industry_url }}">{{ copy.industry_progress | escape }}</a></h2>
+    <p>{{ site.data.group_progress.industry.intro[page.lang] | escape }}</p>
+    {% if latest_industry %}
+      <div class="group-path-latest">
+        <time datetime="{{ latest_industry.date | date: '%Y-%m-%d' }}">{{ latest_industry.date | date: '%Y-%m-%d' }}</time>
+        <a href="{{ industry_url }}#industry">{{ latest_industry.title[page.lang] | escape }}</a>
+      </div>
+    {% endif %}
+  </section>
+</div>
+
+<section class="group-section" id="team" aria-labelledby="team-heading">
+  <h2 id="team-heading">{{ copy.team | escape }}</h2>
+  <p class="group-section-intro muted">{{ copy.team_context | escape }} <a href="{{ group.team_source | escape }}">{{ copy.team_source | escape }}</a></p>
+  <ul class="group-team" role="list">
+    {% for person in group.people %}
+      <li class="group-person{% if person.lead %} group-person-lead{% endif %}">
+        {% if person.photo %}
+          <img src="{{ person.photo.path | relative_url }}" width="{{ person.photo.width }}" height="{{ person.photo.height }}" alt="" loading="lazy" decoding="async">
+        {% endif %}
+        <div>
+          <h3>{{ person.name[page.lang] | escape }}</h3>
+          <p class="muted">{{ person.role[page.lang] | escape }}{% if person.affiliation[page.lang] %} · {{ person.affiliation[page.lang] | escape }}{% endif %}</p>
+          {% if person.focus[page.lang] %}<p>{{ person.focus[page.lang] | escape }}</p>{% endif %}
+          {% if person.url or person.path or person.email %}
+          <div class="group-links">
+            {% if person.url %}<a href="{{ person.url | escape }}">{{ person.link_label[page.lang] | default: copy.profile | escape }}</a>{% endif %}
+            {% if person.path %}<a href="{{ person.path | prepend: prefix | relative_url }}">{{ person.link_label[page.lang] | default: copy.profile | escape }}</a>{% endif %}
+            {% if person.email %}<a href="mailto:{{ person.email | escape }}">{{ person.email | escape }}</a>{% endif %}
+          </div>
+          {% endif %}
+        </div>
       </li>
     {% endfor %}
   </ul>
-{% else %}
-  <section class="content-section" aria-labelledby="group-research">
-    {% if page.lang == 'en' %}
-      <h2 id="group-research">Research Output</h2>
-      <p>Explore the group's <a href="{{ '/en/cv/' | relative_url }}#Publications">publications</a> and <a href="{{ '/en/cv/' | relative_url }}#Projects">research projects</a>.</p>
-    {% else %}
-      <h2 id="group-research">科研成果</h2>
-      <p>已有成果可参阅<a href="{{ '/cv/' | relative_url }}#Publications">论文列表</a>与<a href="{{ '/cv/' | relative_url }}#Projects">科研项目</a>。</p>
-    {% endif %}
-  </section>
-{% endif %}
+</section>
+
+<div class="legacy-links">
+  {% assign old_research_anchors = 'research,directions,outputs,publications,projects,frontiers,updates' | split: ',' %}
+  {% for anchor in old_research_anchors %}
+    <a class="legacy-link" id="{{ anchor }}" href="{{ research_url }}#{{ anchor }}">{{ copy.research_progress | escape }}</a>
+  {% endfor %}
+  <a class="legacy-link" id="industry" href="{{ industry_url }}#industry">{{ copy.industry_progress | escape }}</a>
+</div>
+<div class="group-page-actions">
+  <a href="#group-top">{{ copy.top | escape }}</a>
+</div>
+<script src="{{ '/assets/legacy-links.js' | relative_url }}" defer></script>
